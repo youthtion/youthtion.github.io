@@ -1,8 +1,36 @@
 <html>
-<head></head>
+<title>QualityCalculator</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+#pTextBox{
+	position:absolute;
+	top:7px;
+	left:120px;
+	width:40px;
+	height:20px;
+	text-align:center;
+}
+#pTipText{
+	position:absolute;
+	top:10px;
+	left:40px;
+}
+html{
+	font-size:13px;
+}
+</style>
+<script src="quality.js"></script>
+</head>
 <body>
 <script>
-document.write("123");
+document.write("<div>本體</div>");
+document.write("<div>素材</div>");
+
+for(var i=0;i<tQuality.length;i++){
+	document.write("<div>"+tQuality[i]+"</div>");
+}
+
 </script>
 </body>
 </html>
