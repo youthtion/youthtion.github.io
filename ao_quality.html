@@ -3,32 +3,46 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
-#pTextBox{
+.CText{
 	position:absolute;
-	top:7px;
-	left:120px;
-	width:40px;
+	top:8px;
+	height:20px;
+	text-align:center;
+	background-color:white;
+}
+.CQualityText{
+	position:absolute;
+	top:8px;
 	height:20px;
 	text-align:center;
 }
-#pTipText{
+#sTipText{
 	position:absolute;
 	top:10px;
 	left:40px;
 }
 html{
-	font-size:13px;
+	font-size:14px;
 }
 </style>
 <script src="quality.js"></script>
 </head>
 <body>
+<div>
+	<div class='CText' style='left:10px;'>品質</div>
+	<input type='text' class='CQualityText' style='left:46px;width:28px;' value='80' onChange='Excute();'></input>
+	<div class='CText' style='left:94px;'>あと</div>
+	<input type='text' class='CQualityText' style='left:128px;width:68px;' value='1234567' onChange='Excute();'></input>
+	<div class='CText' style='left:214px;'>→</div>
+	<div class='CText' style='left:254px;'>品質</div>
+	<input type='text' class='CQualityText' style='left:290px;width:28px;' value='80' onChange='Excute();'></input>
+	<div class='CText' style='left:344px;'>あと</div>
+	<input type='text' class='CQualityText' style='left:378px;width:68px;' value='1234567' onChange='Excute();'></input>
+</div>
 <script>
-document.write("<div>本體</div>");
-document.write("<div>素材</div>");
 
 for(var i=0;i<tQuality.length;i++){
-	document.write("<div>"+tQuality[i]+"</div>");
+	//document.write("<div>"+tQuality[i]+"</div>");
 }
 
 </script>
