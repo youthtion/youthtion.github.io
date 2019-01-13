@@ -90,10 +90,6 @@ function UpdateDisplay()
 		lv_idx++;
 	}
 	
-	alert(isNaN(lv_idx));
-	alert(isNaN(tQuality[lv_idx+1]));
-	alert(isNaN(total_exp));
-	alert(isNaN(tQuality[lv_idx+1]-total_exp));
 	var reslut_exp = tQuality[lv_idx+1]-total_exp;
 	if(reslut_exp < 0)
 		reslut_exp = 0;
