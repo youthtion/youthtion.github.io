@@ -90,7 +90,7 @@ function UpdateDisplay()
 		lv_idx++;
 	}
 	
-	var reslut_exp = tQuality[lv_idx+1]-total_exp;
+	var reslut_exp = +tQuality[lv_idx+1]-total_exp;
 	if(reslut_exp < 0)
 		reslut_exp = 0;
 		
@@ -100,7 +100,7 @@ function UpdateDisplay()
 
 function RefreshLv(obj, idx)
 {
-	var level = obj.value;
+	var level = +obj.value;
 	if(isNaN(level) == false){
 		if(level >= 1 && level <= 100){
 			tMat[idx].lv = level;
@@ -112,7 +112,7 @@ function RefreshLv(obj, idx)
 
 function RefreshRexp(obj, idx)
 {
-	var rexp = obj.value;
+	var rexp = +obj.value;
 	if(isNaN(rexp) == false){
 		if(rexp > 0 && rexp <= tQuality[tMat[idx].lv+1]-tQuality[tMat[idx].lv]){
 			tMat[idx].rexp = rexp;
@@ -133,7 +133,7 @@ function AddMaterial()
 function EraseMaterial(idx)
 {
 	if(cur_matsize > 0){
-		for(var i=idx; i<=cur_matsize; i++){
+		for(var i=+idx; i<=cur_matsize; i++){
 			tMat[i] = tMat[i+1];
 		}
 		cur_matsize--;
