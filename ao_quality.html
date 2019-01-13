@@ -3,23 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
+.CBlock{
+	position:absolute;
+	left:8px;
+	width:500px;
+}
 .CText{
 	position:absolute;
-	top:8px;
+	top:5px;
 	height:20px;
 	text-align:center;
-	background-color:white;
-}
-.CQualityText{
-	position:absolute;
-	top:8px;
-	height:20px;
-	text-align:center;
-}
-#sTipText{
-	position:absolute;
-	top:10px;
-	left:40px;
 }
 html{
 	font-size:14px;
@@ -28,23 +21,125 @@ html{
 <script src="quality.js"></script>
 </head>
 <body>
-<div>
-	<div class='CText' style='left:10px;'>品質</div>
-	<input type='text' class='CQualityText' style='left:46px;width:28px;' value='80' onChange='Excute();'></input>
-	<div class='CText' style='left:94px;'>あと</div>
-	<input type='text' class='CQualityText' style='left:128px;width:68px;' value='1234567' onChange='Excute();'></input>
-	<div class='CText' style='left:214px;'>→</div>
-	<div class='CText' style='left:254px;'>品質</div>
-	<input type='text' class='CQualityText' style='left:290px;width:28px;' value='80' onChange='Excute();'></input>
-	<div class='CText' style='left:344px;'>あと</div>
-	<input type='text' class='CQualityText' style='left:378px;width:68px;' value='1234567' onChange='Excute();'></input>
+<div id="Block0" class="CBlock" style="top:8px;height:28px;">
+	<!--本體-->
+	<div class="CText" style="left:10px;">品質</div>
+	<input type="text" id="Lv0" class="CText" style="left:46px;width:28px;" onChange="RefreshLv(this,0);"></input>
+	<div class="CText" style="left:94px;">あと</div>
+	<input type="text" id="Rexp0" class="CText" style="left:128px;width:68px;" onChange="RefreshRexp(this,0);"></input>
+	<!--箭頭-->
+	<div class="CText" style="left:214px;">→</div>
+	<!--結果-->
+	<div class="CText" style="left:254px;">品質</div>
+	<div id="LvResult" class="CText" style="left:290px;width:28px;"></div>
+	<div class="CText" style="left:344px;">あと</div>
+	<div id="RexpResult" class="CText" style="left:378px;width:68px;"></div>
+</div>
+<!--以下材料-->
+<div class="CBlock" style="top:60px;height:28px;">
+	<div class="CText" style="left:10px;">材料</div>
+	<input type="button" class="CText" style="left:48px;width:24px;" value="+" onClick="AddMaterial();"></input>
 </div>
 <script>
+var DF_QUALITY_MAX = 100;
+var DF_MAX_MATSIZE = 30;
+var DF_BLOCK_HEI = 28;
+var cur_matsize = 1;
+var tMat = new Array(DF_MAX_MATSIZE+2);
 
-for(var i=0;i<tQuality.length;i++){
-	//document.write("<div>"+tQuality[i]+"</div>");
+for(var i=1; i<=DF_MAX_MATSIZE; i++){
+	document.write("<div id='Block"+i+"' class='CBlock' style='top:"+(88+DF_BLOCK_HEI*(i-1))+"px;height:28px;visibility:visible;'>");
+	document.write("<div class='CText' style='left:10px;'>品質</div>");
+	document.write("<input type='text' id='Lv"+i+"' class='CText' style='left:46px;width:28px;' onChange='RefreshLv(this,"+i+");'></input>");
+	document.write("<div class='CText' style='left:94px;'>あと</div>");
+	document.write("<input type='text' id='Rexp"+i+"' class='CText' style='left:128px;width:68px;' onChange='RefreshRexp(this,"+i+");'></input>");
+	document.write("<input type='button' class='CText' style='left:210px;width:24px;' value='-' onClick='EraseMaterial("+i+");'></input>");
+	document.write("</div>");
 }
 
+Init();
+UpdateDisplay();
+
+function Init()
+{
+	for(var i=0; i<DF_MAX_MATSIZE+2; i++){
+		tMat[i] = {"lv":0, "rexp":0};
+	}
+	tMat[0] = {"lv":80, "rexp":49294};
+	tMat[1] = {"lv":10, "rexp":1};
+}
+
+function UpdateDisplay()
+{
+	var total_exp = 0;
+	for(var i=0; i<=DF_MAX_MATSIZE; i++){
+		if(i>cur_matsize){
+			document.getElementById("Block"+i).style.display = "none";
+			continue;
+		}
+		else{
+			document.getElementById("Block"+i).style.display = "";
+		}	
+		document.getElementById("Lv"+i).value = tMat[i].lv;
+		document.getElementById("Rexp"+i).value = tMat[i].rexp;
+		total_exp += tQuality[+tMat[i].lv+1]-tMat[i].rexp;
+	}
+
+	var lv_idx = 0;
+	while(tQuality[lv_idx+1]<=total_exp && lv_idx<DF_QUALITY_MAX){
+		lv_idx++;
+	}
+	
+	var reslut_exp = tQuality[lv_idx+1]-total_exp;
+	if(reslut_exp < 0)
+		reslut_exp = 0;
+		
+	document.getElementById("LvResult").innerHTML = lv_idx;
+	document.getElementById("RexpResult").innerHTML = reslut_exp;
+}
+
+function RefreshLv(obj, idx)
+{
+	var level = obj.value;
+	if(isNaN(level) == false){
+		if(level >= 1 && level <= 100){
+			tMat[idx].lv = level;
+			tMat[idx].rexp = tQuality[+level+1]-tQuality[+level];
+		}
+	}
+	UpdateDisplay();
+}
+
+function RefreshRexp(obj, idx)
+{
+	var rexp = obj.value;
+	if(isNaN(rexp) == false){
+		if(rexp > 0 && rexp <= tQuality[tMat[idx].lv+1]-tQuality[tMat[idx].lv]){
+			tMat[idx].rexp = rexp;
+		}
+	}
+	UpdateDisplay();
+}
+
+function AddMaterial()
+{
+	if(cur_matsize < DF_MAX_MATSIZE){
+		cur_matsize++;
+		tMat[cur_matsize] = {"lv":10, "rexp":1};
+	}
+	UpdateDisplay();
+}
+
+function EraseMaterial(idx)
+{
+	if(cur_matsize > 0){
+		for(var i=idx; i<=cur_matsize; i++){
+			tMat[i] = tMat[i+1];
+		}
+		cur_matsize--;
+	}
+	UpdateDisplay();
+}
 </script>
 </body>
 </html>
