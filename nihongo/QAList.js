@@ -26,7 +26,8 @@ var QAList = new Array(
 {que:"切る"				,ans:"きる"			,tip:"cut"									,group:12	,accr:0},	//結ぶ/続ける/繋ぐ
 {que:"被る"				,ans:"かぶる"		,tip:"put on (hat)"							,group:13	,accr:0},
 {que:"着る"				,ans:"きる"			,tip:"to put (tops) on/to wear (tops)"		,group:13	,accr:0},
-{que:"穿く/履く"		,ans:"はく"			,tip:"to put (buttoms) on/wear (buttoms)"	,group:13	,accr:0},
+{que:"穿く"				,ans:"はく"			,tip:"to put (buttoms) on/wear (buttoms)"	,group:13	,accr:0},
+{que:"履く"				,ans:"はく"			,tip:"to put (buttoms) on/wear (buttoms)"	,group:13	,accr:0},
 {que:"脱ぐ"				,ans:"ぬぐ"			,tip:"take off"								,group:13	,accr:0},
 {que:"帰る"				,ans:"かえる"		,tip:"to go back/to be back"				,group:14	,accr:0},	//行く/往く
 {que:"来る"				,ans:"くる"			,tip:"to come"								,group:14	,accr:0},	//行く/往く
@@ -40,7 +41,7 @@ var QAList = new Array(
 {que:"＿＿る"			,ans:"あげる"		,tip:"to give"								,group:0	,accr:0},
 {que:"遊ぶ"				,ans:"あそぶ"		,tip:"to have fun/to play"					,group:0	,accr:0},
 {que:"洗う"				,ans:"あらう"		,tip:"to wash"								,group:0	,accr:0},
-{que:"＿＿(在る/有る)"	,ans:"ある"			,tip:"to be/to have"						,group:0	,accr:0},
+{que:"＿る"				,ans:"ある"			,tip:"to be/to have"						,group:0	,accr:0},
 {que:"言う"				,ans:"いう"			,tip:"to say/to talk"						,group:0	,accr:0},
 {que:"要る"				,ans:"いる"			,tip:"to need/to be necessary"				,group:0	,accr:0},
 {que:"入れる"			,ans:"いれる"		,tip:"to put (any) in"						,group:0	,accr:0},	//出す
@@ -70,7 +71,7 @@ var QAList = new Array(
 {que:"習う"				,ans:"ならう"		,tip:"learn"								,group:0	,accr:0},	//教える
 {que:"並ぶ"				,ans:"ならぶ"		,tip:"make a line"							,group:0	,accr:0},
 {que:"並べる"			,ans:"ならべる"		,tip:"display"								,group:0	,accr:0},
-{que:"＿＿(生る/為る)"	,ans:"なる"			,tip:"become"								,group:0	,accr:0},
+{que:"＿る"				,ans:"なる"			,tip:"become"								,group:0	,accr:0},
 {que:"飲む"				,ans:"のむ"			,tip:"drink"								,group:0	,accr:0},	//吐く/吸う
 {que:"入る"				,ans:"はいる"		,tip:"enter"								,group:0	,accr:0},	//入る/出る
 {que:"始める"			,ans:"はじめる"		,tip:"start"								,group:0	,accr:0},	//終える
@@ -90,12 +91,12 @@ var QAList = new Array(
 {que:"新しい"			,ans:"あたらしい"	,tip:"new"									,group:0	,accr:0},	//古い
 {que:"暑い"				,ans:"あつい"		,tip:"hot (temperature)"					,group:0	,accr:0},	//寒い
 {que:"熱い"				,ans:"あつい"		,tip:"hot (heat)"							,group:0	,accr:0},	//冷たい/温い
-{que:"危ない"	,ans:"あぶない"			,tip:"dangerous"								,group:0	,accr:0},	//安全な
-{que:"＿＿(良い/好い)"	,ans:"いい"			,tip:"good"									,group:0	,accr:0},
+{que:"危ない"			,ans:"あぶない"		,tip:"dangerous"							,group:0	,accr:0},	//安全な
+{que:"＿い"				,ans:"いい"			,tip:"good"									,group:0	,accr:0},
 {que:"忙しい"			,ans:"いそがしい"	,tip:"busy"									,group:0	,accr:0},	//暇/暇な
 {que:"痛い"				,ans:"いたい"		,tip:"painful"								,group:0	,accr:0},
 {que:"嫌な"				,ans:"いやな"		,tip:"hateful"								,group:0	,accr:0},
-{que:"美味しい"				,ans:"おいしい"		,tip:"delicious"						,group:0	,accr:0},	//不味い
+{que:"美味しい"			,ans:"おいしい"		,tip:"delicious"							,group:0	,accr:0},	//不味い
 {que:"大きい"			,ans:"おおきい"		,tip:"big"									,group:0	,accr:0},	//小さい
-{}
+{que:"＿"}
 );
