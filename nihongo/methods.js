@@ -79,6 +79,7 @@ function getQuestion()
 	questNum = questStack.shift();
 	var questText = QAList[questNum]["que"];
 	if(QAList[questNum]["accr"] > accurateLevel && questText.indexOf(QAList[QAList.length-1]["que"]) == -1){
+		questText = QAList[questNum]["ans"];
 		var newText = "";
 		for(var i = 0; i < questText.length-1; i++){
 			newText += QAList[QAList.length-1]["que"];
