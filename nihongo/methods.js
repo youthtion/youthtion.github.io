@@ -2,7 +2,7 @@ var i;
 var questNum = 1;
 var questStack = new Array();
 var unshiftRemain = 0;
-var accurateLevel = 90;	// always pushed when less level(%)
+var accurateLevel = 75;	// always pushed when less level(%)
 var cookieKeyhead = "ac";
 
 function initailStack()
@@ -77,7 +77,16 @@ function getQuestion()
 	setRemain();
 	
 	questNum = questStack.shift();
-	document.getElementById("questText").innerHTML = QAList[questNum]["que"];
+	var questText = QAList[questNum]["que"];
+	if(QAList[questNum]["accr"] > accurateLevel && questText.indexOf(QAList[QAList.length-1]["que"]) == -1){
+		var newText = "";
+		for(var i = 0; i < questText.length-1; i++){
+			newText += QAList[QAList.length-1]["que"];
+		}
+		newText += questText.slice(-1);
+		questText = newText;
+	}
+	document.getElementById("questText").innerHTML = questText;
 	document.getElementById("answerText").innerHTML = QAList[questNum]["tip"];
 }
 
