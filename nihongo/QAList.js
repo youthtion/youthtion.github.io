@@ -27,8 +27,7 @@ var QAList = new Array(
 {que:"切る"				,ans:"きる"			,tip:"cut"									,group:12	,accr:0},	//結ぶ/続ける/繋ぐ
 {que:"被る"				,ans:"かぶる"		,tip:"put on (hat)"							,group:13	,accr:0},
 {que:"着る"				,ans:"きる"			,tip:"to put (tops) on/to wear (tops)"		,group:13	,accr:0},
-{que:"穿く"				,ans:"はく"			,tip:"to put (buttoms) on/wear (buttoms)"	,group:13	,accr:0},
-{que:"履く"				,ans:"はく"			,tip:"to put (buttoms) on/wear (buttoms)"	,group:13	,accr:0},
+{que:"穿く/履く"		,ans:"はく"			,tip:"to put (buttoms) on/wear (buttoms)"	,group:13	,accr:0},
 {que:"脱ぐ"				,ans:"ぬぐ"			,tip:"take off"								,group:13	,accr:0},
 {que:"帰る"				,ans:"かえる"		,tip:"to go back/to be back"				,group:14	,accr:0},	//行く/往く
 {que:"来る"				,ans:"くる"			,tip:"to come"								,group:14	,accr:0},	//行く/往く
@@ -108,22 +107,21 @@ var QAList = new Array(
 {que:"小さい"			,ans:"ちいさい"		,tip:"small"								,group:108	,accr:0},
 {que:"遅い"				,ans:"おそい"		,tip:"late"									,group:109	,accr:0},
 {que:"早い"				,ans:"はやい"		,tip:"early"								,group:109	,accr:0},
-{que:"遅い"				,ans:"おそい"		,tip:"slow"									,group:110	,accr:0},
-{que:"速い"				,ans:"はやい"		,tip:"quick/fast"							,group:110	,accr:0},
-{que:"重い"				,ans:"おもい"		,tip:"heavy"								,group:111	,accr:0},
-{que:"軽い"				,ans:"かるい"		,tip:"light"								,group:111	,accr:0},
-{que:"面白い"			,ans:"おもしろい"	,tip:"interesting"							,group:112	,accr:0},
-{que:"詰まらない"		,ans:"つまらない"	,tip:"boring"								,group:112	,accr:0},
-{que:"汚い"				,ans:"きたない"		,tip:"dirty"								,group:113	,accr:0},	//清い
-{que:"綺麗な"			,ans:"きれいな"		,tip:"beautiful/clean"						,group:113	,accr:0},
-{que:"近い"				,ans:"ちかい"		,tip:"near"									,group:114	,accr:0},
-{que:"遠い"				,ans:"とおい"		,tip:"far"									,group:114	,accr:0},
-{que:"長い"				,ans:"ながい"		,tip:"long"									,group:115	,accr:0},
-{que:"短い"				,ans:"みじかい"		,tip:"short"								,group:115	,accr:0},
-{que:"太い"				,ans:"ふとい"		,tip:"thick/fat"							,group:116	,accr:0},
-{que:"細い"				,ans:"ほそい"		,tip:"thin"									,group:116	,accr:0},
-{que:"難しい"			,ans:"むずかしい"	,tip:"difficult"							,group:117	,accr:0},
-{que:"易しい"			,ans:"やさしい"		,tip:"easy"									,group:117	,accr:0},
+{que:"速い"				,ans:"はやい"		,tip:"quick/fast"							,group:109	,accr:0},
+{que:"重い"				,ans:"おもい"		,tip:"heavy"								,group:110	,accr:0},
+{que:"軽い"				,ans:"かるい"		,tip:"light"								,group:110	,accr:0},
+{que:"面白い"			,ans:"おもしろい"	,tip:"interesting"							,group:111	,accr:0},
+{que:"詰まらない"		,ans:"つまらない"	,tip:"boring"								,group:111	,accr:0},
+{que:"汚い"				,ans:"きたない"		,tip:"dirty"								,group:112	,accr:0},	//清い
+{que:"綺麗な"			,ans:"きれいな"		,tip:"beautiful/clean"						,group:112	,accr:0},
+{que:"近い"				,ans:"ちかい"		,tip:"near"									,group:113	,accr:0},
+{que:"遠い"				,ans:"とおい"		,tip:"far"									,group:113	,accr:0},
+{que:"長い"				,ans:"ながい"		,tip:"long"									,group:114	,accr:0},
+{que:"短い"				,ans:"みじかい"		,tip:"short"								,group:114	,accr:0},
+{que:"太い"				,ans:"ふとい"		,tip:"thick/fat"							,group:115	,accr:0},
+{que:"細い"				,ans:"ほそい"		,tip:"thin"									,group:115	,accr:0},
+{que:"難しい"			,ans:"むずかしい"	,tip:"difficult"							,group:116	,accr:0},
+{que:"易しい"			,ans:"やさしい"		,tip:"easy"									,group:116	,accr:0},
 {que:"明るい"			,ans:"あかるい"		,tip:"bright"								,group:0	,accr:0},	//暗い
 {que:"危ない"			,ans:"あぶない"		,tip:"dangerous"							,group:0	,accr:0},	//安全な
 {que:"痛い"				,ans:"いたい"		,tip:"painful"								,group:0	,accr:0},
@@ -141,8 +139,7 @@ var QAList = new Array(
 {que:"賑やかな"			,ans:"にぎやかな"	,tip:"lively"								,group:0	,accr:0},	//寂しい/淋しい
 {que:"低い"				,ans:"ひくい"		,tip:"low"									,group:0	,accr:0},	//高い
 {que:"便利な"			,ans:"べんりな"		,tip:"convenience"							,group:0	,accr:0},	//不便
-{que:"丸い"				,ans:"まるい"		,tip:"round"								,group:0	,accr:0},	//四角い
-{que:"円い"				,ans:"まるい"		,tip:"round"								,group:0	,accr:0},
+{que:"丸い/円い"		,ans:"まるい"		,tip:"round"								,group:0	,accr:0},	//四角い
 {que:"安い"				,ans:"やすい"		,tip:"cheap"								,group:0	,accr:0},	//高い
 {que:"有名な"			,ans:"ゆうめいな"	,tip:"famous"								,group:0	,accr:0},	//無名
 {que:"立派な"			,ans:"りっぱな"		,tip:"splendid"								,group:0	,accr:0},	//粗末/貧弱
