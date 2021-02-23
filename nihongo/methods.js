@@ -4,6 +4,7 @@ var questStack = new Array();
 var unshiftRemain = 0;
 var accurateLevel = 75;	// always pushed when less level(%)
 var cookieKeyhead = "ac";
+var accMode = 0;	//1:Kanji 0:Last
 
 function initailStack()
 {
@@ -81,22 +82,24 @@ function getQuestion()
 	if(QAList[questNum]["accr"] > accurateLevel){
 		if(questText.indexOf(QAList[QAList.length-1]["que"]) == -1){
 			var newText = "";
-			for(var i = 0; i < questText.length; i++){
-				var subStrTemp = questText.substr(i, 1);
-				if(isKanji(subStrTemp)){
-					newText += subStrTemp;
+			if(accMode){
+				for(var i = 0; i < questText.length; i++){
+					var subStrTemp = questText.substr(i, 1);
+					if(isKanji(subStrTemp)){
+						newText += subStrTemp;
+					}
+					else{
+						newText += QAList[QAList.length-1]["que"];
+					}
 				}
-				else{
+			}
+			else{
+				questText = QAList[questNum]["ans"];
+				for(var i = 0; i < questText.length-1; i++){
 					newText += QAList[QAList.length-1]["que"];
 				}
+				newText += questText.slice(-1);
 			}
-			/*	only last text
-			questText = QAList[questNum]["ans"];
-			for(var i = 0; i < questText.length-1; i++){
-				newText += QAList[QAList.length-1]["que"];
-			}
-			newText += questText.slice(-1);
-			*/
 			questText = newText;
 		}
 	}
