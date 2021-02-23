@@ -130,7 +130,7 @@ function readCookie()
 				if(accvs.length%2 == 0){
 					for(var j = 0; j < accvs.length / 2; j++){
 						var accv = Number(subc[i].substr(vhidx+1+j*2,2));
-						QAList[i+j*10]["accr"] = accv;
+						QAList[j*10+acchidx]["accr"] = accv;
 					}
 				}
 			}
