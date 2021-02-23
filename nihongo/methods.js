@@ -124,7 +124,7 @@ function handleKey(e)
 		e = window.event;
 		
 	if(e.keyCode == 13){
-		if (QAList[questNum]["ans"] == document.getElementById("inputText").value){
+		if (isCorrect()){
 			if(unshiftRemain > 0){
 				QAList[questNum]["accr"] = Math.floor((QAList[questNum]["accr"]+100)/2);
 				writeCookie();
@@ -142,6 +142,19 @@ function handleKey(e)
 		document.getElementById("inputText").value = "";
 		unshiftRemain = unshiftRemain-1;
 	}
+}
+
+function isCorrect()
+{
+	if(QAList[questNum]["accr"] > accurateLevel){
+		if (QAList[questNum]["que"] == document.getElementById("inputText").value){
+			return true;
+		}
+	}
+	if (QAList[questNum]["ans"] == document.getElementById("inputText").value){
+		return true;
+	}
+	return false;
 }
 
 function readCookie()
