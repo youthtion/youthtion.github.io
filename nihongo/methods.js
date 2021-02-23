@@ -107,6 +107,7 @@ function handleKey(e)
 		else{
 			QAList[questNum]["accr"] = 0;
 			writeCookie();
+			document.getElementById("questText").innerHTML = QAList[questNum]["que"];
 			document.getElementById("answerText").innerHTML = QAList[questNum]["ans"];
 			questStack.push(questNum);
 			setRemain();
