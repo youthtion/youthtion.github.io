@@ -201,13 +201,44 @@ function writeCookie()
 	now.setTime(now.getTime()+1000*60*60*24*365);
 	document.cookie = cookieKeyhead+(questNum%10)+"="+temp+";expires="+now.toGMTString();
 }
+
 function readVersion(lastVer)
 {
+	var accTemp = new Array();
+	for(var i = 0; i < QAList.length-1; i++){
+		if(QAList[i]["accr"] != 0){
+			accTemp.push(QAList[i]["accr"]);
+		}
+		else{
+			accTemp.push(0);
+		}
+	}
+
 	for(var i = 0; i < version_log.length-1; i++){
 		if(version_log[i]["verd"] > lastVer){
-			for(var j = 0; j < version_log[i]["changed"].length; j++){
+			var newAcc = new Array();
+			for(var j = 0; j < QAList.length-1; j++){
+				newAcc.push(-1);
+			}
+			for(var k in version_log[i]["changed"]){
+				newAcc[k] = 0;
+			}
+			for(var k in version_log[i]["changed"]){
+				var v = version_log[i]["changed"][k];
+				if(v >= 0){
+					newAcc[v] = accTemp[k];
+				}
+			}
+			for(var j = 0; j < QAList.length-1; j++){
+				if(newAcc[j] >= 0){
+					accTemp[j] = newAcc[j];
+				}
 			}
 		}
+	}
+	
+	for(var i = 0; i < QAList.length-1; i++){
+		QAList[i]["accr"] = accTemp[i];
 	}
 }
 
