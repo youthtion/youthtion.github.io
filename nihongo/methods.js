@@ -6,7 +6,7 @@ var accurateLevel = 75;	// always pushed when less level(%)
 var cookieKeyhead = "ac";
 var accMode = 0;	//1:Kanji 0:Last
 var versionKeyhead = "verd";
-var versionDate = 2021022404;
+var params = QAList[QAList.length-1];
 
 function initailStack()
 {
@@ -82,7 +82,7 @@ function getQuestion()
 	questNum = questStack.shift();
 	var questText = QAList[questNum]["que"];
 	if(QAList[questNum]["accr"] > accurateLevel){
-		if(questText.indexOf(QAList[QAList.length-1]["que"]) == -1){
+		if(questText.indexOf(params["space"]) == -1){
 			var newText = "";
 			if(accMode){
 				for(var i = 0; i < questText.length; i++){
@@ -91,14 +91,14 @@ function getQuestion()
 						newText += subStrTemp;
 					}
 					else{
-						newText += QAList[QAList.length-1]["que"];
+						newText += params["space"];
 					}
 				}
 			}
 			else{
 				questText = QAList[questNum]["ans"];
 				for(var i = 0; i < questText.length-1; i++){
-					newText += QAList[QAList.length-1]["que"];
+					newText += params["space"];
 				}
 				newText += questText.slice(-1);
 			}
@@ -178,11 +178,12 @@ function readCookie()
 				}
 			}
 			else if(subc[i].indexOf(versionKeyhead) != -1){
-				
+				var last_ver = Number(subc[i].slice(vhidx+1));
+				readVersion(last_ver);
 			}
 		}
-		writeVersion();
 	}
+	writeVersion();
 }
 
 function writeCookie()
@@ -200,12 +201,21 @@ function writeCookie()
 	now.setTime(now.getTime()+1000*60*60*24*365);
 	document.cookie = cookieKeyhead+(questNum%10)+"="+temp+";expires="+now.toGMTString();
 }
+function readVersion(lastVer)
+{
+	for(var i = 0; i < version_log.length-1; i++){
+		if(version_log[i]["verd"] > lastVer){
+			for(var j = 0; j < version_log[i]["changed"].length; j++){
+			}
+		}
+	}
+}
 
 function writeVersion()
 {
 	var now = new Date();
 	now.setTime(now.getTime()+1000*60*60*24*365);
-	document.cookie = versionKeyhead+"=2021022305;expires="+now.toGMTString();
+	document.cookie = versionKeyhead+"="+params["verd"].toString()+";expires="+now.toGMTString();
 }
 
 function adjustPos(obj)
