@@ -5,6 +5,8 @@ var unshiftRemain = 0;
 var accurateLevel = 75;	// always pushed when less level(%)
 var cookieKeyhead = "ac";
 var accMode = 0;	//1:Kanji 0:Last
+var versionKeyhead = "ver";
+var versionDate = 2021022404;
 
 function initailStack()
 {
@@ -175,7 +177,11 @@ function readCookie()
 					}
 				}
 			}
+			else if(subc[i].indexOf(versionKeyhead) != -1){
+				
+			}
 		}
+		writeVersion();
 	}
 }
 
@@ -193,6 +199,13 @@ function writeCookie()
 	var now = new Date();
 	now.setTime(now.getTime()+1000*60*60*24*365);
 	document.cookie = cookieKeyhead+(questNum%10)+"="+temp+";expires="+now.toGMTString();
+}
+
+function writeVersion()
+{
+	var now = new Date();
+	now.setTime(now.getTime()+1000*60*60*24*365);
+	document.cookie = versionKeyhead+"=2021022305;expires="+now.toGMTString();
 }
 
 function adjustPos(obj)
