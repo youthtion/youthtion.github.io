@@ -5,7 +5,7 @@ var unshiftRemain = 0;
 var accurateLevel = 75;	// always pushed when less level(%)
 var cookieKeyhead = "ac";
 var accMode = 0;	//1:Kanji 0:Last
-var versionKeyhead = "ver";
+var versionKeyhead = "verd";
 var versionDate = 2021022404;
 
 function initailStack()
