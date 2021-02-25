@@ -269,7 +269,7 @@ var QAList = new Array(
 {que:"自動車"			,ans:"じどうしゃ"	,tip:"car"									,group:0	,accr:0},
 {que:"自分"				,ans:"じぶん"		,tip:"oneself"								,group:0	,accr:0},
 {que:"授業"				,ans:"じゅぎょう"	,tip:"class"								,group:0	,accr:0},
-{que:"背"				,ans:"せい/せ"		,tip:"height"								,group:0	,accr:0},
+{que:"背"				,ans:"せい"			,tip:"height"								,group:0	,accr:0},
 {que:"生徒"				,ans:"せいと"		,tip:"student"								,group:0	,accr:0},
 {que:"先月"				,ans:"せんげつ"		,tip:"last month"							,group:0	,accr:0},
 {que:"先週"				,ans:"せんしゅう"	,tip:"last week"							,group:0	,accr:0},
