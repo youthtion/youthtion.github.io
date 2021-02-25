@@ -100,7 +100,9 @@ function getQuestion()
 				for(var i = 0; i < questText.length-1; i++){
 					newText += params["space"];
 				}
-				newText += questText.slice(-1);
+				if(questText.length > 1){
+					newText += questText.slice(-1);
+				}
 			}
 			questText = newText;
 		}
