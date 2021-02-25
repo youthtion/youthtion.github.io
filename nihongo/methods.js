@@ -82,7 +82,7 @@ function getQuestion()
 	questNum = questStack.shift();
 	var questText = QAList[questNum]["que"];
 	if(QAList[questNum]["accr"] > accurateLevel){
-		if(questText.indexOf(params["space"]) == -1){
+		//if(questText.indexOf(params["space"]) == -1){
 			var newText = "";
 			if(accMode){
 				for(var i = 0; i < questText.length; i++){
@@ -105,7 +105,7 @@ function getQuestion()
 				}
 			}
 			questText = newText;
-		}
+		//}
 	}
 	document.getElementById("questText").innerHTML = questText;
 	document.getElementById("answerText").innerHTML = QAList[questNum]["tip"];
