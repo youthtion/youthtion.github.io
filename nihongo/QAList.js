@@ -409,7 +409,7 @@ var QAList = new Array(
 {que:"お＿＿＿＿＿い"		,ans:"おやすみなさい"		,tip:"Good night."							,group:0	,accr:0},
 {que:"回"					,ans:"かい"					,tip:"times"								,group:0	,accr:0},
 {que:"階"					,ans:"かい"					,tip:"(counter for) floor"					,group:0	,accr:0},
-{que:"結構です。"			,ans:"けっこうです。"		,tip:"fine/no thanks"						,group:0	,accr:0},
+{que:"結構です"				,ans:"けっこうです"			,tip:"fine/no thanks"						,group:0	,accr:0},
 {que:"九日"					,ans:"ここのか"				,tip:"ninth of month"						,group:0	,accr:0},
 {que:"九つ"					,ans:"ここのつ"				,tip:"nine"									,group:0	,accr:0},
 {que:"こ＿＿＿そ"			,ans:"こちらこそ"			,tip:"So do I"								,group:0	,accr:0},
