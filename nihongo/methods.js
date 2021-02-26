@@ -97,10 +97,13 @@ function getQuestion()
 			}
 			else{
 				questText = QAList[questNum]["ans"];
-				for(var i = 0; i < questText.length-1; i++){
-					newText += params["space"];
+				if(questText.length == 1){
+					newText = params["space"];
 				}
-				if(questText.length > 1){
+				else{
+					for(var i = 0; i < questText.length-1; i++){
+						newText += params["space"];
+					}
 					newText += questText.slice(-1);
 				}
 			}
