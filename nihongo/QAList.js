@@ -412,7 +412,7 @@ var QAList = new Array(
 {que:"後ろ"					,ans:"うしろ"				,tip:"back"									,group:0	,accr:0},
 {que:"大勢"					,ans:"おおぜい"				,tip:"many"									,group:0	,accr:0},
 {que:"同じ"					,ans:"おなじ"				,tip:"same"									,group:0	,accr:0},
-{que:"お＿＿＿＿＿す"		,ans:"おねがいします"		,tip:"Please –"								,group:0	,accr:0},
+{que:"お＿＿＿＿＿す"		,ans:"おねがいします"		,tip:"Please~"								,group:0	,accr:0},
 {que:"お＿＿＿＿＿＿＿す"	,ans:"おはようございます"	,tip:"Good morning."						,group:0	,accr:0},
 {que:"お＿＿＿＿＿い"		,ans:"おやすみなさい"		,tip:"Good night."							,group:0	,accr:0},
 {que:"回"					,ans:"かい"					,tip:"times"								,group:0	,accr:0},
