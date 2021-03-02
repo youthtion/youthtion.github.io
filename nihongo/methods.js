@@ -30,8 +30,9 @@ function initailStack()
 
 function randomSort()
 {
-	for(var i = 0; i < questStack.length; i++)
+	for(var i = 0; i < questStack.length; i++){
 		exchange(i,Math.floor(Math.random()*questStack.length));
+	}
 }
 
 function groupGather()

@@ -107,14 +107,56 @@
 とり	tori	鳥	bird
 </div>
 <script>
+var sectionTabs = new Array(7,7,11,3,0);
+var tabKey = "\\\\t";
+var tabSize = 4;
+
 var readStr = document.getElementById("remainText").innerHTML;
 var subc = readStr.split(/[\t\f\r\n]/);
 var catStrs = "";
+var tempStr = new Array();
 for (var i = 1; i < subc.length; i+=4){
-	catStrs += '{que:"'+subc[i+2]+'",ans:"'+subc[i]+'",tip:"'+subc[i+3]+'",group:0,accr:0},';
+	tempStr = new Array();
+	tempStr.push('{que:"'+subc[i+2]+'"');
+	tempStr.push(',ans:"'+subc[i]+'"');
+	tempStr.push(',tip:"'+subc[i+3]+'"');
+	tempStr.push(',group:0');
+	tempStr.push(',accr:0},');
+	for(var j = 0; j < tempStr.length; j++){
+		catStrs += tempStr[j];
+		catStrs += getTabKey(j);
+	}
 	catStrs += "<br>";
 }
 document.getElementById("remainText").innerHTML = catStrs;
+
+function getTabKey(tidx)
+{
+	var word_size = 0;
+	for(var i = 0; i < tempStr[tidx].length; i++){
+		var tstr = tempStr[tidx].substr(i, 1);
+		if(isHalfSize(tstr)){
+			word_size++;
+		}
+		else{
+			word_size+=2;
+		}
+	}
+	
+	var needs_num = sectionTabs[tidx]-Math.floor(word_size/tabSize);
+	var res_str = "";
+	for(var i = 0; i < needs_num; i++){
+		res_str += tabKey;
+	}
+	return res_str;
+}
+
+function isHalfSize(strParam){
+    var unicode = strParam.charCodeAt(0);
+    if (unicode>=0x0000 && unicode<=0x00ff)
+		return true;
+    return false;
+}
 </script>
 </body>
 </html>
