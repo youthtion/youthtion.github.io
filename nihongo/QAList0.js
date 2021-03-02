@@ -460,7 +460,6 @@ var QAList0 = new Array(
 {que:"前"					,ans:"まえ"					,tip:"ago/before"							,group:0	,accr:0},
 {que:"＿た"					,ans:"また"					,tip:"also/again"							,group:0	,accr:0},
 {que:"＿だ"					,ans:"まだ"					,tip:"still/yet"							,group:0	,accr:0},
-{que:"町"					,ans:"まち"					,tip:"town"									,group:0	,accr:0},
 {que:"ま＿＿ぐ"				,ans:"まっすぐ"				,tip:"straight"								,group:0	,accr:0},
 {que:"六日"					,ans:"むいか"				,tip:"the sixth of month"					,group:0	,accr:0},
 {que:"向こう"				,ans:"むこう"				,tip:"over there"							,group:0	,accr:0},
@@ -468,5 +467,5 @@ var QAList0 = new Array(
 {que:"も＿と"				,ans:"もっと"				,tip:"more"									,group:0	,accr:0},
 {que:"も＿＿し"				,ans:"もしもし"				,tip:"hello(on the phone)"					,group:0	,accr:0},
 {que:"も＿＿ん"				,ans:"もちろん"				,tip:"of course"							,group:0	,accr:0},
-{space:"＿",verd:2021022819}
+{space:"＿",verd:2021022820}
 );
