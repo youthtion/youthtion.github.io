@@ -1,4 +1,3 @@
-var i;
 var questNum = 1;
 var questStack = new Array();
 var unshiftRemain = 0;
@@ -83,33 +82,31 @@ function getQuestion()
 	questNum = questStack.shift();
 	var questText = QAList[questNum]["que"];
 	if(QAList[questNum]["accr"] > accurateLevel){
-		//if(questText.indexOf(params["space"]) == -1){
-			var newText = "";
-			if(accMode){
-				for(var i = 0; i < questText.length; i++){
-					var subStrTemp = questText.substr(i, 1);
-					if(isKanji(subStrTemp)){
-						newText += subStrTemp;
-					}
-					else{
-						newText += params["space"];
-					}
-				}
-			}
-			else{
-				questText = QAList[questNum]["ans"];
-				if(questText.length == 1){
-					newText = params["space"];
+		var newText = "";
+		if(accMode){
+			for(var i = 0; i < questText.length; i++){
+				var subStrTemp = questText.substr(i, 1);
+				if(isKanji(subStrTemp)){
+					newText += subStrTemp;
 				}
 				else{
-					for(var i = 0; i < questText.length-1; i++){
-						newText += params["space"];
-					}
-					newText += questText.slice(-1);
+					newText += params["space"];
 				}
 			}
-			questText = newText;
-		//}
+		}
+		else{
+			questText = QAList[questNum]["ans"];
+			if(questText.length == 1){
+				newText = params["space"];
+			}
+			else{
+				for(var i = 0; i < questText.length-1; i++){
+					newText += params["space"];
+				}
+				newText += questText.slice(-1);
+			}
+		}
+		questText = newText;
 	}
 	document.getElementById("questText").innerHTML = questText;
 	document.getElementById("answerText").innerHTML = QAList[questNum]["tip"];
@@ -183,7 +180,10 @@ function readCookie()
 					}
 				}
 			}
-			else if(subc[i].indexOf(versionKeyhead) != -1){
+		}
+		for (var i = 0; i < subc.length; i++){
+			var vhidx = subc[i].indexOf("=");
+			if(subc[i].indexOf(versionKeyhead) != -1){
 				var last_ver = Number(subc[i].slice(vhidx+1));
 				readVersion(last_ver);
 			}

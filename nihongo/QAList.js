@@ -35,22 +35,20 @@ var QAList = new Array(
 {que:"話す"					,ans:"はなす"				,tip:"talk/speak"							,group:15	,accr:0},
 {que:"消す"					,ans:"けす"					,tip:"turn off"								,group:16	,accr:0},
 {que:"点ける"				,ans:"つける"				,tip:"turn on"								,group:16	,accr:0},
-{que:"厚い"					,ans:"あつい"				,tip:"thick"								,group:17	,accr:0},
-{que:"薄い"					,ans:"うすい"				,tip:"thin"									,group:17	,accr:0},
-{que:"生きる"				,ans:"いきる"				,tip:"live"									,group:18	,accr:0},
-{que:"死ぬ"					,ans:"しぬ"					,tip:"die"									,group:18	,accr:0},
-{que:"生まれる"				,ans:"うまれる"				,tip:"be born"								,group:18	,accr:0},
-{que:"覚える"				,ans:"おぼえる"				,tip:"to memorize"							,group:19	,accr:0},	//忘れる
-{que:"思い出す"				,ans:"おもいだす"			,tip:"recall/remember"						,group:19	,accr:0},
-{que:"降る"					,ans:"ふる"					,tip:"fall/come down/rain"					,group:20	,accr:0},	//照る/止む
-{que:"曇る"					,ans:"くもる"				,tip:"become cloudy"						,group:20	,accr:0},
-{que:"晴れる"				,ans:"はれる"				,tip:"clear up"								,group:20	,accr:0},
-{que:"壊す"					,ans:"こわす"				,tip:"break"								,group:21	,accr:0},
-{que:"直す"					,ans:"なおす"				,tip:"repair"								,group:21	,accr:0},
-{que:"答える"				,ans:"こたえる"				,tip:"answer"								,group:22	,accr:0},	//問う
-{que:"尋ねる"				,ans:"たずねる"				,tip:"ask"									,group:22	,accr:0},
-{que:"入れる"				,ans:"いれる"				,tip:"to put (any) in"						,group:23	,accr:0},
-{que:"出す"					,ans:"だす"					,tip:"put out"								,group:23	,accr:0},
+{que:"生きる"				,ans:"いきる"				,tip:"live"									,group:17	,accr:0},
+{que:"死ぬ"					,ans:"しぬ"					,tip:"die"									,group:17	,accr:0},
+{que:"生まれる"				,ans:"うまれる"				,tip:"be born"								,group:17	,accr:0},
+{que:"覚える"				,ans:"おぼえる"				,tip:"to memorize"							,group:18	,accr:0},	//忘れる
+{que:"思い出す"				,ans:"おもいだす"			,tip:"recall/remember"						,group:18	,accr:0},
+{que:"降る"					,ans:"ふる"					,tip:"fall/come down/rain"					,group:19	,accr:0},	//照る/止む
+{que:"曇る"					,ans:"くもる"				,tip:"become cloudy"						,group:19	,accr:0},
+{que:"晴れる"				,ans:"はれる"				,tip:"clear up"								,group:19	,accr:0},
+{que:"壊す"					,ans:"こわす"				,tip:"break"								,group:20	,accr:0},
+{que:"直す"					,ans:"なおす"				,tip:"repair"								,group:20	,accr:0},
+{que:"答える"				,ans:"こたえる"				,tip:"answer"								,group:21	,accr:0},	//問う
+{que:"尋ねる"				,ans:"たずねる"				,tip:"ask"									,group:21	,accr:0},
+{que:"入れる"				,ans:"いれる"				,tip:"to put (any) in"						,group:22	,accr:0},
+{que:"出す"					,ans:"だす"					,tip:"put out"								,group:22	,accr:0},
 {que:"会う"					,ans:"あう"					,tip:"to meet"								,group:0	,accr:0},
 {que:"あ＿る"				,ans:"あげる"				,tip:"to give"								,group:0	,accr:0},
 {que:"遊ぶ"					,ans:"あそぶ"				,tip:"to have fun/to play"					,group:0	,accr:0},
@@ -213,6 +211,8 @@ var QAList = new Array(
 {que:"細い"					,ans:"ほそい"				,tip:"thin"									,group:115	,accr:0},
 {que:"難しい"				,ans:"むずかしい"			,tip:"difficult"							,group:116	,accr:0},
 {que:"易しい"				,ans:"やさしい"				,tip:"easy"									,group:116	,accr:0},
+{que:"厚い"					,ans:"あつい"				,tip:"thick"								,group:117	,accr:0},
+{que:"薄い"					,ans:"うすい"				,tip:"thin"									,group:117	,accr:0},
 {que:"明るい"				,ans:"あかるい"				,tip:"bright"								,group:0	,accr:0},	//暗い
 {que:"危ない"				,ans:"あぶない"				,tip:"dangerous"							,group:0	,accr:0},	//安全な
 {que:"痛い"					,ans:"いたい"				,tip:"painful"								,group:0	,accr:0},
@@ -558,5 +558,5 @@ var QAList = new Array(
 {que:"も＿と"				,ans:"もっと"				,tip:"more"									,group:0	,accr:0},
 {que:"も＿＿し"				,ans:"もしもし"				,tip:"hello(on the phone)"					,group:0	,accr:0},
 {que:"も＿＿ん"				,ans:"もちろん"				,tip:"of course"							,group:0	,accr:0},
-{space:"＿",verd:2021030305}
+{space:"＿",verd:2021030417}
 );
