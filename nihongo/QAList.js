@@ -143,7 +143,7 @@ var QAList = new Array(
 {que:"滑る"					,ans:"すべる"				,tip:"slide/slip"							,group:0	,accr:0},
 {que:"済む"					,ans:"すむ"					,tip:"end"									,group:0	,accr:0},
 {que:"育てる"				,ans:"そだてる"				,tip:"grow"									,group:0	,accr:0},
-{que:"倒れる"				,ans:"たおれる"				,tip:"fall down"							,group:0	,accr:0},
+{que:"倒れる"				,ans:"たおれる"				,tip:"(something) fall down"				,group:0	,accr:0},
 {que:"訪ねる"				,ans:"たずねる"				,tip:"visit"								,group:0	,accr:0},
 {que:"立てる"				,ans:"たてる"				,tip:"raise/set up"							,group:0	,accr:0},
 {que:"建てる"				,ans:"たてる"				,tip:"build"								,group:0	,accr:0},
