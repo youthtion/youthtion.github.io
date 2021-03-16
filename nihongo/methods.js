@@ -1,7 +1,7 @@
 var questNum = 1;
 var questStack = new Array();
 var unshiftRemain = 0;
-var accurateLevel = 75;	// always pushed when less level(%)
+var accurateLevel = 85;	// always pushed when less level(%)
 var cookieKeyhead = "ac";
 var accMode = 0;	//1:Kanji 0:Last
 var versionKeyhead = "verd";
