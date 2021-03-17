@@ -277,7 +277,7 @@ var QAList = new Array(
 {que:"簡単な"				,ans:"かんたんな"			,tip:"simple/easy"							,group:0	,accr:0},
 {que:"臭い"					,ans:"くさい"				,tip:"smelly"								,group:0	,accr:0},
 {que:"細かい"				,ans:"こまかい"				,tip:"fine"									,group:0	,accr:0},
-{que:"残念な"				,ans:"ざんねん"				,tip:"sorry"								,group:0	,accr:0},
+{que:"残念な"				,ans:"ざんねんな"			,tip:"sorry"								,group:0	,accr:0},
 {que:"十分"					,ans:"じゅうぶん"			,tip:"enough"								,group:0	,accr:0},
 {que:"少ない"				,ans:"すくない"				,tip:"very few/little"						,group:0	,accr:0},
 {que:"確かな"				,ans:"たしかな"				,tip:"surely"								,group:0	,accr:0},
