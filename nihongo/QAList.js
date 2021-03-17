@@ -283,7 +283,7 @@ var QAList = new Array(
 {que:"確かな"				,ans:"たしかな"				,tip:"surely"								,group:0	,accr:0},
 {que:"小さな"				,ans:"ちいさな"				,tip:"small"								,group:0	,accr:0},
 {que:"す＿い"				,ans:"すごい"				,tip:"fantastic/terrible"					,group:0	,accr:0},
-{que:"特別な"				,ans:"とくべつ"				,tip:"special"								,group:0	,accr:0},
+{que:"特別な"				,ans:"とくべつな"			,tip:"special"								,group:0	,accr:0},
 {que:"恥ずかしい"			,ans:"はずかしい"			,tip:"embarassing"							,group:0	,accr:0},
 {que:"必要"					,ans:"ひつよう"				,tip:"necessary"							,group:0	,accr:0},
 {que:"苦い"					,ans:"くるしい"				,tip:"painful"								,group:0	,accr:0},
