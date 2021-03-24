@@ -10,7 +10,7 @@ var QAList = new Array(
 {que:"止まる"				,ans:"とまる"				,tip:"(something) stop"						,group:4	,accr:0},
 {que:"売る"					,ans:"うる"					,tip:"to sell"								,group:5	,accr:0},
 {que:"買う"					,ans:"かう"					,tip:"to buy"								,group:5	,accr:0},
-{que:"起きる"				,ans:"おきる"				,tip:"to get up"							,group:6	,accr:0},
+{que:"起きる"				,ans:"おきる"				,tip:"(something) get up"					,group:6	,accr:0},
 {que:"寝る"					,ans:"ねる"					,tip:"go to bed"							,group:6	,accr:0},
 {que:"押す"					,ans:"おす"					,tip:"to push"								,group:7	,accr:0},
 {que:"引く"					,ans:"ひく"					,tip:"pull/draw"							,group:7	,accr:0},
