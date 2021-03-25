@@ -1,11 +1,11 @@
 var questNum = 1;
 var questStack = new Array();
-var unshiftRemain = 0;
 var accurateLevel = 85;	// always pushed when less level(%)
 var cookieKeyhead = "ac";
 var accMode = 0;	//1:Kanji 0:Last
 var versionKeyhead = "verd";
 var params = QAList[QAList.length-1];
+var correctionMode = false;
 
 function initailStack()
 {
@@ -74,7 +74,6 @@ function getQuestion()
 		}
 		randomSort();
 		groupGather();
-		unshiftRemain = questStack.length;
 	}
 	
 	setRemain();
@@ -110,6 +109,7 @@ function getQuestion()
 	}
 	document.getElementById("questText").innerHTML = questText;
 	document.getElementById("answerText").innerHTML = QAList[questNum]["tip"];
+	correctionMode = false;
 }
 
 function isKanji(strParam){
@@ -130,7 +130,7 @@ function handleKey(e)
 		
 	if(e.keyCode == 13){
 		if (isCorrect()){
-			if(unshiftRemain > 0){
+			if(correctionMode == false){
 				QAList[questNum]["accr"] = Math.floor((QAList[questNum]["accr"]+100)/2);
 				writeCookie();
 			}
@@ -141,11 +141,11 @@ function handleKey(e)
 			writeCookie();
 			document.getElementById("questText").innerHTML = QAList[questNum]["que"];
 			document.getElementById("answerText").innerHTML = QAList[questNum]["ans"];
+			correctionMode = true;
 			questStack.push(questNum);
 			setRemain();
 		}
 		document.getElementById("inputText").value = "";
-		unshiftRemain = unshiftRemain-1;
 	}
 }
 
