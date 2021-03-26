@@ -210,6 +210,7 @@ function writeCookie()
 
 function readVersion(lastVer)
 {
+	var isVerChange = false;
 	var accTemp = new Array();
 	for(var i = 0; i < QAList.length-1; i++){
 		accTemp.push(QAList[i]["accr"]);
@@ -217,6 +218,9 @@ function readVersion(lastVer)
 
 	for(var i = 0; i < version_log.length-1; i++){
 		if(version_log[i]["verd"] > lastVer){
+			if(isVerChange == false){
+				isVerChange = true;
+			}
 			var newAcc = new Array();
 			for(var j = 0; j < QAList.length-1; j++){
 				newAcc.push(-1);
@@ -240,6 +244,14 @@ function readVersion(lastVer)
 	
 	for(var i = 0; i < QAList.length-1; i++){
 		QAList[i]["accr"] = accTemp[i];
+	}
+	
+	if(isVerChange == true){
+		for(var i = 0; i < 10; i++){
+			questNum = i;
+			writeCookie();
+		}
+		questNum = 1;
 	}
 }
 
