@@ -46,15 +46,15 @@ if(document.cookie){
 		var khidx = subc[i].indexOf(versionKeyhead);
 		var vhidx = subc[i].indexOf("=");
 		if(khidx != -1){
-		alert();
 			var last_ver = Number(subc[i].slice(vhidx+1));
-			//readVersion(last_ver);
+			readVersion(last_ver);
 		}
 	}
 }
 
 function readVersion(lastVer)
 {
+alert();
 var rsText = "";
 
 
