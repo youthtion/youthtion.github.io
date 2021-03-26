@@ -169,8 +169,8 @@ function readCookie()
 		var subc = document.cookie.split(';');
 		for (var i = 0; i < subc.length; i++){
 			var khidx = subc[i].indexOf(cookieKeyhead);
-			var vhidx = subc[i].indexOf("=");
 			if(khidx != -1){
+				var vhidx = subc[i].indexOf("=");
 				var acchidx = Number(subc[i].substr(khidx+2,1));
 				var accvs = subc[i].substr(vhidx+1);
 				if(accvs.length%2 == 0){
@@ -182,8 +182,9 @@ function readCookie()
 			}
 		}
 		for (var i = 0; i < subc.length; i++){
+			var khidx = subc[i].indexOf(versionKeyhead);
 			var vhidx = subc[i].indexOf("=");
-			if(subc[i].indexOf(versionKeyhead) != -1){
+			if(khidx != -1){
 				var last_ver = Number(subc[i].slice(vhidx+1));
 				readVersion(last_ver);
 			}
@@ -212,12 +213,7 @@ function readVersion(lastVer)
 {
 	var accTemp = new Array();
 	for(var i = 0; i < QAList.length-1; i++){
-		if(QAList[i]["accr"] != 0){
-			accTemp.push(QAList[i]["accr"]);
-		}
-		else{
-			accTemp.push(0);
-		}
+		accTemp.push(QAList[i]["accr"]);
 	}
 
 	for(var i = 0; i < version_log.length-1; i++){
