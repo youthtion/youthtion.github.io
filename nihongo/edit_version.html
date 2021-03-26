@@ -65,7 +65,6 @@ for(var i = 0; i < QAList.length-1; i++){
 	rsText += QAList[i]["que"]+" "+accTemp[i]+"<br>";
 }
 rsText += "<br>";
-alert(1);
 //
 	for(var i = 0; i < version_log.length-1; i++){
 		if(version_log[i]["verd"] > lastVer){
@@ -73,13 +72,13 @@ alert(1);
 			for(var j = 0; j < QAList.length-1; j++){
 				newAcc.push(-1);
 			}
-/*
+//
 rsText += "newAcc0:<br>";
 for(var i = 0; i < QAList.length-1; i++){
 	rsText += QAList[i]["que"]+" "+newAcc[i]+"<br>";
 }
 rsText += "<br>";
-*/
+//
 			for(var k in version_log[i]["changed"]){
 				newAcc[k] = 0;
 			}
