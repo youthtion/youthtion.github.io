@@ -12,12 +12,11 @@ var cookieKeyhead = "ac";
 var params = QAList[QAList.length-1];
 
 if(document.cookie){
-	var accStack = new Array();
 	var subc = document.cookie.split(';');
 	for (var i = 0; i < subc.length; i++){
 		var khidx = subc[i].indexOf(cookieKeyhead);
-		var vhidx = subc[i].indexOf("=");
 		if(khidx != -1){
+			var vhidx = subc[i].indexOf("=");
 			var acchidx = Number(subc[i].substr(khidx+2,1));
 			var accvs = subc[i].substr(vhidx+1);
 			if(accvs.length%2 == 0){

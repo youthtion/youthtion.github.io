@@ -165,7 +165,6 @@ function isCorrect()
 function readCookie()
 {
 	if(document.cookie){
-		var accStack = new Array();
 		var subc = document.cookie.split(';');
 		for (var i = 0; i < subc.length; i++){
 			var khidx = subc[i].indexOf(cookieKeyhead);
