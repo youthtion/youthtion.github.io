@@ -61,8 +61,8 @@ var rsText = "";
 	}
 //
 rsText += "accTemp0:<br>";
-for(var i = 0; i < QAList.length-1; i++){
-	rsText += QAList[i]["que"]+" "+accTemp[i]+"<br>";
+for(var a = 0; a < QAList.length-1; a++){
+	rsText += QAList[a]["que"]+" "+accTemp[a]+"<br>";
 }
 rsText += "<br>";
 //
@@ -74,46 +74,46 @@ rsText += "<br>";
 			}
 //
 rsText += "newAcc0:<br>";
-for(var i = 0; i < QAList.length-1; i++){
-	rsText += QAList[i]["que"]+" "+newAcc[i]+"<br>";
+for(var a = 0; a < QAList.length-1; a++){
+	rsText += QAList[a]["que"]+" "+newAcc[a]+"<br>";
 }
 rsText += "<br>";
 //
 			for(var k in version_log[i]["changed"]){
 				newAcc[k] = 0;
 			}
-/*
+//
 rsText += "newAcc1:<br>";
-for(var i = 0; i < QAList.length-1; i++){
-	rsText += QAList[i]["que"]+" "+newAcc[i]+"<br>";
+for(var a = 0; a < QAList.length-1; a++){
+	rsText += QAList[a]["que"]+" "+newAcc[a]+"<br>";
 }
 rsText += "<br>";
-*/
+//
 			for(var k in version_log[i]["changed"]){
 				var v = version_log[i]["changed"][k];
 				if(v >= 0){
 					newAcc[v] = accTemp[k];
 				}
 			}
-/*
+//
 rsText += "newAcc2:<br>";
-for(var i = 0; i < QAList.length-1; i++){
-	rsText += QAList[i]["que"]+" "+newAcc[i]+"<br>";
+for(var a = 0; a < QAList.length-1; a++){
+	rsText += QAList[a]["que"]+" "+newAcc[a]+"<br>";
 }
 rsText += "<br>";
-*/
+//
 			for(var j = 0; j < QAList.length-1; j++){
 				if(newAcc[j] >= 0){
 					accTemp[j] = newAcc[j];
 				}
 			}
-/*
+//
 rsText += "accTemp1:<br>";
-for(var i = 0; i < QAList.length-1; i++){
-	rsText += QAList[i]["que"]+" "+accTemp[i]+"<br>";
+for(var a = 0; a < QAList.length-1; a++){
+	rsText += QAList[a]["que"]+" "+accTemp[a]+"<br>";
 }
 rsText += "<br>";
-*/
+//
 		}
 	}
 	
