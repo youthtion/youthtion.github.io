@@ -825,5 +825,10 @@ var QAList = new Array(
 {que:"や＿り"				,ans:"やはり"				,tip:"as I (you) thought/as I told you"		,group:0	,accr:0},
 {que:"や＿＿り"				,ans:"やっぱり"				,tip:"as I (you) thought/as I told you"		,group:0	,accr:0},
 {que:"ゆ＿＿り"				,ans:"ゆっくり"				,tip:"slowly"								,group:0	,accr:0},
+{que:"合図"					,ans:"あいず"				,tip:"a signal"								,group:0	,accr:0},
+{que:"相手"					,ans:"あいて"				,tip:"a companion/a partner"				,group:0	,accr:0},
+{que:"ア＿＿ア"				,ans:"アイデア"				,tip:"an idea"								,group:0	,accr:0},
+{que:"ア＿＿ン"				,ans:"アイロン"				,tip:"an iron"								,group:0	,accr:0},
+{que:"飽きる"				,ans:"あきる"				,tip:"to tire of"							,group:0	,accr:0},
 {space:"＿",verd:2021032918}
 );
