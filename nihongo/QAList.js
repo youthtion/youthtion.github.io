@@ -134,7 +134,7 @@ var QAList = new Array(
 {que:"下さる"				,ans:"くださる"				,tip:"give (honorific)"						,group:0	,accr:0},
 {que:"見物する"				,ans:"けんぶつする"			,tip:"sightseeing"							,group:0	,accr:0},
 {que:"混む/込む"			,ans:"こむ"					,tip:"to be crowed"							,group:0	,accr:0},
-{que:"ご覧になる"			,ans:"ごらんになる"			,tip:"see (honorific)"						,group:0	,accr:0},
+{que:"ご覧になる"			,ans:"ごらんになる"			,tip:"see/inspect(honorific)"				,group:0	,accr:0},
 {que:"探す"					,ans:"さがす"				,tip:"look for"								,group:0	,accr:0},
 {que:"探る"					,ans:"さぐる"				,tip:"search"								,group:0	,accr:0},
 {que:"咲く"					,ans:"さく"					,tip:"bloom"								,group:0	,accr:0},
@@ -775,12 +775,10 @@ var QAList = new Array(
 {que:"も＿と"				,ans:"もっと"				,tip:"more"									,group:0	,accr:0},
 {que:"も＿＿し"				,ans:"もしもし"				,tip:"hello(on the phone)"					,group:0	,accr:0},
 {que:"も＿＿ん"				,ans:"もちろん"				,tip:"of course"							,group:0	,accr:0},
-
 {que:"以下"					,ans:"いか"					,tip:"or less than，not more than"			,group:0	,accr:0},
 {que:"以上"					,ans:"いじょう"				,tip:"more than/over"						,group:0	,accr:0},
 {que:"い＿＿い"				,ans:"いっぱい"				,tip:"fill/full"							,group:0	,accr:0},
 {que:"以内"					,ans:"いない"				,tip:"within"								,group:0	,accr:0},
-{que:"い＿＿ろ"				,ans:"いろいろ"				,tip:"various"								,group:0	,accr:0},
 {que:"員"					,ans:"いん"					,tip:"worker/one who work at"				,group:0	,accr:0},
 {que:"＿ん"					,ans:"うん"					,tip:"yes/alright"							,group:0	,accr:0},
 {que:"大勢"					,ans:"おおぜい"				,tip:"many/great number of"					,group:0	,accr:0},
@@ -791,7 +789,6 @@ var QAList = new Array(
 {que:"お＿＿＿＿＿＿＿＿す"	,ans:"おめでとうございます"	,tip:"Congratulations."						,group:0	,accr:0},
 {que:"か＿＿＿＿＿＿た"		,ans:"かしこまりました"		,tip:"Certainly sir."						,group:0	,accr:0},
 {que:"必ず"					,ans:"かならず"				,tip:"certainly"							,group:0	,accr:0},
-{que:"く＿＿る"				,ans:"くださる"				,tip:"give (polite)"						,group:0	,accr:0},
 {que:"く＿い"				,ans:"くらい"				,tip:"about"								,group:0	,accr:0},
 {que:"ぐ＿い"				,ans:"ぐらい"				,tip:"about"								,group:0	,accr:0},
 {que:"決して"				,ans:"けっして"				,tip:"definitely/by no means/not at all"	,group:0	,accr:0},
@@ -807,7 +804,6 @@ var QAList = new Array(
 {que:"こ＿＿ら"				,ans:"これから"				,tip:"in future/hereafter"					,group:0	,accr:0},
 {que:"ご存じ"				,ans:"ごぞんじ"				,tip:"know"									,group:0	,accr:0},
 {que:"ご＿＿＿＿＿い"		,ans:"ごめんください"		,tip:"Hello! May I come in?"				,group:0	,accr:0},
-{que:"ご＿＿＿＿る"			,ans:"ごらんになる"			,tip:"see/inspect"							,group:0	,accr:0},
 {que:"し＿し"				,ans:"しかし"				,tip:"but"									,group:0	,accr:0},
 {que:"し＿＿り"				,ans:"しっかり"				,tip:"firmly"								,group:0	,accr:0},
 {que:"世話"					,ans:"せわ"					,tip:"take care of"							,group:0	,accr:0},
@@ -829,5 +825,5 @@ var QAList = new Array(
 {que:"や＿り"				,ans:"やはり"				,tip:"as I (you) thought/as I told you"		,group:0	,accr:0},
 {que:"や＿＿り"				,ans:"やっぱり"				,tip:"as I (you) thought/as I told you"		,group:0	,accr:0},
 {que:"ゆ＿＿り"				,ans:"ゆっくり"				,tip:"slowly"								,group:0	,accr:0},
-{space:"＿",verd:2021032618}
+{space:"＿",verd:2021032918}
 );
