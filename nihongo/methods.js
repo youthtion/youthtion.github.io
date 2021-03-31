@@ -6,7 +6,7 @@ var accMode = 0;	//1:Kanji 0:Last
 var versionKeyhead = "verd";
 var params = QAList[QAList.length-1];
 var correctionMode = false;
-var totalQueNum = 0;
+var unshiftRemain = 0;
 
 function initailStack()
 {
@@ -26,7 +26,6 @@ function initailStack()
 			QAList[i]["accr"] = 0;
 		}
 	}
-	totalQueNum = questStack.length;
 }
 
 function randomSort()
@@ -76,10 +75,10 @@ function getQuestion()
 		}
 		randomSort();
 		groupGather();
+		unshiftRemain = questStack.length;
 	}
 	
 	setRemain();
-	totalQueNum = totalQueNum-1;
 	questNum = questStack.shift();
 	
 	var questText = QAList[questNum]["que"];
@@ -133,7 +132,7 @@ function handleKey(e)
 		
 	if(e.keyCode == 13){
 		if (isCorrect()){
-			if(correctionMode == false && totalQueNum >= 0){
+			if(correctionMode == false && unshiftRemain > 0){
 				QAList[questNum]["accr"] = Math.floor((QAList[questNum]["accr"]+100)/2);
 				writeCookie();
 			}
@@ -149,6 +148,7 @@ function handleKey(e)
 			setRemain();
 		}
 		document.getElementById("inputText").value = "";
+		unshiftRemain = unshiftRemain-1;
 	}
 }
 
