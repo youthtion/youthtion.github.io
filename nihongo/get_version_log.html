@@ -13,8 +13,8 @@ var checkDumplicate = "";
 for(var i = 0; i < QAList.length-1; i++){
 	for(var j = i+1; j < QAList.length-1; j++){
 		if(QAList[i]["ans"] == QAList[j]["ans"]){// && QAList[i]["ans"] == QAList[j]["ans"] && QAList[i]["tip"] == QAList[j]["tip"]){
-			checkDumplicate += "DUMPLICATE:"+QAList[i]["que"]+" "+QAList[i]["ans"]+" "+QAList[i]["tip"]+"<br>";
-			checkDumplicate += "DUMPLICATE:"+QAList[j]["que"]+" "+QAList[j]["ans"]+" "+QAList[j]["tip"]+"<br>";
+			checkDumplicate += "DUMPLICATE["+i+"]:"+QAList[i]["que"]+" "+QAList[i]["ans"]+" "+QAList[i]["tip"]+"<br>";
+			checkDumplicate += "DUMPLICATE["+j+"]:"+QAList[j]["que"]+" "+QAList[j]["ans"]+" "+QAList[j]["tip"]+"<br>";
 		}
 	}
 }
