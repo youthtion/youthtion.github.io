@@ -295,7 +295,7 @@ var QAList = new Array(
 {que:"よ＿＿い"				,ans:"よろしい"				,tip:"good"									,group:0	,accr:0},
 //-----------------------------------------------------N-----------------------------------------------------
 {que:"明後日"				,ans:"あさって"				,tip:"the day after tomorrow"				,group:1001	,accr:0},
-{que:"明日"					,ans:"あした"				,tip:"tomorrow"								,group:1001	,accr:0},
+{que:"明日(＿＿＿)"			,ans:"あした"				,tip:"tomorrow"								,group:1001	,accr:0},
 {que:"一昨日"				,ans:"おととい"				,tip:"the day before yesterday"				,group:1001	,accr:0},
 {que:"昨日"					,ans:"きのう"				,tip:"yesterday"							,group:1001	,accr:0},
 {que:"今日"					,ans:"きょう"				,tip:"today"								,group:1001	,accr:0},
@@ -834,7 +834,7 @@ var QAList = new Array(
 {que:"麻"					,ans:"あさ"					,tip:"a hemp"								,group:0	,accr:0},
 {que:"浅い"					,ans:"あさい"				,tip:"shallow"								,group:0	,accr:0},
 {que:"足首"					,ans:"あしくび"				,tip:"an ankle"								,group:0	,accr:0},
-{que:"明日"					,ans:"あす"					,tip:"tomorrow"								,group:0	,accr:0},
+{que:"明日(＿＿)"			,ans:"あす"					,tip:"tomorrow"								,group:0	,accr:0},
 {que:"預かる"				,ans:"あずかる"				,tip:"keep/look after something"			,group:0	,accr:0},
 {que:"遊び"					,ans:"あそび"				,tip:"to play/to have fun"					,group:0	,accr:0},
 {que:"与える"				,ans:"あたえる"				,tip:"to give"								,group:0	,accr:0},
