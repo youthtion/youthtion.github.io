@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<div id='remainText'>
+合図	あいず	a signal
+相手	あいて	a companion; a partner
+アイデア	 	an idea
+アイロン	 	an iron
+合う	あう	to match
+飽きる	あきる	to tire 《of》
+空く	あく	to be empty
+握手	あくしゅ	shaking hands; a handshake
+アクション	 	action
+顎	あご	chin
+麻	あさ	a hemp
+浅い	あさい	shallow
+足首	あしくび	an ankle
+明日	あす	tomorrow
+預かる	あずかる	keep; look after something 《for somebody》
+遊び	あそび	to play;to have fun
+与える	あたえる	to give
+暖まる	あたたまる	to be warmed
+辺り	あたり	around
+当たり前	あたりまえ	common sense
+あっという間に	あっというまに	in [like] a flash
+アップ	 	up
+集まり	あつまり	a crowd
+宛名	あてな	an addressee
+当てる	あてる	to guess;to hit ;to allot
+アドバイス	 	to advice 
+穴	あな	a hole
+アナウンサー	 	an announcer
+アナウンス	 	an announcement
+アニメ	 	an animation
+脂	あぶら	an oil
+アマチュア	 	amature
+争う	あらそう	to compete;to argue; to dispute
+表す	あらわす	to express; to be shown
+アルバム	 	an album
+合わせる	あわせる	to put [bring] together
+慌てる	あわてる	to be confused; be flustered; be flurried
+案外	あんがい	unexpected
+アンケート	 	a questionnaire
+意外	いがい	unexpected
+怒り	いかり	an anger
+以後	いご	later
+イコール	 	equal 
+医師	いし	a doctor
+苛める	いじめる	to persecute （people）;to bully
+意地悪	いじわる	
+以前	いぜん	before
+悪戯	いたずら	mischief; an escapade
+傷める	いためる	to hurt
+一度に	いちどに	at once
+一生	いっしょう	one’s (whole) life
+一体	いったい	on earth (e.g. “who on earth?”) 
+いっぱい	 	to be filled up
+いつのまにか	 	Before one knows
+命	いのち	a life
+祈る	いのる	to pray
+居間	いま	a living room
+イメージ	 	image
+苛々	いらいら	a fretfulness, a fussines
+医療費	いりょうひ	a medical expenses; a doctor’s bill
+祝う	いわう	to celebrate
+インク	 	ink
+印象	いんしょう	impression
+インスタント	 	instant 
+インターネット	 	internet
+インタビュー	 	interview
+ウイルス	 	a virus
+ウェーター	 	a waiter
+ウェートレス	 	a waitress 
+うっかり	 	carelessly
+映る	うつる	 be reflected [mirrored] 《in》
+美味い	うまい	delicious
+埋まる	うまる	to be filled (up) 《with》 
+産む	うむ	to bear
+羨ましい	うらやましい	jealously, enviously, covetously
+上着	うわぎ	a outer wear 
+噂	うわさ	a rumour
+運賃	うんちん	a fare
+運転士	うんてんし	a driver; train driver
+エアコン	 	an air‐conditioning
+影響	えいきょう	(an) influence
+栄養	えいよう	a nutrition
+描く	えがく	to draw
+駅員	えきいん	a station employee
+エッセー	 	an essay 
+エネルギー	 	an energy
+襟	えり	the neck
+演歌	えんか	a (traditional‐style) Japanese popular song
+演劇	えんげき	a theatrical performance
+エンジニア	 	an engineer
+演奏	えんそう	a (musical) performance
+遠慮	えんりょ	reserve
+追い越す	おいこす	to  pass; to get ahead of somebody
+応援	おうえん	an aid; assistance; a support
+オープン	 	to open
+可笑しい	おかしい	funny;strange
+奢る	おごる	to treat somebody to something
+押さえる	おさえる	to press
+お辞儀	おじぎ	to bow
+</div>
+<script>
+var sectionTabs = new Array(7,7,11,3,0);
+var tabKey = "\\\\t";
+var tabSize = 4;
+var spaceText = "＿";
+
+var readStr = document.getElementById("remainText").innerHTML;
+var subc = readStr.split(/[\t\f\r\n]/);
+var catStrs = "";
+var tempStr = new Array();
+for (var i = 1; i < subc.length; i+=3){
+	tempStr = new Array();
+	if (subc[i+1] == " "){
+		var newText = "";
+		if(subc[i].length == 1){
+			newText = spaceText;
+		}
+		else{
+			newText += subc[i].slice(0, 1);
+			for(var j = 1; j < subc[i].length-1; j++){
+				newText += spaceText;
+			}
+			newText += subc[i].slice(-1);
+		}
+		tempStr.push('{que:"'+newText+'"');
+		tempStr.push(',ans:"'+subc[i]+'"');
+	}
+	else{
+		tempStr.push('{que:"'+subc[i]+'"');
+		tempStr.push(',ans:"'+subc[i+1]+'"');
+	}
+	tempStr.push(',tip:"'+subc[i+2]+'"');
+	tempStr.push(',group:0');
+	tempStr.push(',accr:0},');
+	for(var j = 0; j < tempStr.length; j++){
+		catStrs += tempStr[j];
+		catStrs += getTabKey(j);
+	}
+	catStrs += "<br>";
+}
+document.getElementById("remainText").innerHTML = catStrs;
+
+function getTabKey(tidx)
+{
+	var word_size = 0;
+	for(var i = 0; i < tempStr[tidx].length; i++){
+		var tstr = tempStr[tidx].substr(i, 1);
+		if(isHalfSize(tstr)){
+			word_size++;
+		}
+		else{
+			word_size+=2;
+		}
+	}
+	
+	var needs_num = sectionTabs[tidx]-Math.floor(word_size/tabSize);
+	var res_str = "";
+	for(var i = 0; i < needs_num; i++){
+		res_str += tabKey;
+	}
+	return res_str;
+}
+
+function isHalfSize(strParam){
+    var unicode = strParam.charCodeAt(0);
+    if (unicode>=0x0000 && unicode<=0x00ff)
+		return true;
+    return false;
+}
+</script>
+</body>
+</html>

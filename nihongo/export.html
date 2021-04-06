@@ -68,6 +68,7 @@
 var sectionTabs = new Array(7,7,11,3,0);
 var tabKey = "\\\\t";
 var tabSize = 4;
+var spaceText = "＿";
 
 var readStr = document.getElementById("remainText").innerHTML;
 var subc = readStr.split(/[\t\f\r\n]/);
@@ -75,7 +76,23 @@ var catStrs = "";
 var tempStr = new Array();
 for (var i = 1; i < subc.length; i+=4){
 	tempStr = new Array();
-	tempStr.push('{que:"'+subc[i+2]+'"');
+	if (subc[i+2] == " "){
+		var newText = "";
+		if(subc[i].length == 1){
+			newText = spaceText;
+		}
+		else{
+			newText += subc[i].slice(0, 1);
+			for(var j = 1; j < subc[i].length-1; j++){
+				newText += spaceText;
+			}
+			newText += subc[i].slice(-1);
+		}
+		tempStr.push('{que:"'+newText+'"');
+	}
+	else{
+		tempStr.push('{que:"'+subc[i+2]+'"');
+	}
 	tempStr.push(',ans:"'+subc[i]+'"');
 	tempStr.push(',tip:"'+subc[i+3]+'"');
 	tempStr.push(',group:0');
