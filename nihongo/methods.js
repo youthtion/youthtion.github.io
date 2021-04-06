@@ -274,13 +274,13 @@ function changeBody()
 {
 	var windowHei = window.innerHeight;
 	
-	document.getElementById("remainText").style.fontSize = ""+windowHei*0.036+"px";
+	document.getElementById("remainText").style.fontSize = ""+windowHei*0.024+"px";
 	document.getElementById("remainText").style.letterSpacing = ""+windowHei*0.008+"px";
-	document.getElementById("questText").style.fontSize = ""+windowHei*0.048+"px";
+	document.getElementById("questText").style.fontSize = ""+windowHei*0.030+"px";
 	document.getElementById("questText").style.letterSpacing = ""+windowHei*0.008+"px";
-	document.getElementById("answerText").style.fontSize = ""+windowHei*0.048+"px";
+	document.getElementById("answerText").style.fontSize = ""+windowHei*0.030+"px";
 	document.getElementById("answerText").style.letterSpacing = ""+windowHei*0.008+"px";
-	document.getElementById("inputText").style.fontSize = ""+windowHei*0.048+"px";
+	document.getElementById("inputText").style.fontSize = ""+windowHei*0.030+"px";
 	document.getElementById("inputText").style.letterSpacing = ""+windowHei*0.008+"px";
 
 	adjustPos(document.getElementById("remainText"));
