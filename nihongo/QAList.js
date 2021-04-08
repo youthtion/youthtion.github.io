@@ -951,7 +951,7 @@ var QAList = new Array(
 {que:"歌劇"					,ans:"かげき"					,tip:"an opera"									,group:0	,accr:0},
 {que:"掛け算"				,ans:"かけざん"					,tip:"multiplication"							,group:0	,accr:0},
 {que:"囲む"					,ans:"かこむ"					,tip:"to surround/to encircle/to encompass"		,group:0	,accr:0},
-{que:"重ねる"				,ans:"かこむ"					,tip:"to lay one upon another"					,group:0	,accr:0},
+{que:"重ねる"				,ans:"かさねる"					,tip:"to lay one upon another"					,group:0	,accr:0},
 {que:"飾り"					,ans:"かざり"					,tip:"a decoration"								,group:0	,accr:0},
 {que:"貸し"					,ans:"かし"						,tip:"to loan"									,group:0	,accr:0},
 {que:"数える"				,ans:"かぞえる"					,tip:"to count"									,group:0	,accr:0},
