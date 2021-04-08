@@ -59,6 +59,8 @@ var QAList = new Array(
 {que:"輸入する"				,ans:"ゆにゅうする"				,tip:"import"									,group:26	,accr:0},
 {que:"会う"					,ans:"あう"						,tip:"to meet"									,group:27	,accr:0},
 {que:"別れる"				,ans:"わかれる"					,tip:"separate"									,group:27	,accr:0},
+{que:"片付ける"				,ans:"かたづける"				,tip:"put in order/tidy up"						,group:28	,accr:0},
+{que:"片付く"				,ans:"かたづく"					,tip:"(something) put in order"					,group:28	,accr:0},
 {que:"あ＿る"				,ans:"あげる"					,tip:"to give"									,group:0	,accr:0},
 {que:"遊ぶ"					,ans:"あそぶ"					,tip:"to have fun/to play"						,group:0	,accr:0},
 {que:"洗う"					,ans:"あらう"					,tip:"to wash"									,group:0	,accr:0},
@@ -124,7 +126,6 @@ var QAList = new Array(
 {que:"思う"					,ans:"おもう"					,tip:"think"									,group:0	,accr:0},
 {que:"か＿る"				,ans:"かかる"					,tip:"take (time)/cost"							,group:0	,accr:0},
 {que:"飾る"					,ans:"かざる"					,tip:"decorate"									,group:0	,accr:0},
-{que:"片付ける"				,ans:"かたづける"				,tip:"put in order/tidy up"						,group:0	,accr:0},
 {que:"変わる"				,ans:"かわる"					,tip:"change"									,group:0	,accr:0},
 {que:"考える"				,ans:"かんがえる"				,tip:"consider/think"							,group:0	,accr:0},
 {que:"聞こえる"				,ans:"きこえる"					,tip:"audible/can hear"							,group:0	,accr:0},
@@ -957,7 +958,6 @@ var QAList = new Array(
 {que:"型"					,ans:"かた"						,tip:"a type"									,group:0	,accr:0},
 {que:"固い"					,ans:"かたい"					,tip:"hard"										,group:0	,accr:0},
 {que:"課題"					,ans:"かだい"					,tip:"a topic"									,group:0	,accr:0},
-{que:"片付く"				,ans:"かたづく"					,tip:"to be put in order"						,group:0	,accr:0},
 {que:"勝ち"					,ans:"かち"						,tip:"a win"									,group:0	,accr:0},
 {que:"カ＿プ"				,ans:"カップ"					,tip:"a cup"									,group:0	,accr:0},
 {que:"カ＿＿ル"				,ans:"カップル"					,tip:"lovers"									,group:0	,accr:0},
@@ -1011,5 +1011,5 @@ var QAList = new Array(
 {que:"禁止"					,ans:"きんし"					,tip:"a prohibition/an inhibition/a ban"		,group:0	,accr:0},
 {que:"緊張"					,ans:"きんちょう"				,tip:"a strain/tension"							,group:0	,accr:0},
 {que:"ク＿ズ"				,ans:"クイズ"					,tip:"a quiz"									,group:0	,accr:0},
-{space:"＿",verd:2021040815}
+{space:"＿",verd:2021040816}
 );
