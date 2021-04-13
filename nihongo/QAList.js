@@ -816,7 +816,6 @@ var QAList = new Array(
 {que:"か＿＿＿＿＿＿た"		,ans:"かしこまりました"			,tip:"Certainly sir."							,group:0	,accr:0},
 {que:"必ず"					,ans:"かならず"					,tip:"certainly/ever/always"					,group:0	,accr:0},
 {que:"く＿い"				,ans:"くらい"					,tip:"about"									,group:0	,accr:0},
-{que:"ぐ＿い"				,ans:"ぐらい"					,tip:"about"									,group:0	,accr:0},
 {que:"決して"				,ans:"けっして"					,tip:"by no means/never/in no way"				,group:0	,accr:0},
 {que:"け＿ど"				,ans:"けれど"					,tip:"but/however"								,group:0	,accr:0},
 {que:"け＿＿も"				,ans:"けれども"					,tip:"but/however"								,group:0	,accr:0},
@@ -1103,5 +1102,7 @@ var QAList = new Array(
 {que:"事件"					,ans:"じけん"					,tip:"a life‐and‐death matter (affair)"			,group:0	,accr:0},
 {que:"四捨五入"				,ans:"ししゃごにゅう"			,tip:"round off (to the nearest whole number)"	,group:0	,accr:0},
 {que:"支出"					,ans:"ししゅつ"					,tip:"an expense"								,group:0	,accr:0},
-{space:"＿",verd:2021041315}
+{que:"詩人"					,ans:"しじん"					,tip:"a poet"									,group:0	,accr:0},
+{que:"自信"					,ans:"じしん"					,tip:"a confidence"								,group:0	,accr:0},
+{space:"＿",verd:2021041316}
 );
