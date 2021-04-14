@@ -1027,7 +1027,7 @@ var QAList = new Array(
 {que:"暮れ"					,ans:"くれ"						,tip:"nightfall/dusk/twilight"					,group:0	,accr:0},
 {que:"詳しい"				,ans:"くわしい"					,tip:"full/detailed/minute"						,group:0	,accr:0},
 {que:"毛"					,ans:"け"						,tip:"a hair"									,group:0	,accr:0},
-{que:"経営"					,ans:"けいかく"					,tip:"management/administration "				,group:0	,accr:0},
+{que:"経営"					,ans:"けいえい"					,tip:"management/administration "				,group:0	,accr:0},
 {que:"蛍光灯"				,ans:"けいこうとう"				,tip:"a fluorescent light (lamp)"				,group:0	,accr:0},
 {que:"計算"					,ans:"けいさん"					,tip:"calculation"								,group:0	,accr:0},
 {que:"芸術"					,ans:"げいじゅつ"				,tip:"an art"									,group:0	,accr:0},
