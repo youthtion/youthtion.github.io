@@ -826,7 +826,7 @@ var QAList = new Array(
 {que:"＿と"					,ans:"こと"						,tip:"thing"									,group:0	,accr:0},
 {que:"こ＿＿＿だ"			,ans:"このあいだ"				,tip:"the other day/a few days ago"				,group:0	,accr:0},
 {que:"こ＿＿ろ"				,ans:"このごろ"					,tip:"nowadays"									,group:0	,accr:0},
-{que:"こ＿＿ら"				,ans:"これから"					,tip:"in future/hereafter"						,group:0	,accr:0},
+{que:"こ＿＿ら"				,ans:"これから"					,tip:"hereafter"								,group:0	,accr:0},
 {que:"ご存じ"				,ans:"ごぞんじ"					,tip:"know"										,group:0	,accr:0},
 {que:"ご＿＿＿＿＿い"		,ans:"ごめんください"			,tip:"Hello! May I come in?"					,group:0	,accr:0},
 {que:"し＿し"				,ans:"しかし"					,tip:"but"										,group:0	,accr:0},
