@@ -1130,7 +1130,7 @@ var QAList = new Array(
 {que:"宗教"					,ans:"しゅうきょう"				,tip:"religion"									,group:0	,accr:0},
 {que:"就職"					,ans:"しゅうしょく"				,tip:"find work"								,group:0	,accr:0},
 {que:"渋滞"					,ans:"じゅうたい"				,tip:"delay"									,group:0	,accr:0},
-{que:"絨毯"					,ans:"じゅんたん"				,tip:"a carpet"									,group:0	,accr:0},
+{que:"絨毯"					,ans:"じゅうたん"				,tip:"a carpet"									,group:0	,accr:0},
 {que:"週末"					,ans:"しゅうまつ"				,tip:"weekend"									,group:0	,accr:0},
 {que:"重要"					,ans:"じゅうよう"				,tip:"an inmportance"							,group:0	,accr:0},
 {que:"修理"					,ans:"しゅうり"					,tip:"repair(s)/mending/a refit"				,group:0	,accr:0},
