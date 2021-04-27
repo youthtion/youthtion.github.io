@@ -1137,7 +1137,7 @@ var QAList = new Array(
 {que:"授業料"				,ans:"じゅぎょうりょう"			,tip:"lesson fee"								,group:0	,accr:0},
 {que:"手術"					,ans:"しゅじゅつ"				,tip:"an (a surgical) operation"				,group:0	,accr:0},
 {que:"主人"					,ans:"しゅじん"					,tip:" the master (of a house)"					,group:0	,accr:0},
-{que:"手段"					,ans:"しゅつじょう"				,tip:"a means/a way/a measure/a step"			,group:0	,accr:0},
+{que:"手段"					,ans:"しゅだん"					,tip:"a means/a way/a measure/a step"			,group:0	,accr:0},
 {que:"出場"					,ans:"しゅつじょう"				,tip:"participation"							,group:0	,accr:0},
 {que:"種類"					,ans:"しゅるい"					,tip:"a kind"									,group:0	,accr:0},
 {que:"順番"					,ans:"じゅんばん"				,tip:"order/turn/rotation"						,group:0	,accr:0},
