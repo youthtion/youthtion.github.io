@@ -1,0 +1,33 @@
+body{
+	overflow: hidden;
+}
+#remainText{
+	position:absolute;
+	text-align:center;
+	width:100%;
+	top:5%;
+	color:white;
+}
+#questText{
+	position:absolute;
+	text-align:center;
+	width:100%;
+	top:15%;
+	color:white;
+}
+#answerText{
+	position:absolute;
+	text-align:center;
+	width:100%;
+	top:25%;
+	color:white;
+}
+#inputText{
+	position:absolute;
+	text-align:center;
+	left:5%;
+	width:90%;
+	height:8%;
+	top:35%;
+	color:gray;
+}
