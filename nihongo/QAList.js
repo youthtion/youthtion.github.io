@@ -1281,7 +1281,7 @@ var QAList = new Array(
 {que:"潰す"					,ans:"つぶす"					,tip:"to crush/smash/squash/mash"				,group:0	,accr:0},
 {que:"爪先"					,ans:"つまさき"					,tip:"a toe"									,group:0	,accr:0},
 {que:"積もる"				,ans:"つもる"					,tip:"to heap pile up/accumulate"				,group:0	,accr:0},
-{que:"梅雨"					,ans:"つゆ+A472"				,tip:"the rainy wet season"						,group:0	,accr:0},
+{que:"梅雨"					,ans:"つゆ"						,tip:"the rainy wet season"						,group:0	,accr:0},
 {que:"テ＿＿＿＿ツ"			,ans:"ティーシャツ"				,tip:"T-shirts"									,group:0	,accr:0},
 {space:"＿",verd:2021050718}
 );
