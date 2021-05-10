@@ -1238,7 +1238,7 @@ var QAList = new Array(
 {que:"退職"					,ans:"たいしょく"				,tip:"retirement/resignation"					,group:0	,accr:0},
 {que:"態度"					,ans:"たいど"					,tip:"One's attitube"							,group:0	,accr:0},
 {que:"タ＿＿ル"				,ans:"タイトル"					,tip:"a title"									,group:0	,accr:0},
-{que:"ダ＿＿＿グ"			,ans:"ダインング"				,tip:"a timing"									,group:0	,accr:0},
+{que:"タ＿＿＿グ"			,ans:"タイミング"				,tip:"a timing"									,group:0	,accr:0},
 {que:"代表"					,ans:"だいひょう"				,tip:"representation"							,group:0	,accr:0},
 {que:"大分"					,ans:"だいぶ"					,tip:"very/greatly"								,group:0	,accr:0},
 {que:"タ＿プ"				,ans:"タイプ"					,tip:"a type"									,group:0	,accr:0},
