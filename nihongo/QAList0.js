@@ -367,6 +367,8 @@ var QAList0 = new Array(
 {que:"女"					,ans:"おんな"					,tip:"woman"									,group:1013	,accr:0},
 {que:"男の子"				,ans:"おとこのこ"				,tip:"boy"										,group:1013	,accr:0},
 {que:"女の子"				,ans:"おんなのこ"				,tip:"girl"										,group:1013	,accr:0},
+{que:"掛け算"				,ans:"かけざん"					,tip:"multiplication"							,group:1014	,accr:0},
+{que:"足し算"				,ans:"たしざん"					,tip:"addition"									,group:1014	,accr:0},
 {que:"朝"					,ans:"あさ"						,tip:"morning"									,group:0	,accr:0},
 {que:"朝御飯"				,ans:"あさごはん"				,tip:"breakfast"								,group:0	,accr:0},
 {que:"足"					,ans:"あし"						,tip:"leg/foot"									,group:0	,accr:0},
@@ -953,7 +955,6 @@ var QAList0 = new Array(
 {que:"確認"					,ans:"かくにん"					,tip:"a confirmation"							,group:0	,accr:0},
 {que:"学歴"					,ans:"がくれき"					,tip:"one's educational background"				,group:0	,accr:0},
 {que:"歌劇"					,ans:"かげき"					,tip:"an opera"									,group:0	,accr:0},
-{que:"掛け算"				,ans:"かけざん"					,tip:"multiplication"							,group:0	,accr:0},
 {que:"飾り"					,ans:"かざり"					,tip:"a decoration"								,group:0	,accr:0},
 {que:"貸し"					,ans:"かし"						,tip:"to loan"									,group:0	,accr:0},
 {que:"型"					,ans:"かた"						,tip:"a type"									,group:0	,accr:0},
@@ -1251,7 +1252,6 @@ var QAList0 = new Array(
 {que:"炊く"					,ans:"たく"						,tip:"To boil/to cook"							,group:0	,accr:0},
 {que:"抱く"					,ans:"だく"						,tip:"hold take (a child) in one's arms"		,group:0	,accr:0},
 {que:"宅配便"				,ans:"たくはいびん"				,tip:"home delivery service"					,group:0	,accr:0},
-{que:"足し算"				,ans:"たしざん"					,tip:"addition"									,group:0	,accr:0},
 {que:"畳む"					,ans:"たたむ"					,tip:"to fold (up)"								,group:0	,accr:0},
 {que:"騙す"					,ans:"だます"					,tip:"to cheat"									,group:0	,accr:0},
 {que:"溜まる"				,ans:"たまる"					,tip:"To accumulate/to collect"					,group:0	,accr:0},
@@ -1283,5 +1283,5 @@ var QAList0 = new Array(
 {que:"積もる"				,ans:"つもる"					,tip:"to heap pile up/accumulate"				,group:0	,accr:0},
 {que:"梅雨"					,ans:"つゆ"						,tip:"the rainy wet season"						,group:0	,accr:0},
 {que:"テ＿＿＿＿ツ"			,ans:"ティーシャツ"				,tip:"T-shirts"									,group:0	,accr:0},
-{space:"＿",verd:2021050718}
+{space:"＿",verd:2021051015}
 );
