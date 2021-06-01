@@ -136,11 +136,13 @@ function handleKey(e)
 				QAList[questNum]["accr"] = Math.floor((QAList[questNum]["accr"]+100)/2);
 				writeCookie();
 			}
+			else if(unshiftRemain <= 0){
+				QAList[questNum]["accr"] = 0;
+				writeCookie();
+			}
 			getQuestion();
 		}
 		else{
-			QAList[questNum]["accr"] = 0;
-			writeCookie();
 			document.getElementById("questText").innerHTML = QAList[questNum]["que"];
 			document.getElementById("answerText").innerHTML = QAList[questNum]["ans"];
 			correctionMode = true;
