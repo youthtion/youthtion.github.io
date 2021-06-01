@@ -1313,7 +1313,7 @@ var QAList = new Array(
 {que:"そ＿＿も"				,ans:"それとも"					,tip:"or"										,group:0	,accr:0},
 {que:"揃う"					,ans:"そろう"					,tip:"make a pair set"							,group:0	,accr:0},
 {que:"対"					,ans:"たい"						,tip:"companion/pendant/match"					,group:0	,accr:0},
-{que:"退学"					,ans:"たいがく"					,tip:"leave give up, withdraw from school"		,group:0	,accr:0},
+{que:"退学"					,ans:"たいがく"					,tip:"leave give up/withdraw from school"		,group:0	,accr:0},
 {que:"大学院"				,ans:"だいがくいん"				,tip:"a graduate school"						,group:0	,accr:0},
 {que:"大工"					,ans:"だいく"					,tip:"a carpenter"								,group:0	,accr:0},
 {que:"退屈な"				,ans:"たいくつな"				,tip:"boring"									,group:0	,accr:0},
