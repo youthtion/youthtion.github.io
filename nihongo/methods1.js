@@ -133,7 +133,7 @@ function handleKey(e)
 	if(e.keyCode == 13){
 		if (isCorrect()){
 			if(correctionMode == false && unshiftRemain > 0){
-				QAList[questNum]["accr"] = accurateLevel;
+				QAList[questNum]["accr"] = 99;
 				writeCookie();
 			}
 			else if(unshiftRemain <= 0){
