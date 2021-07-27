@@ -356,7 +356,7 @@ var QAList = new Array(
 {que:"お父さん"				,ans:"おとうさん"				,tip:"(your) father"							,group:1002	,accr:0},
 {que:"お爺さん"				,ans:"おじいさん"				,tip:"(your) grand father"						,group:1002	,accr:0},
 {que:"お婆さん"				,ans:"おばあさん"				,tip:"(your) grand mother"						,group:1002	,accr:0},
-{que:"お子さん"				,ans:"おこさん	"				,tip:"(your) children"							,group:1002	,accr:0},
+{que:"お子さん"				,ans:"おこさん"					,tip:"(your) children"							,group:1002	,accr:0},
 {que:"掛け算"				,ans:"かけざん"					,tip:"multiplication"							,group:1003	,accr:0},
 {que:"足し算"				,ans:"たしざん"					,tip:"addition"									,group:1003	,accr:0},
 {que:"男"					,ans:"おとこ"					,tip:"man"										,group:1004	,accr:0},
