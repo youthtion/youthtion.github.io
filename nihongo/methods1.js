@@ -1,8 +1,12 @@
+// SWITCH
+var accurateLevel = 80;	// always pushed when less level(%)
+var accMode = 0;	//1:Kanji 0:Last
+var expectedFinalStackNum = 200;
+
+// VARIABLE
 var questNum = 1;
 var questStack = new Array();
-var accurateLevel = 85;	// always pushed when less level(%)
 var cookieKeyhead = "ac";
-var accMode = 0;	//1:Kanji 0:Last
 var versionKeyhead = "verd";
 var params = QAList[QAList.length-1];
 var correctionMode = false;
@@ -17,7 +21,7 @@ function initailStack()
 		}
 		else{
 			var randn = Math.floor(Math.random()*100);
-			if(randn >= QAList[i]["accr"]){
+			if(randn >= QAList[i]["accr"] && adjStackNumRand()){
 				questStack.push(i);
 			}
 		}
@@ -26,6 +30,15 @@ function initailStack()
 			QAList[i]["accr"] = 0;
 		}
 	}
+}
+
+function adjStackNumRand()
+{
+	var a = expectedFinalStackNum/QAList.length*100/(100-accurateLevel);
+	var b = Math.random();
+	if(b < a)
+		return true;
+	return false;
 }
 
 function randomSort()
