@@ -1373,7 +1373,7 @@ var QAList = new Array(
 {que:"チ＿＿ク"				,ans:"チェック"					,tip:"a check"									,group:0	,accr:0},
 {que:"地下"					,ans:"ちか"						,tip:"under the ground"							,group:0	,accr:0},
 {que:"近道"					,ans:"ちかみち"					,tip:"a shorter way"							,group:0	,accr:0},
-{que:"地球"					,ans:"ちきゅう"					,tip:"the earth Earth"							,group:0	,accr:0},
+{que:"地球"					,ans:"ちきゅう"					,tip:"the earth/Earth"							,group:0	,accr:0},
 {que:"遅刻"					,ans:"ちこく"					,tip:"be late (for)"							,group:0	,accr:0},
 {que:"チ＿＿ト"				,ans:"チケット"					,tip:"a ticket"									,group:0	,accr:0},
 {que:"知識"					,ans:"ちしき"					,tip:"a knowledge"								,group:0	,accr:0},
