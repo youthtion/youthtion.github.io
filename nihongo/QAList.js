@@ -925,7 +925,7 @@ var QAList = new Array(
 {que:"は＿＿＿＿て"			,ans:"はじめまして"				,tip:"Nice to meet you."						,group:0	,accr:0},
 {que:"半分"					,ans:"はんぶん"					,tip:"half"										,group:0	,accr:0},
 {que:"ほ＿＿＿に"			,ans:"ほんとうに"				,tip:"really"									,group:0	,accr:0},
-{que:"枚"					,ans:"まい"						,tip:"counter for flat things)"					,group:0	,accr:0},
+{que:"枚"					,ans:"まい"						,tip:"counter for flat things"					,group:0	,accr:0},
 {que:"前"					,ans:"まえ"						,tip:"front"									,group:0	,accr:0},
 {que:"前"					,ans:"まえ"						,tip:"ago/before"								,group:0	,accr:0},
 {que:"＿た"					,ans:"また"						,tip:"also/again"								,group:0	,accr:0},
