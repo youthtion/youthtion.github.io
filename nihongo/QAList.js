@@ -753,7 +753,7 @@ var QAList = new Array(
 {que:"ポ＿＿ト"				,ans:"ポケット"					,tip:"pocket"									,group:0	,accr:0},
 {que:"ボ＿ン"				,ans:"ボタン"					,tip:"button"									,group:0	,accr:0},
 {que:"ズ＿ン"				,ans:"ズボン"					,tip:"pants"									,group:0	,accr:0},
-{que:"半ズ＿ン"				,ans:"半ズボン"					,tip:"shorts"									,group:0	,accr:0},
+{que:"半ズ＿ン"				,ans:"はんズボン"					,tip:"shorts"									,group:0	,accr:0},
 {que:"ス＿＿ト"				,ans:"スカート"					,tip:"skirt"									,group:0	,accr:0},
 {que:"ス＿＿パ"				,ans:"スリッパ"					,tip:"slipper"									,group:0	,accr:0},
 //---------------------------------------------------OTHER---------------------------------------------------
