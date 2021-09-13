@@ -753,9 +753,17 @@ var QAList = new Array(
 {que:"ポ＿＿ト"				,ans:"ポケット"					,tip:"pocket"									,group:0	,accr:0},
 {que:"ボ＿ン"				,ans:"ボタン"					,tip:"button"									,group:0	,accr:0},
 {que:"ズ＿ン"				,ans:"ズボン"					,tip:"pants"									,group:0	,accr:0},
-{que:"半ズ＿ン"				,ans:"はんズボン"					,tip:"shorts"									,group:0	,accr:0},
+{que:"半ズ＿ン"				,ans:"はんズボン"				,tip:"shorts"									,group:0	,accr:0},
 {que:"ス＿＿ト"				,ans:"スカート"					,tip:"skirt"									,group:0	,accr:0},
 {que:"ス＿＿パ"				,ans:"スリッパ"					,tip:"slipper"									,group:0	,accr:0},
+{que:"電気製品"				,ans:"でんきせいひん"			,tip:"electric appliances"						,group:0	,accr:0},
+{que:"扇風機"				,ans:"せんぷうき"				,tip:"fan"										,group:0	,accr:0},
+{que:"炬燵"					,ans:"こたつ"					,tip:"kotatsu"									,group:0	,accr:0},
+{que:"テレビ"				,ans:"テレビ"					,tip:"TV set"									,group:0	,accr:0},
+{que:"ビデオ"				,ans:"ビデオ"					,tip:"video"									,group:0	,accr:0},
+{que:"ラジオ"				,ans:"ラジオ"					,tip:"radio"									,group:0	,accr:0},
+{que:"カメラ"				,ans:"カメラ"					,tip:"camera"									,group:0	,accr:0},
+{que:"パソコン"				,ans:"パソコン"					,tip:"personal computer"						,group:0	,accr:0},
 //---------------------------------------------------OTHER---------------------------------------------------
 {que:"い＿＿＿＿い"			,ans:"いらっしゃい"				,tip:"May I help you?"							,group:2001	,accr:0},
 {que:"い＿＿＿＿＿＿せ"		,ans:"いらっしゃいませ"			,tip:"May I help you?"							,group:2001	,accr:0},
@@ -1465,5 +1473,5 @@ var QAList = new Array(
 {que:"ト＿レ"				,ans:"トイレ"					,tip:"toilet"									,group:0	,accr:0},
 {que:"方位"					,ans:"ほうい"					,tip:"direction"								,group:0	,accr:0},
 {que:"近く"					,ans:"ちかく"					,tip:"vicinity"									,group:0	,accr:0},
-{space:"＿",verd:2021091114}
+{space:"＿",verd:2021091315}
 );
