@@ -218,7 +218,7 @@ var QAList = new Array(
 {que:"産む"					,ans:"うむ"						,tip:"to bear"									,group:0	,accr:0},
 {que:"描く"					,ans:"えがく"					,tip:"to draw"									,group:0	,accr:0},
 {que:"追い越す"				,ans:"おいこす"					,tip:"to pass/to get ahead of somebody"			,group:0	,accr:0},
-{que:"思いやる"				,ans:"おもいやる"				,tip:"to think of"								,group:0	,accr:0},
+{que:"思いやる"				,ans:"おもいやる"				,tip:"be considerate"							,group:0	,accr:0},
 {que:"折る"					,ans:"おる"						,tip:"to fold"									,group:0	,accr:0},
 {que:"飼う"					,ans:"かう"						,tip:"to own pet"								,group:0	,accr:0},
 {que:"掻く"					,ans:"かく"						,tip:"to scratch"								,group:0	,accr:0},
