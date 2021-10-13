@@ -124,7 +124,7 @@ function getQuestion()
 	}
 	document.getElementById("questText").innerHTML = questText;
 	document.getElementById("answerText1").innerHTML = QAList[questNum]["tip"];
-	document.getElementById("answerText2").innerHTML = QAList[questNum]["tip"];
+	document.getElementById("answerText2").innerHTML = QAList[questNum]["ch"];
 	correctionMode = false;
 }
 
