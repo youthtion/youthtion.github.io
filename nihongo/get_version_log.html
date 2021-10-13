@@ -13,8 +13,8 @@ var checkDumplicate = "";
 for(var i = 0; i < QAList.length-1; i++){
 	for(var j = i+1; j < QAList.length-1; j++){
 		if(QAList[i]["ans"] == QAList[j]["ans"]){// && QAList[i]["ans"] == QAList[j]["ans"] && QAList[i]["tip"] == QAList[j]["tip"]){
-			checkDumplicate += "DUMPLICATE["+i+"]:"+QAList[i]["que"]+" "+QAList[i]["ans"]+" "+QAList[i]["tip"]+"<br>";
-			checkDumplicate += "DUMPLICATE["+j+"]:"+QAList[j]["que"]+" "+QAList[j]["ans"]+" "+QAList[j]["tip"]+"<br>";
+			checkDumplicate += "DUMPLICATE["+i+"]:"+QAList[i]["que"]+" "+QAList[i]["ans"]+" "+QAList[i]["tip"]+" "+QAList[i]["ch"]+"<br>";
+			checkDumplicate += "DUMPLICATE["+j+"]:"+QAList[j]["que"]+" "+QAList[j]["ans"]+" "+QAList[j]["tip"]+" "+QAList[j]["ch"]+"<br>";
 		}
 	}
 }
@@ -23,7 +23,7 @@ var rsStr = "";
 for(var i = 0; i < QAList0.length-1; i++){
 	var j = 0;
 	for(; j < QAList.length-1; j++){
-		if(QAList0[i]["que"] == QAList[j]["que"] && QAList0[i]["ans"] == QAList[j]["ans"] && QAList0[i]["tip"] == QAList[j]["tip"]){
+		if(QAList0[i]["que"] == QAList[j]["que"] && QAList0[i]["ans"] == QAList[j]["ans"] && QAList0[i]["tip"] == QAList[j]["tip"] && QAList0[i]["ch"] == QAList[j]["ch"]){
 			if(i != j){
 				writeMap(i.toString(), j.toString());
 			}

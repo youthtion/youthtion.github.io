@@ -123,7 +123,8 @@ function getQuestion()
 		questText = newText;
 	}
 	document.getElementById("questText").innerHTML = questText;
-	document.getElementById("answerText").innerHTML = QAList[questNum]["tip"];
+	document.getElementById("answerText1").innerHTML = QAList[questNum]["tip"];
+	document.getElementById("answerText2").innerHTML = QAList[questNum]["tip"];
 	correctionMode = false;
 }
 
@@ -157,7 +158,7 @@ function handleKey(e)
 		}
 		else{
 			document.getElementById("questText").innerHTML = QAList[questNum]["que"];
-			document.getElementById("answerText").innerHTML = QAList[questNum]["ans"];
+			document.getElementById("answerText2").innerHTML = QAList[questNum]["ans"];
 			correctionMode = true;
 			questStack.push(questNum);
 			setRemain();
@@ -293,12 +294,15 @@ function changeBody()
 	document.getElementById("remainText").style.letterSpacing = ""+windowHei*0.008+"px";
 	document.getElementById("questText").style.fontSize = ""+windowHei*0.032+"px";
 	document.getElementById("questText").style.letterSpacing = ""+windowHei*0.008+"px";
-	document.getElementById("answerText").style.fontSize = ""+windowHei*0.032+"px";
-	document.getElementById("answerText").style.letterSpacing = ""+windowHei*0.008+"px";
+	document.getElementById("answerText1").style.fontSize = ""+windowHei*0.032+"px";
+	document.getElementById("answerText1").style.letterSpacing = ""+windowHei*0.008+"px";
+	document.getElementById("answerText2").style.fontSize = ""+windowHei*0.032+"px";
+	document.getElementById("answerText2").style.letterSpacing = ""+windowHei*0.008+"px";
 	document.getElementById("inputText").style.fontSize = ""+windowHei*0.032+"px";
 	document.getElementById("inputText").style.letterSpacing = ""+windowHei*0.008+"px";
 
 	adjustPos(document.getElementById("remainText"));
 	adjustPos(document.getElementById("questText"));
-	adjustPos(document.getElementById("answerText"));
+	adjustPos(document.getElementById("answerText1"));
+	adjustPos(document.getElementById("answerText2"));
 }

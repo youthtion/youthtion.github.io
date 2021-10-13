@@ -13,11 +13,17 @@ body{
 	width:100%;
 	top:15%;
 }
-#answerText{
+#answerText1{
 	position:absolute;
 	text-align:center;
 	width:100%;
 	top:25%;
+}
+#answerText2{
+	position:absolute;
+	text-align:center;
+	width:100%;
+	top:35%;
 }
 #inputText{
 	position:absolute;
@@ -25,5 +31,5 @@ body{
 	left:5%;
 	width:90%;
 	height:8%;
-	top:35%;
+	top:45%;
 }
