@@ -725,7 +725,7 @@ var QAList = new Array(
 {que:"理由"					,ans:"りゆう"					,tip:"reason"									,ch:""					,group:0	,accr:0},
 {que:"利用"					,ans:"りよう"					,tip:"use/take advantage of/make use of"		,ch:""					,group:0	,accr:0},
 {que:"両方"					,ans:"りょうほう"				,tip:"both"										,ch:""					,group:0	,accr:0},
-{que:"旅館"					,ans:"りょかん"					,tip:"ryokan"									,ch:""					,group:0	,accr:0},
+{que:"旅館"					,ans:"りょかん"					,tip:""											,ch:"旅館"				,group:0	,accr:0},
 {que:"留守"					,ans:"るす"						,tip:"out of home"								,ch:""					,group:0	,accr:0},
 {que:"歴史"					,ans:"れきし"					,tip:"history"									,ch:""					,group:0	,accr:0},
 {que:"連絡"					,ans:"れんらく"					,tip:"contacts"									,ch:""					,group:0	,accr:0},
