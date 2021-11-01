@@ -243,8 +243,8 @@ var QAList = new Array(
 {que:"黄色い"				,ans:"きいろい"					,tip:"yellow"									,ch:""					,group:104	,accr:0},
 {que:"忙しい"				,ans:"いそがしい"				,tip:"busy"										,ch:""					,group:105	,accr:0},
 {que:"暇な"					,ans:"ひまな"					,tip:"being bored"								,ch:""					,group:105	,accr:0},
-{que:"良い"					,ans:"いい"						,tip:"good(i)"									,ch:"好的"				,group:106	,accr:0},
-{que:"良い"					,ans:"よい"						,tip:"good(yo)"									,ch:"好的"				,group:106	,accr:0},
+{que:"良い"					,ans:"いい"						,tip:"good(＿＿/よい)"							,ch:"好的(＿＿/よい)"	,group:106	,accr:0},
+{que:"良い"					,ans:"よい"						,tip:"good(いい/＿＿)"							,ch:"好的(いい/＿＿)"	,group:106	,accr:0},
 {que:"悪い"					,ans:"わるい"					,tip:"bad"										,ch:"壞的"				,group:106	,accr:0},	//善い
 {que:"美味しい"				,ans:"おいしい"					,tip:"delicious"								,ch:"美味的"			,group:107	,accr:0},
 {que:"不味い"				,ans:"まずい"					,tip:"bad tasting"								,ch:"難吃的"			,group:107	,accr:0},
