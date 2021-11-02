@@ -337,7 +337,7 @@ var QAList = new Array(
 {que:"柔らかい"				,ans:"やわらかい"				,tip:"soft"										,ch:""					,group:0	,accr:0},
 {que:"よ＿＿い"				,ans:"よろしい"					,tip:"good"										,ch:""					,group:0	,accr:0},
 {que:"よ＿＿い"				,ans:"よろしい"					,tip:"good"										,ch:""					,group:0	,accr:0},
-{que:"色々な"				,ans:"いろいなろ"				,tip:"various"									,ch:"各式各樣的"		,group:0	,accr:0},
+{que:"色々な"				,ans:"いろいろな"				,tip:"various"									,ch:"各式各樣的"		,group:0	,accr:0},
 {que:"同じな"				,ans:"おなじな"					,tip:"same"										,ch:"一樣的/相同的"		,group:0	,accr:0},
 {que:"結構な"				,ans:"けっこうな"				,tip:"well"										,ch:"很好的/很夠的"		,group:0	,accr:0},
 {que:"大変な"				,ans:"たいへんな"				,tip:"very"										,ch:"嚴重/非常的"		,group:0	,accr:0},
