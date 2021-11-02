@@ -295,7 +295,7 @@ var QAList = new Array(
 {que:"上手な"				,ans:"じょうずな"				,tip:"skillful"									,ch:"擅長的/熟練的"		,group:125	,accr:0},
 {que:"下手な"				,ans:"へたな"					,tip:"unskilled"								,ch:"生疏的"			,group:125	,accr:0},
 {que:"上手い"				,ans:"うまい"					,tip:"skillful/good"							,ch:"擅長的/熟練的"		,group:125	,accr:0},
-{que:"ない"					,ans:"ない"						,tip:"no/absent"								,ch:"沒有/無"			,group:0	,accr:0},
+{que:"＿い"					,ans:"ない"						,tip:"no/absent"								,ch:"沒有/無"			,group:0	,accr:0},
 {que:"欲しい"				,ans:"ほしい"					,tip:"wanted/desired"							,ch:"想要的"			,group:0	,accr:0},
 {que:"甘い"					,ans:"あまい"					,tip:"sweet"									,ch:"甜的"				,group:0	,accr:0},
 {que:"嫌な"					,ans:"いやな"					,tip:"disliked/hateful"							,ch:"不想要/討厭的"		,group:0	,accr:0},
