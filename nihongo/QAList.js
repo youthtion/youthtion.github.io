@@ -239,9 +239,14 @@ var QAList = new Array(
 {que:"冷たい"				,ans:"つめたい"					,tip:"cold (heat)"								,ch:"冷的/冷漠的"		,group:102	,accr:0},
 {que:"新しい"				,ans:"あたらしい"				,tip:"new"										,ch:"新的"				,group:103	,accr:0},
 {que:"古い"					,ans:"ふるい"					,tip:"old"										,ch:"舊的"				,group:103	,accr:0},
-{que:"赤い"					,ans:"あかい"					,tip:"red"										,ch:""					,group:104	,accr:0},
-{que:"黄色い"				,ans:"きいろい"					,tip:"yellow"									,ch:""					,group:104	,accr:0},
-{que:"忙しい"				,ans:"いそがしい"				,tip:"busy"										,ch:""					,group:105	,accr:0},
+{que:"青い"					,ans:"あおい"					,tip:"blue"										,ch:"青色的"			,group:104	,accr:0},
+{que:"黒い"					,ans:"くろい"					,tip:"black"									,ch:"黑色的"			,group:104	,accr:0},
+{que:"白い"					,ans:"しろい"					,tip:"white"									,ch:"白色的"			,group:104	,accr:0},
+{que:"暗い"					,ans:"くらい"					,tip:"dark"										,ch:"黑暗的"			,group:104	,accr:0},
+{que:"明るい"				,ans:"あかるい"					,tip:"bright"									,ch:"明亮的"			,group:104	,accr:0},
+{que:"赤い"					,ans:"あかい"					,tip:"red"										,ch:"紅色的"			,group:104	,accr:0},
+{que:"黄色い"				,ans:"きいろい"					,tip:"yellow"									,ch:"黃色的"			,group:104	,accr:0},
+{que:"忙しい"				,ans:"いそがしい"				,tip:"busy"										,ch:"忙碌的"			,group:105	,accr:0},
 {que:"暇な"					,ans:"ひまな"					,tip:"being bored"								,ch:""					,group:105	,accr:0},
 {que:"良い"					,ans:"いい"						,tip:"good(＿＿/よい)"							,ch:"好的(＿＿/よい)"	,group:106	,accr:0},
 {que:"良い"					,ans:"よい"						,tip:"good(いい/＿＿)"							,ch:"好的(いい/＿＿)"	,group:106	,accr:0},
@@ -273,7 +278,7 @@ var QAList = new Array(
 {que:"薄い"					,ans:"うすい"					,tip:"thin"										,ch:"薄的"				,group:117	,accr:0},
 {que:"安全な"				,ans:"あんぜんな"				,tip:"safety"									,ch:""					,group:118	,accr:0},
 {que:"危険な"				,ans:"きけんな"					,tip:"dangerous"								,ch:""					,group:118	,accr:0},
-{que:"危ない"				,ans:"あぶない"					,tip:"dangerous"								,ch:""					,group:118	,accr:0},
+{que:"危ない"				,ans:"あぶない"					,tip:"dangerous"								,ch:"危險的"			,group:118	,accr:0},
 {que:"嬉しい"				,ans:"うれしい"					,tip:"be glad"									,ch:""					,group:119	,accr:0},
 {que:"悲しい"				,ans:"かなしい"					,tip:"sad"										,ch:""					,group:119	,accr:0},
 {que:"深い"					,ans:"ふかい"					,tip:"deep"										,ch:""					,group:120	,accr:0},
@@ -287,27 +292,31 @@ var QAList = new Array(
 {que:"安い"					,ans:"やすい"					,tip:"cheap"									,ch:"便宜的"			,group:124	,accr:0},
 {que:"高い"					,ans:"たかい"					,tip:"high/expensive"							,ch:"昂貴的/高的"		,group:124	,accr:0},
 {que:"低い"					,ans:"ひくい"					,tip:"low"										,ch:"矮的"				,group:124	,accr:0},
+{que:"上手な"				,ans:"じょうずな"				,tip:"skillful"									,ch:"擅長的/熟練的"		,group:125	,accr:0},
+{que:"下手な"				,ans:"へたな"					,tip:"unskilled"								,ch:"生疏的"			,group:125	,accr:0},
+{que:"上手い"				,ans:"うまい"					,tip:"skillful/good"							,ch:"擅長的/熟練的"		,group:125	,accr:0},
+{que:"ない"					,ans:"ない"						,tip:"no/absent"								,ch:"沒有/無"			,group:0	,accr:0},
+{que:"欲しい"				,ans:"ほしい"					,tip:"wanted/desired"							,ch:"想要的"			,group:0	,accr:0},
 {que:"甘い"					,ans:"あまい"					,tip:"sweet"									,ch:"甜的"				,group:0	,accr:0},
-{que:"嫌な"					,ans:"いやな"					,tip:"hateful"									,ch:""					,group:0	,accr:0},
-{que:"明るい"				,ans:"あかるい"					,tip:"bright"									,ch:""					,group:0	,accr:0},	//暗い
-{que:"痛い"					,ans:"いたい"					,tip:"painful"									,ch:""					,group:0	,accr:0},
+{que:"嫌な"					,ans:"いやな"					,tip:"disliked/hateful"							,ch:"不想要/討厭的"		,group:0	,accr:0},
+{que:"嫌いな"				,ans:"きらいな"					,tip:"hateful"									,ch:"討厭的"			,group:0	,accr:0},
+{que:"痛い"					,ans:"いたい"					,tip:"painful"									,ch:"痛苦的"			,group:0	,accr:0},
 {que:"辛い"					,ans:"からい"					,tip:"hot/spicy"								,ch:""					,group:0	,accr:0},	//甘い/苦い
-{que:"可愛い"				,ans:"かわいい"					,tip:"cute"										,ch:""					,group:0	,accr:0},	//憎い
+{que:"可愛い"				,ans:"かわいい"					,tip:"cute"										,ch:"可愛的"			,group:0	,accr:0},	//憎い
 {que:"元気な"				,ans:"げんきな"					,tip:"energy/fine"								,ch:""					,group:0	,accr:0},
 {que:"怖い"					,ans:"こわい"					,tip:"frightening/scary"						,ch:""					,group:0	,accr:0},
-{que:"静かな"				,ans:"しずかな"					,tip:"quiet"									,ch:""					,group:0	,accr:0},	//騒がしい
-{que:"大切な"				,ans:"たいせつな"				,tip:"important"								,ch:""					,group:0	,accr:0},	//粗末
+{que:"静かな"				,ans:"しずかな"					,tip:"quiet"									,ch:"安靜的"			,group:0	,accr:0},	//騒がしい
+{que:"大切な"				,ans:"たいせつな"				,tip:"important"								,ch:"重要的/珍惜的"		,group:0	,accr:0},	//粗末
 {que:"た＿＿い"				,ans:"たいてい"					,tip:"usually"									,ch:""					,group:0	,accr:0},
-{que:"楽しい"				,ans:"たのしい"					,tip:"enjoyable"								,ch:""					,group:0	,accr:0},	//苦しい
-{que:"大好きな"				,ans:"だいすきな"				,tip:"like very much"							,ch:""					,group:0	,accr:0},
-{que:"賑やかな"				,ans:"にぎやかな"				,tip:"lively"									,ch:""					,group:0	,accr:0},	//寂しい/淋しい
-{que:"便利な"				,ans:"べんりな"					,tip:"convenience"								,ch:""					,group:0	,accr:0},	//不便
-{que:"丸い/円い"			,ans:"まるい"					,tip:"round"									,ch:""					,group:0	,accr:0},	//四角い
-{que:"有名な"				,ans:"ゆうめいな"				,tip:"famous"									,ch:""					,group:0	,accr:0},	//無名
-{que:"立派な"				,ans:"りっぱな"					,tip:"splendid"									,ch:""					,group:0	,accr:0},	//粗末/貧弱
-{que:"若い"					,ans:"わかい"					,tip:"young"									,ch:""					,group:0	,accr:0},	//老いた
-{que:"上手い"				,ans:"うまい"					,tip:"skilful/good"								,ch:""					,group:0	,accr:0},
-{que:"う＿＿い"				,ans:"うるさい"					,tip:"noisy"									,ch:""					,group:0	,accr:0},
+{que:"楽しい"				,ans:"たのしい"					,tip:"enjoyable"								,ch:"快樂的"			,group:0	,accr:0},	//苦しい
+{que:"大好きな"				,ans:"だいすきな"				,tip:"like very much"							,ch:"最喜歡的"			,group:0	,accr:0},
+{que:"賑やかな"				,ans:"にぎやかな"				,tip:"lively"									,ch:"熱鬧的"			,group:0	,accr:0},	//寂しい/淋しい
+{que:"便利な"				,ans:"べんりな"					,tip:"convenience"								,ch:"方便的"			,group:0	,accr:0},	//不便
+{que:"丸い/円い"			,ans:"まるい"					,tip:"round"									,ch:"圓的"				,group:0	,accr:0},	//四角い
+{que:"有名な"				,ans:"ゆうめいな"				,tip:"famous"									,ch:"有名的"			,group:0	,accr:0},	//無名
+{que:"立派な"				,ans:"りっぱな"					,tip:"splendid"									,ch:"出色的"			,group:0	,accr:0},	//粗末/貧弱
+{que:"若い"					,ans:"わかい"					,tip:"young"									,ch:"年輕的"			,group:0	,accr:0},	//老いた
+{que:"う＿＿い"				,ans:"うるさい"					,tip:"noisy"									,ch:"吵/囉嗦的"			,group:0	,accr:0},
 {que:"美しい"				,ans:"うつくしい"				,tip:"beautiful"								,ch:""					,group:0	,accr:0},
 {que:"臭い"					,ans:"くさい"					,tip:"smelly"									,ch:""					,group:0	,accr:0},
 {que:"細かい"				,ans:"こまかい"					,tip:"fine"										,ch:""					,group:0	,accr:0},
@@ -327,6 +336,15 @@ var QAList = new Array(
 {que:"珍しい"				,ans:"めずらしい"				,tip:"unusual"									,ch:""					,group:0	,accr:0},
 {que:"柔らかい"				,ans:"やわらかい"				,tip:"soft"										,ch:""					,group:0	,accr:0},
 {que:"よ＿＿い"				,ans:"よろしい"					,tip:"good"										,ch:""					,group:0	,accr:0},
+{que:"よ＿＿い"				,ans:"よろしい"					,tip:"good"										,ch:""					,group:0	,accr:0},
+{que:"色々な"				,ans:"いろいなろ"				,tip:"various"									,ch:"各式各樣的"		,group:0	,accr:0},
+{que:"同じな"				,ans:"おなじな"					,tip:"same"										,ch:"一樣的/相同的"		,group:0	,accr:0},
+{que:"結構な"				,ans:"けっこうな"				,tip:"well"										,ch:"很好的/很夠的"		,group:0	,accr:0},
+{que:"大変な"				,ans:"たいへんな"				,tip:"very"										,ch:"嚴重/非常的"		,group:0	,accr:0},
+{que:"本当な"				,ans:"ほんとうな"				,tip:"really"									,ch:"真的/真實的"		,group:0	,accr:0},
+{que:"大丈夫な"				,ans:"だいじょうぶな"			,tip:"okay/fine"								,ch:"放心的/不要緊"		,group:0	,accr:0},
+{que:"丈夫な"				,ans:"じょうぶな"				,tip:"durable"									,ch:"堅固的/結實的"		,group:0	,accr:0},
+{que:"真っ直ぐな"			,ans:"まっすぐな"				,tip:"straight"									,ch:"筆直的"			,group:0	,accr:0},
 //-----------------------------------------------------N-----------------------------------------------------
 {que:"明後日"				,ans:"あさって"					,tip:"the day after tomorrow"					,ch:"後天"				,group:1001	,accr:0},
 {que:"明日(＿＿＿)"			,ans:"あした"					,tip:"tomorrow"									,ch:"明天"				,group:1001	,accr:0},
@@ -437,6 +455,13 @@ var QAList = new Array(
 {que:"サ＿＿＿＿ン"			,ans:"サラリーマン"				,tip:"salaryman"								,ch:"上班族"			,group:1012	,accr:0},
 {que:"出席"					,ans:"しゅっせき"				,tip:"attendance"								,ch:""					,group:1013	,accr:0},
 {que:"欠席"					,ans:"けっせき"					,tip:"absence"									,ch:""					,group:1013	,accr:0},
+{que:"赤"					,ans:"あか"						,tip:"red"										,ch:"紅"				,group:1014	,accr:0},
+{que:"青"					,ans:"あお"						,tip:"blue"										,ch:"青"				,group:1014	,accr:0},
+{que:"ブ＿ー"				,ans:"ブルー"					,tip:"blue"										,ch:"藍"				,group:1014	,accr:0},
+{que:"黒"					,ans:"くろ"						,tip:"black"									,ch:"黑"				,group:1014	,accr:0},
+{que:"白"					,ans:"しろ"						,tip:"white"									,ch:"白"				,group:1014	,accr:0},
+{que:"緑"					,ans:"みどり"					,tip:"green"									,ch:"綠"				,group:1014	,accr:0},
+{que:"黄色"					,ans:"きいろ"					,tip:"yellow"									,ch:"黃"				,group:1014	,accr:0},
 {que:"雨"					,ans:"あめ"						,tip:"rain"										,ch:"雨"				,group:0	,accr:0},
 {que:"家"					,ans:"いえ"						,tip:"house"									,ch:"家"				,group:0	,accr:0},
 {que:"家"					,ans:"うち"						,tip:"home"										,ch:"家"				,group:0	,accr:0},
@@ -983,14 +1008,12 @@ var QAList = new Array(
 {que:"一緒"					,ans:"いっしょ"					,tip:"together"									,ch:""					,group:0	,accr:0},
 {que:"＿つ"					,ans:"いつ"						,tip:"when"										,ch:"何時"				,group:0	,accr:0},
 {que:"い＿も"				,ans:"いつも"					,tip:"always"									,ch:""					,group:0	,accr:0},
-{que:"色々"					,ans:"いろいろ"					,tip:"various"									,ch:""					,group:0	,accr:0},
-{que:"同じ"					,ans:"おなじ"					,tip:"same"										,ch:""					,group:0	,accr:0},
 {que:"お＿＿＿＿＿す"		,ans:"おねがいします"			,tip:"Please~"									,ch:""					,group:0	,accr:0},
 {que:"お＿＿＿＿＿＿＿す"	,ans:"おはようございます"		,tip:"Good morning."							,ch:""					,group:0	,accr:0},
 {que:"お＿＿＿＿＿い"		,ans:"おやすみなさい"			,tip:"Good night."								,ch:""					,group:0	,accr:0},
 {que:"回"					,ans:"かい"						,tip:"times"									,ch:""					,group:0	,accr:0},
 {que:"階"					,ans:"かい"						,tip:"(counter for) floor"						,ch:""					,group:0	,accr:0},
-{que:"結構です"				,ans:"けっこうです"				,tip:"fine/no thanks"							,ch:""					,group:0	,accr:0},
+{que:"結構です"				,ans:"けっこうです"				,tip:"fine/no thanks"							,ch:"足夠了/不用了"		,group:0	,accr:0},
 {que:"こ＿＿＿そ"			,ans:"こちらこそ"				,tip:"So do I"									,ch:""					,group:0	,accr:0},
 {que:"今日は"				,ans:"こんにちは"				,tip:"Good afternoon"							,ch:""					,group:0	,accr:0},
 {que:"今晩は"				,ans:"こんばんは"				,tip:"Good evening."							,ch:""					,group:0	,accr:0},
@@ -1003,10 +1026,8 @@ var QAList = new Array(
 {que:"全部"					,ans:"ぜんぶ"					,tip:"all"										,ch:""					,group:0	,accr:0},
 {que:"そ＿で"				,ans:"それで"					,tip:"and then"									,ch:""					,group:0	,accr:0},
 {que:"そ＿＿ら"				,ans:"それから"					,tip:"after that"								,ch:""					,group:0	,accr:0},
-{que:"た＿＿ん"				,ans:"たいへん"					,tip:"very"										,ch:""					,group:0	,accr:0},
 {que:"た＿＿ん"				,ans:"たくさん"					,tip:"many/much"								,ch:""					,group:0	,accr:0},
 {que:"た＿ん"				,ans:"たぶん"					,tip:"probably/maybe"							,ch:""					,group:0	,accr:0},
-{que:"大丈夫"				,ans:"だいじょうぶ"				,tip:"All right"								,ch:""					,group:0	,accr:0},
 {que:"だ＿＿ん"				,ans:"だんだん"					,tip:"gradually"								,ch:""					,group:0	,accr:0},
 {que:"ち＿＿ど"				,ans:"ちょうど"					,tip:"just"										,ch:""					,group:0	,accr:0},
 {que:"ち＿＿と"				,ans:"ちょっと"					,tip:"for a moment/a little"					,ch:""					,group:0	,accr:0},
@@ -1023,12 +1044,10 @@ var QAList = new Array(
 {que:"初めて"				,ans:"はじめて"					,tip:"for the first time"						,ch:""					,group:0	,accr:0},
 {que:"は＿＿＿＿て"			,ans:"はじめまして"				,tip:"Nice to meet you."						,ch:""					,group:0	,accr:0},
 {que:"半分"					,ans:"はんぶん"					,tip:"half"										,ch:""					,group:0	,accr:0},
-{que:"ほ＿＿＿に"			,ans:"ほんとうに"				,tip:"really"									,ch:""					,group:0	,accr:0},
 {que:"枚"					,ans:"まい"						,tip:"counter for flat things"					,ch:""					,group:0	,accr:0},
 {que:"前"					,ans:"まえ"						,tip:"ago/before"								,ch:""					,group:0	,accr:0},
 {que:"＿た"					,ans:"また"						,tip:"also/again"								,ch:""					,group:0	,accr:0},
 {que:"＿だ"					,ans:"まだ"						,tip:"still/yet"								,ch:""					,group:0	,accr:0},
-{que:"ま＿＿ぐ"				,ans:"まっすぐ"					,tip:"straight"									,ch:""					,group:0	,accr:0},
 {que:"＿う"					,ans:"もう"						,tip:"already/yet"								,ch:""					,group:0	,accr:0},
 {que:"も＿と"				,ans:"もっと"					,tip:"more"										,ch:""					,group:0	,accr:0},
 {que:"も＿＿し"				,ans:"もしもし"					,tip:"hello(on the phone)"						,ch:""					,group:0	,accr:0},
@@ -1530,12 +1549,6 @@ var QAList = new Array(
 {que:"床"					,ans:"ゆか"						,tip:"floor"									,ch:"地板"				,group:0	,accr:0},
 {que:"文"					,ans:"ぶん"						,tip:"sentence"									,ch:"句子"				,group:0	,accr:0},
 {que:"机"					,ans:"つくえ"					,tip:"desk"										,ch:"桌子"				,group:0	,accr:0},
-{que:"赤"					,ans:"あか"						,tip:"red"										,ch:"紅"				,group:0	,accr:0},
-{que:"青"					,ans:"あお"						,tip:"blue"										,ch:"藍"				,group:0	,accr:0},
-{que:"黒"					,ans:"くろ"						,tip:"black"									,ch:"黑"				,group:0	,accr:0},
-{que:"白"					,ans:"しろ"						,tip:"white"									,ch:"白"				,group:0	,accr:0},
-{que:"緑"					,ans:"みどり"					,tip:"green"									,ch:"綠"				,group:0	,accr:0},
-{que:"黄色"					,ans:"きいろ"					,tip:"yellow"									,ch:"黃"				,group:0	,accr:0},
 {que:"自己"					,ans:"じこ"						,tip:"self"										,ch:"自我"				,group:0	,accr:0},
 {que:"財布"					,ans:"さいふ"					,tip:"wallet"									,ch:"錢包"				,group:0	,accr:0},
 {que:"試験"					,ans:"しけん"					,tip:"test"										,ch:"考試/試驗"			,group:0	,accr:0},
@@ -1571,5 +1584,5 @@ var QAList = new Array(
 {que:"キ＿＿＿ム"			,ans:"キログラム"				,tip:"kilogram"									,ch:"公斤"				,group:0	,accr:0},
 {que:"キ＿＿＿＿ル"			,ans:"キロメートル"				,tip:"kilometer"								,ch:"公里"				,group:0	,accr:0},
 {que:"カ＿＿＿ー"			,ans:"カレンダー"				,tip:"calendar"									,ch:"日曆"				,group:0	,accr:0},
-{space:"＿",verd:2021102518}
+{space:"＿",verd:2021110216}
 );
