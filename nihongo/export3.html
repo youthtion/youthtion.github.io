@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<div id='remainText'>
+市	し	1	市
+都	と	1	都市
+坂	さか	2	坡道
+島	しま	2	島嶼
+席	せき	1	座位
+壁	かべ	0	牆壁
+寺	てら	2	寺廟
+隅	すみ	1	角落
+裏	うら	2	裡面/反面
+表	おもて	3	表面/正面
+間	あいだ	0	中間/之間
+湖	みずうみ	3	湖
+屋根	やね	1	屋頂
+以下	いか	1	以下
+以外	いがい	1	以外
+以内	いない	1	以內
+以上	いじょう	1	以上
+遠く	とおく	3	遠
+通り	とおり	3	大街道
+世界	せかい	1	世界
+床屋	とこや	0	理髮店
+田舎	いなか	0	鄉下
+郊外	こうがい	1	郊區
+国際	こくさい	0	國際
+西洋	せいよう	1	西洋
+神社	じんじゃ	1	神社
+旅館	りょかん	0	旅館
+海岸	かいがん	0	海岸
+受付	うけつけ	0	櫃檯
+講堂	こうどう	0	禮堂
+途中	とちゅう	0	途中/中途
+近所	きんじょ	1	近處/附近
+会場	かいじょう	0	會場
+工場	こうじょう	3	工廠
+教会	きょうかい	0	教會
+住所	じゅうしょ	1	住址/住處
+売り場	うりば	0	賣場
+事務所	じむしょ	2	事務所
+真ん中	まんなか	0	正中間
+美容院	びよういん	2	美容院
+会議室	かいぎしつ	3	會議室
+展覧会	てんらんかい	3	展覽會
+動物園	どうぶつえん	4	動物園
+美術館	びじゅつかん	3	美術館
+新聞社	しんぶんしゃ	3	報社
+研究室	けんきゅうしつ	3	研究室
+駐車場	ちゅうしゃじょう	0	停車場
+うち	 	0	之間/裡面
+ビル	 	1	大樓(bill)
+アジア	 	1	亞洲(Asia)
+アフリカ	 	0	非洲(Africa)
+アメリカ	 	0	美國(America)
+テニスコート	 	4	網球場
+ガソリンスタンド	 	6	加油站
+スーパーマーケット	 	5	超市
+</div>
+<script>
+var sectionTabs = new Array(7,8,12,6,3,0);
+var tabKey = "\\\\t";
+var tabSize = 4;
+var spaceText = "＿";
+
+var readStr = document.getElementById("remainText").innerHTML;
+var subc = readStr.split(/[\t\f\r\n]/);
+var catStrs = "";
+var tempStr = new Array();
+for (var i = 1; i < subc.length; i+=4){
+	tempStr = new Array();
+	if (subc[i+1] == " "){
+		var newText = "";
+		if(subc[i].length == 1){
+			newText = spaceText;
+		}
+		else{
+			newText += subc[i].slice(0, 1);
+			for(var j = 1; j < subc[i].length-1; j++){
+				newText += spaceText;
+			}
+			newText += subc[i].slice(-1);
+		}
+		tempStr.push('{que:"'+newText+'"');
+		tempStr.push(',ans:"'+subc[i]+'"');
+	}
+	else{
+		tempStr.push('{que:"'+subc[i]+'"');
+		tempStr.push(',ans:"'+subc[i+1]+'"');
+	}
+	tempStr.push(',tip:""');
+	tempStr.push(',ch:"'+subc[i+3]+'"');
+	tempStr.push(',group:0');
+	tempStr.push(',accr:0},');
+	for(var j = 0; j < tempStr.length; j++){
+		catStrs += tempStr[j];
+		catStrs += getTabKey(j);
+	}
+	catStrs += "<br>";
+}
+document.getElementById("remainText").innerHTML = catStrs;
+
+function getTabKey(tidx)
+{
+	var word_size = 0;
+	for(var i = 0; i < tempStr[tidx].length; i++){
+		var tstr = tempStr[tidx].substr(i, 1);
+		if(isHalfSize(tstr)){
+			word_size++;
+		}
+		else{
+			word_size+=2;
+		}
+	}
+	
+	var needs_num = sectionTabs[tidx]-Math.floor(word_size/tabSize);
+	var res_str = "";
+	for(var i = 0; i < needs_num; i++){
+		res_str += tabKey;
+	}
+	return res_str;
+}
+
+function isHalfSize(strParam){
+    var unicode = strParam.charCodeAt(0);
+    if (unicode>=0x0000 && unicode<=0x00ff)
+		return true;
+    return false;
+}
+</script>
+</body>
+</html>
