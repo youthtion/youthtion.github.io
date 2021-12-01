@@ -843,7 +843,7 @@ var QAList = new Array(
 {que:"ス＿＿パ"				,ans:"スリッパ"					,tip:"slipper"									,ch:"拖鞋"				,group:0	,accr:0},
 {que:"電気製品"				,ans:"でんきせいひん"			,tip:"electric appliances"						,ch:"電器產品"			,group:0	,accr:0},
 {que:"扇風機"				,ans:"せんぷうき"				,tip:"fan"										,ch:"電風扇"			,group:0	,accr:0},
-{que:"炬燵"					,ans:"こたつ"					,tip:"kotatsu"									,ch:"暖桌/被爐"			,group:0	,accr:0},
+{que:"炬燵"					,ans:"こたつ"					,tip:""											,ch:"暖桌/被爐"			,group:0	,accr:0},
 {que:"テ＿ビ"				,ans:"テレビ"					,tip:"TV set"									,ch:"電視"				,group:0	,accr:0},
 {que:"ビ＿オ"				,ans:"ビデオ"					,tip:"video"									,ch:"錄影帶/影片"		,group:0	,accr:0},
 {que:"ラ＿オ"				,ans:"ラジオ"					,tip:"radio"									,ch:"收音機"			,group:0	,accr:0},
