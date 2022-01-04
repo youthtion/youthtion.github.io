@@ -331,6 +331,9 @@ var QAList = new Array(
 {que:"熱心"					,ans:"ねっしん"					,tip:"ardent/dedicated"							,ch:"熱情/熱衷"			,group:128	,accr:0},
 {que:"久しぶりな"			,ans:"ひさしぶりな"				,tip:"long time"								,ch:"久違的"			,group:129	,accr:0},
 {que:"久しぶり"				,ans:"ひさしぶり"				,tip:"long time no see"							,ch:"好久不見"			,group:129	,accr:0},
+{que:"大切な"				,ans:"たいせつな"				,tip:"important"								,ch:"珍惜的"			,group:130	,accr:0},	//粗末
+{que:"大事な"				,ans:"だいじな"					,tip:"important"								,ch:"重要的(彼此)"		,group:130	,accr:0},
+{que:"重要な"				,ans:"じゅうような"				,tip:"important"								,ch:"重要的(客觀)"		,group:130	,accr:0},
 {que:"＿い"					,ans:"ない"						,tip:"no/absent"								,ch:"沒有/無"			,group:0	,accr:0},
 {que:"欲しい"				,ans:"ほしい"					,tip:"wanted/desired"							,ch:"想要的"			,group:0	,accr:0},
 {que:"嫌な"					,ans:"いやな"					,tip:"disliked/hateful"							,ch:"不想要/討厭的"		,group:0	,accr:0},
@@ -340,7 +343,6 @@ var QAList = new Array(
 {que:"元気な"				,ans:"げんきな"					,tip:"energy/fine"								,ch:"精神的/朝氣的"		,group:0	,accr:0},
 {que:"怖い"					,ans:"こわい"					,tip:"frightening/scary"						,ch:"恐怖的/可怕的"		,group:0	,accr:0},
 {que:"静かな"				,ans:"しずかな"					,tip:"quiet"									,ch:"安靜的"			,group:0	,accr:0},	//騒がしい
-{que:"大切な"				,ans:"たいせつな"				,tip:"important"								,ch:"重要的/珍惜的"		,group:0	,accr:0},	//粗末
 {que:"た＿＿い"				,ans:"たいてい"					,tip:"usually"									,ch:""					,group:0	,accr:0},
 {que:"楽しい"				,ans:"たのしい"					,tip:"enjoyable"								,ch:"快樂的"			,group:0	,accr:0},	//苦しい
 {que:"大好きな"				,ans:"だいすきな"				,tip:"like very much"							,ch:"最喜歡的"			,group:0	,accr:0},
@@ -388,7 +390,6 @@ var QAList = new Array(
 {que:"変な"					,ans:"へんな"					,tip:"strange"									,ch:"奇怪的"			,group:0	,accr:0},
 {que:"別な"					,ans:"べつな"					,tip:"alternative"								,ch:"別的/另外的"		,group:0	,accr:0},
 {que:"駄目な"				,ans:"だめな"					,tip:"futile/impossible"						,ch:"不行的"			,group:0	,accr:0},
-{que:"大事な"				,ans:"だいじな"					,tip:"important"								,ch:"重要的"			,group:0	,accr:0},
 {que:"盛んな"				,ans:"さかんな"					,tip:"prosperous"								,ch:"繁榮的"			,group:0	,accr:0},
 {que:"寝坊な"				,ans:"ねぼうな"					,tip:"oversleep"								,ch:"貪睡的"			,group:0	,accr:0},
 {que:"不便な"				,ans:"ふべんな"					,tip:"inconvenient"								,ch:"不方便的"			,group:0	,accr:0},
@@ -1583,7 +1584,6 @@ var QAList = new Array(
 {que:"就職"					,ans:"しゅうしょく"				,tip:"find work"								,ch:""					,group:0	,accr:0},
 {que:"渋滞"					,ans:"じゅうたい"				,tip:"delay"									,ch:""					,group:0	,accr:0},
 {que:"絨毯"					,ans:"じゅうたん"				,tip:"a carpet"									,ch:""					,group:0	,accr:0},
-{que:"重要"					,ans:"じゅうよう"				,tip:"an importance"							,ch:""					,group:0	,accr:0},
 {que:"修理"					,ans:"しゅうり"					,tip:"repair(s)/mending/a refit"				,ch:""					,group:0	,accr:0},
 {que:"授業料"				,ans:"じゅぎょうりょう"			,tip:"lesson fee"								,ch:""					,group:0	,accr:0},
 {que:"手術"					,ans:"しゅじゅつ"				,tip:"an (a surgical) operation"				,ch:""					,group:0	,accr:0},
