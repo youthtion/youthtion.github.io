@@ -119,7 +119,7 @@ var QAList = new Array(
 {que:"踊る"					,ans:"おどる"					,tip:"dance"									,ch:""					,group:0	,accr:0},
 {que:"驚く"					,ans:"おどろく"					,tip:"surprise"									,ch:""					,group:0	,accr:0},
 {que:"掛かる"				,ans:"かかる"					,tip:"(something) take (time)/cost"				,ch:"掛著/花費"			,group:0	,accr:0},
-{que:"変わる"				,ans:"かわる"					,tip:"change"									,ch:""					,group:0	,accr:0},
+{que:"変わる"				,ans:"かわる"					,tip:"(something)change"						,ch:""					,group:0	,accr:0},
 {que:"聞こえる"				,ans:"きこえる"					,tip:"audible/can hear"							,ch:""					,group:0	,accr:0},
 {que:"決まる"				,ans:"きまる"					,tip:"(something) be decide"					,ch:""					,group:0	,accr:0},
 {que:"混む/込む"			,ans:"こむ"						,tip:"to be crowed"								,ch:""					,group:0	,accr:0},
