@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<div id='remainText'>
+数	かず	the number of	數目
+後	のち	later	之後
+以後	いご	after	以後
+以前	いぜん	before	以前
+今後	こんご	after this	今後
+期間	きかん	term/period	期間
+期限	きげん	term/deadline	期限
+夜間	やかん	at night	夜晚
+未来	みらい	future	未來
+数字	すうじ	figure/numeral	數字
+四角	しかく	quadrilateral/square	四方形
+奇数	きすう	odd number	奇數
+偶数	ぐうすう	even number	偶數
+三角	さんかく	triangle	三角形
+一列	いちれつ	line/row	一排
+正午	しょうご	noon	正午
+先日	せんじつ	the other day	前幾天
+前日	ぜんじつ	the day before	前一天
+翌日	よくじつ	on the following day	隔日
+下旬	げじゅん	end of month	下旬
+生前	せいぜん	during in one's lifetime	生前
+点数	てんすう	point	分數
+分数	ぶんすう	fraction	分數
+算数	さんすう	arithmetic/calculation	算數
+整数	せいすう	integer	整數
+縦長	たてなが	vertically long	長方形
+平日	へいじつ	workday	平日
+小数	しょうすう	decimal	小數
+少数	しょうすう	minority/small number	少數
+一生	いっしょう	one's whole life	一生
+早朝	そうちょう	early morning	早晨
+上旬	じょうじゅん	early of month	上旬
+真夜中	まよなか	midnight	半夜
+小数点	しょうすうてん	decimal point	小數點
+</div>
+<script>
+var sectionTabs = new Array(7,8,12,6,3,2,0);
+var tabKey = "\\\\t";
+var tabSize = 4;
+var spaceText = "＿";
+
+var readStr = document.getElementById("remainText").innerHTML;
+var subc = readStr.split(/[\t\f\r\n]/);
+var catStrs = "";
+var tempStr = new Array();
+for (var i = 1; i < subc.length; i+=4){
+	tempStr = new Array();
+	if (subc[i+1] == " "){
+		var newText = "";
+		if(subc[i].length == 1){
+			newText = spaceText;
+		}
+		else{
+			newText += subc[i].slice(0, 1);
+			for(var j = 1; j < subc[i].length-1; j++){
+				newText += spaceText;
+			}
+			newText += subc[i].slice(-1);
+		}
+		tempStr.push('{que:"'+newText+'"');
+		tempStr.push(',ans:"'+subc[i]+'"');
+	}
+	else{
+		tempStr.push('{que:"'+subc[i]+'"');
+		tempStr.push(',ans:"'+subc[i+1]+'"');
+	}
+	tempStr.push(',tip:"'+subc[i+2]+'"');
+	tempStr.push(',ch:"'+subc[i+3]+'"');
+	tempStr.push(',group:0');
+	tempStr.push(',accr:0');
+	tempStr.push(',lhint:0},');
+	for(var j = 0; j < tempStr.length; j++){
+		catStrs += tempStr[j];
+		catStrs += getTabKey(j);
+	}
+	catStrs += "<br>";
+}
+document.getElementById("remainText").innerHTML = catStrs;
+
+function getTabKey(tidx)
+{
+	var word_size = 0;
+	for(var i = 0; i < tempStr[tidx].length; i++){
+		var tstr = tempStr[tidx].substr(i, 1);
+		if(isHalfSize(tstr)){
+			word_size++;
+		}
+		else{
+			word_size+=2;
+		}
+	}
+	
+	var needs_num = sectionTabs[tidx]-Math.floor(word_size/tabSize);
+	var res_str = "";
+	for(var i = 0; i < needs_num; i++){
+		res_str += tabKey;
+	}
+	return res_str;
+}
+
+function isHalfSize(strParam){
+    var unicode = strParam.charCodeAt(0);
+    if (unicode>=0x0000 && unicode<=0x00ff)
+		return true;
+    return false;
+}
+</script>
+</body>
+</html>

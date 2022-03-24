@@ -82,7 +82,7 @@
 聞こえる	きこえる	0	聽得到
 </div>
 <script>
-var sectionTabs = new Array(7,8,12,6,3,0);
+var sectionTabs = new Array(7,8,12,6,3,2,0);
 var tabKey = "\\\\t";
 var tabSize = 4;
 var spaceText = "＿";
@@ -115,7 +115,8 @@ for (var i = 1; i < subc.length; i+=4){
 	tempStr.push(',tip:""');
 	tempStr.push(',ch:"'+subc[i+3]+'"');
 	tempStr.push(',group:0');
-	tempStr.push(',accr:0},');
+	tempStr.push(',accr:0');
+	tempStr.push(',lhint:0},');
 	for(var j = 0; j < tempStr.length; j++){
 		catStrs += tempStr[j];
 		catStrs += getTabKey(j);

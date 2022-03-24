@@ -114,10 +114,18 @@ function getQuestion()
 				newText = params["space"];
 			}
 			else{
-				for(var i = 0; i < questText.length-1; i++){
-					newText += params["space"];
+				if(QAList[questNum]["lhint"] == 1){
+					newText += questText.slice(0, 1);
+					for(var i = 0; i < questText.length; i++){
+						newText += params["space"];
+					}
 				}
-				newText += questText.slice(-1);
+				else{
+					for(var i = 0; i < questText.length-1; i++){
+						newText += params["space"];
+					}
+					newText += questText.slice(-1);
+				}
 			}
 		}
 		questText = newText;
