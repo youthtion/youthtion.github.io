@@ -116,7 +116,7 @@ function getQuestion()
 			else{
 				if(QAList[questNum]["lhint"] == 1){
 					newText += questText.slice(0, 1);
-					for(var i = 0; i < questText.length; i++){
+					for(var i = 0; i < questText.length-1; i++){
 						newText += params["space"];
 					}
 				}
