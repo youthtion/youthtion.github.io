@@ -1229,8 +1229,8 @@ var QAList = new Array(
 {que:"授業料"				,ans:"じゅぎょうりょう"			,tip:"lesson fee"								,ch:"學費"				,group:0	,accr:0	,lhint:0},
 {que:"水道料金"				,ans:"すいどうりょうきん"		,tip:"water bill"								,ch:"水費"				,group:0	,accr:0	,lhint:0},
 {que:"電気料金"				,ans:"でんきりょうきん"			,tip:"electrical charges"						,ch:"電費"				,group:0	,accr:0	,lhint:0},
-{que:"ネット代"				,ans:"ネットだい"				,tip:"Internet fee"								,ch:"網路費"			,group:0	,accr:0	,lhint:0},
-{que:"サービス料"			,ans:"サービスりょう"			,tip:"service charge"							,ch:"服務費"			,group:0	,accr:0	,lhint:0},
+{que:"ネ＿ト代"				,ans:"ネットだい"				,tip:"Internet fee"								,ch:"網路費"			,group:0	,accr:0	,lhint:0},
+{que:"サ＿＿ス料"			,ans:"サービスりょう"			,tip:"service charge"							,ch:"服務費"			,group:0	,accr:0	,lhint:0},
 //---------------------------------------------------OTHER---------------------------------------------------
 {que:"い＿＿＿＿い"			,ans:"いらっしゃい"				,tip:"May I help you?"							,ch:""					,group:2001	,accr:0	,lhint:0},
 {que:"い＿＿＿＿＿＿せ"		,ans:"いらっしゃいませ"			,tip:"May I help you?"							,ch:""					,group:2001	,accr:0	,lhint:0},
