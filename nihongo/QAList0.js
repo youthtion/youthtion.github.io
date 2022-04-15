@@ -1157,7 +1157,6 @@ var QAList0 = new Array(
 {que:"バ＿ト"				,ans:"バイト"					,tip:"part-time job"							,ch:"打工"				,group:0	,accr:0	,lhint:0},
 {que:"ア＿＿＿ト"			,ans:"アルバイト"				,tip:"part-time job"							,ch:"打工"				,group:0	,accr:0	,lhint:0},
 {que:"数"					,ans:"かず"						,tip:"the number of"							,ch:"數目"				,group:0	,accr:0	,lhint:0},
-{que:"後"					,ans:"のち"						,tip:"later"									,ch:"之後"				,group:0	,accr:0	,lhint:0},
 {que:"以後"					,ans:"いご"						,tip:"after"									,ch:"以後"				,group:0	,accr:0	,lhint:0},
 {que:"以前"					,ans:"いぜん"					,tip:"before"									,ch:"以前"				,group:0	,accr:0	,lhint:0},
 {que:"今後"					,ans:"こんご"					,tip:"after this"								,ch:"今後"				,group:0	,accr:0	,lhint:0},
@@ -1367,7 +1366,8 @@ var QAList0 = new Array(
 {que:"縦"					,ans:"たて"						,tip:"vertical"									,ch:"縱"				,group:2021	,accr:0	,lhint:0},
 {que:"横"					,ans:"よこ"						,tip:"horizontal"								,ch:"橫"				,group:2021	,accr:0	,lhint:0},
 {que:"先"					,ans:"さき"						,tip:"before/previous"							,ch:"先/之前/未來"		,group:2022	,accr:0	,lhint:0},
-{que:"後"					,ans:"あと"						,tip:"after/later"								,ch:"之後"				,group:2022	,accr:0	,lhint:0},
+{que:"後(＿と)"				,ans:"あと"						,tip:"after/later"								,ch:"之後"				,group:2022	,accr:0	,lhint:0},
+{que:"後(＿ち)"				,ans:"のち"						,tip:"later"									,ch:"之後"				,group:2022	,accr:0	,lhint:0},
 {que:"あ＿り"				,ans:"あまり"					,tip:"not much"									,ch:""					,group:0	,accr:0	,lhint:0},
 {que:"幾つ"					,ans:"いくつ"					,tip:"how many"									,ch:""					,group:0	,accr:0	,lhint:0},
 {que:"い＿＿＿＿す"			,ans:"いただきます"				,tip:"(Before you eat, you say this)"			,ch:""					,group:0	,accr:0	,lhint:0},
@@ -1905,5 +1905,5 @@ var QAList0 = new Array(
 {que:"今夜"					,ans:"こんや"					,tip:"tonight"									,ch:"今晚"				,group:0	,accr:0	,lhint:0},
 {que:"最初"					,ans:"さいしょ"					,tip:"first time"								,ch:"最初/首次"			,group:0	,accr:0	,lhint:0},
 {que:"彼ら"					,ans:"かれら"					,tip:"they"										,ch:"他們"				,group:0	,accr:0	,lhint:0},
-{space:"＿",verd:2022032212}
+{space:"＿",verd:2022032215}
 );
