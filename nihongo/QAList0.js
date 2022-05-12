@@ -1703,7 +1703,7 @@ var QAList0 = new Array(
 {que:"誘う"					,ans:"さそう"					,tip:"to invite"								,ch:""					,group:0	,accr:0	,lhint:0},
 {que:"作家"					,ans:"さっか"					,tip:"An author/a writer"						,ch:""					,group:0	,accr:0	,lhint:0},
 {que:"砂糖"					,ans:"さとう"					,tip:"a suger"									,ch:"砂糖"				,group:0	,accr:0	,lhint:0},
-{que:"様々"					,ans:"さまざま"					,tip:"various"									,ch:""					,group:0	,accr:0	,lhint:0},
+{que:"様々"					,ans:"さまざま"					,tip:"various"									,ch:"各種不同的"		,group:0	,accr:0	,lhint:0},
 {que:"冷ます"				,ans:"さます"					,tip:"cool/let something cool"					,ch:""					,group:0	,accr:0	,lhint:0},
 {que:"騒ぎ"					,ans:"さわぎ"					,tip:"a noise/an uproar"						,ch:""					,group:0	,accr:0	,lhint:0},
 {que:"参加"					,ans:"さんか"					,tip:"participation"							,ch:""					,group:0	,accr:0	,lhint:0},
