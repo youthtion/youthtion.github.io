@@ -1,7 +1,7 @@
 // SWITCH
-var accurateLevel = 80;	// always pushed when less level(%)
+var accurateLevel = 80;	// always push when less level(%)
 var accMode = 0;	//1:Kanji 0:Last
-var expectedFinalStackNum = 300;
+var expectedFinalStackNum = 300; // expected stack length when all reach accurateLevel
 
 // VARIABLE
 var questNum = 1;
