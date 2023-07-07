@@ -1333,7 +1333,7 @@ var QAList = new Array(
 {que:"まな板"				,ans:"まないた"					,tip:"chopping board"							,ch:"砧板"				,group:0	,accr:0	,lhint:0},
 {que:"味噌汁"				,ans:"みそしる"					,tip:"miso soup"								,ch:"味噌湯"			,group:0	,accr:0	,lhint:0},
 {que:"中華鍋"				,ans:"ちゅうかなべ"				,tip:"Chinese pan"								,ch:"炒菜鍋"			,group:0	,accr:0	,lhint:0},
-{que:"電子レンジ"			,ans:"でんしれんじ"				,tip:"microwave oven"							,ch:"微波爐"			,group:0	,accr:0	,lhint:0},
+{que:"電子レンジ"			,ans:"でんしレンジ"				,tip:"microwave oven"							,ch:"微波爐"			,group:0	,accr:0	,lhint:0},
 {que:"お玉杓子"				,ans:"おたまじゃくし"			,tip:"ladle"									,ch:"湯勺子"			,group:0	,accr:0	,lhint:0},
 {que:"オ＿＿ン"				,ans:"オーブン"					,tip:"oven"										,ch:"烤箱"				,group:0	,accr:0	,lhint:0},
 {que:"エ＿＿ン"				,ans:"エプロン"					,tip:"apron"									,ch:"圍裙"				,group:0	,accr:0	,lhint:0},
