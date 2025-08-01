@@ -1,4 +1,0 @@
-1.save QAList.js to QAList0.js
-2.rename QAList to QAList0 in QAList0.js
-3.write new date to verd in new QAList.js
-4.run get_version_log.html and copy line to version_log.js
