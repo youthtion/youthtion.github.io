@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<div id='remainText'>
+始発	しはつ	0	頭班車
+信号	しんごう	0	紅綠燈
+船便	ふなびん	0	船運
+踏切	ふみきり	0	平交道
+窓口	まどぐち	2	窗口
+終電	しゅうでん	0	末班車
+乗り場	のりば	0	乘車處
+定期券	ていきけん	3	定期車票
+券売機	けんばいき	3	售票機
+精算機	せいさんき	3	補票機
+救急車	きゅうきゅうしゃ	3	救護車
+消防車	しょうぼうしゃ	3	消防車
+交通事故	こうつうじこ	5	交通事故
+ホーム	 	1	月台
+トラック	 	2	卡車
+エムアールティー	 	6	MRT
+草履	ぞうり	0	草鞋
+曲	きょく	0	曲子
+理科	りか	1	理科
+国語	こくご	0	國語
+保健	ほけん	0	保健
+保険	ほけん	0	保險
+看護	かんご	1	護理
+古典	こてん	0	古典
+太鼓	たいこ	0	太鼓
+美術	びじゅつ	1	美術
+家庭科	かていか	0	家政課
+作曲	さっきょく	0	作曲
+三味線	しゃみせん	0	三弦樂器
+化学反応	かがくはんのう	4	化學反應
+櫛	くし	2	梳子
+物	ぶつ	1	實際物品
+紐	ひも	0	繩子
+蓋	ふた	0	蓋子
+鋏	はさみ	3	剪刀
+袋	ふくろ	3	袋子
+枕	まくら	1	枕頭
+鋸	のこぎり	3	鋸子
+名刺	めいし	0	名片
+電池	でんち	1	電池
+毛布	もうふ	1	毛毯
+布巾	ふきん	2	抹布(擦桌子等)
+雑巾	ぞうきん	0	抹布(擦地板等)
+手帳	てちょう	0	手冊;記事本
+便箋	びんせん	0	便籤;信紙
+電卓	でんたく	0	計算機
+書物	しょもつ	1	書籍
+缶詰	かんづめ	3	罐頭
+金槌	かなづち	3	鐵鎚
+夕刊	ゆうかん	0	晚報
+瀬戸物	せともの	0	陶瓷器
+愛	あい	1	愛
+文句	もんく	1	抱怨
+敬意	けいい	1	敬意
+勇気	ゆうき	1	勇氣
+不幸	ふこう	2	不幸
+目的	もくてき	0	目的
+引力	いんりょく	1	引力
+能力	のうりょく	1	能力
+やる気	やるき	0	幹勁
+抽象的	ちゅうしょうてき	0	抽象的
+具体的	ぐたいてき	0	具體的
+</div>
+<script>
+var sectionTabs = new Array(7,8,12,6,3,2,0);
+var tabKey = "\\\\t";
+var tabSize = 4;
+var spaceText = "＿";
+
+var readStr = document.getElementById("remainText").innerHTML;
+var subc = readStr.split(/[\t\f\r\n]/);
+var catStrs = "";
+var tempStr = new Array();
+for (var i = 1; i < subc.length; i+=4){
+	tempStr = new Array();
+	if (subc[i+1] == " "){
+		var newText = "";
+		if(subc[i].length == 1){
+			newText = spaceText;
+		}
+		else{
+			newText += subc[i].slice(0, 1);
+			for(var j = 1; j < subc[i].length-1; j++){
+				newText += spaceText;
+			}
+			newText += subc[i].slice(-1);
+		}
+		tempStr.push('{que:"'+newText+'"');
+		tempStr.push(',ans:"'+subc[i]+'"');
+	}
+	else{
+		tempStr.push('{que:"'+subc[i]+'"');
+		tempStr.push(',ans:"'+subc[i+1]+'"');
+	}
+	tempStr.push(',tip:"'+subc[i+2]+'"');
+	tempStr.push(',ch:"'+subc[i+3]+'"');
+	tempStr.push(',group:0');
+	tempStr.push(',accr:0');
+	tempStr.push(',lhint:0},');
+	for(var j = 0; j < tempStr.length; j++){
+		catStrs += tempStr[j];
+		catStrs += getTabKey(j);
+	}
+	catStrs += "<br>";
+}
+document.getElementById("remainText").innerHTML = catStrs;
+
+function getTabKey(tidx)
+{
+	var word_size = 0;
+	for(var i = 0; i < tempStr[tidx].length; i++){
+		var tstr = tempStr[tidx].substr(i, 1);
+		if(isHalfSize(tstr)){
+			word_size++;
+		}
+		else{
+			word_size+=2;
+		}
+	}
+	
+	var needs_num = sectionTabs[tidx]-Math.floor(word_size/tabSize);
+	var res_str = "";
+	for(var i = 0; i < needs_num; i++){
+		res_str += tabKey;
+	}
+	return res_str;
+}
+
+function isHalfSize(strParam){
+    var unicode = strParam.charCodeAt(0);
+    if (unicode>=0x0000 && unicode<=0x00ff)
+		return true;
+    return false;
+}
+</script>
+</body>
+</html>

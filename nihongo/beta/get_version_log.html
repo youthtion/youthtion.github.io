@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<script src="QAList0.js"></script>
+<script src="QAList.js"></script>
+</head>
+<body>
+<div id="rsText" style="position:absolute;width:100%;top:5%;">
+</div>
+<script>
+var checkDumplicate = "";
+for(var i = 0; i < QAList.length-1; i++){
+	for(var j = i+1; j < QAList.length-1; j++){
+		if(QAList[i]["ans"] == QAList[j]["ans"]){// && QAList[i]["ans"] == QAList[j]["ans"] && QAList[i]["tip"] == QAList[j]["tip"]){
+			checkDumplicate += "DUMPLICATE["+i+"]:"+QAList[i]["que"]+" "+QAList[i]["ans"]+" "+QAList[i]["tip"]+" "+QAList[i]["ch"]+"<br>";
+			checkDumplicate += "DUMPLICATE["+j+"]:"+QAList[j]["que"]+" "+QAList[j]["ans"]+" "+QAList[j]["tip"]+" "+QAList[j]["ch"]+"<br>";
+		}
+	}
+}
+
+var rsStr = "";
+for(var i = 0; i < QAList0.length-1; i++){
+	var j = 0;
+	for(; j < QAList.length-1; j++){
+		if(QAList0[i]["que"] == QAList[j]["que"] && QAList0[i]["ans"] == QAList[j]["ans"] && QAList0[i]["tip"] == QAList[j]["tip"] && QAList0[i]["ch"] == QAList[j]["ch"]){
+			if(i != j){
+				writeMap(i.toString(), j.toString());
+			}
+			break;
+		}
+	}
+	if(j == QAList.length-1){
+		writeMap(i.toString(), "-1");
+	}
+}
+document.getElementById("rsText").innerHTML = checkDumplicate+"{verd:"+QAList[QAList.length-1]["verd"].toString()+",changed:{"+rsStr+"}},";
+
+function writeMap(k, v)
+{
+	if(rsStr != ""){
+		rsStr += ",";
+	}
+	rsStr += k+":"+v;
+}
+</script>
+</body>
+</html>

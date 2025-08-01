@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<input type='text' id='inputText' value='' onKeyDown='handleKey()'></input>
+<script>
+function handleKey(e)
+{
+	if(typeof e == "undefined" || (!e))
+		e = window.event;
+		
+	if(e.keyCode == 13){
+		var now = new Date();
+		now.setTime(now.getTime()+1000*60*60*24*365);
+		document.cookie = "verd="+document.getElementById("inputText").value+";expires="+now.toGMTString();
+	}
+}
+</script>
+</body>
+</html>
