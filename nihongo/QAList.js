@@ -1699,7 +1699,7 @@ var QAList = new Array(
 {que:"苛々",ans:"いらいら",tip:"著急/焦躁",ch:"＿＿＿＿",group:0,accr:0,lhint:0},
 {que:"イ＿ク",ans:"インク",tip:"墨水",ch:"＿＿＿",group:0,accr:0,lhint:0},
 {que:"印象",ans:"いんしょう",tip:"印象",ch:"＿＿＿＿＿",group:0,accr:0,lhint:0},
-{que:"イ＿＿＿＿ト",ans:"インスタント",tip:"速食/即時",ch:"＿＿＿＿＿＿",group:0,accr:0,lhint:0},
+{que:"イ＿＿＿＿ト",ans:"インスタント",tip:"即食",ch:"＿＿＿＿＿＿",group:0,accr:0,lhint:0},
 {que:"イ＿＿＿＿＿ト",ans:"インターネット",tip:"網路",ch:"＿＿＿＿＿＿＿",group:0,accr:0,lhint:0},
 {que:"イ＿＿＿＿ー",ans:"インタビュー",tip:"訪談",ch:"＿＿＿＿＿＿",group:0,accr:0,lhint:0},
 {que:"ウ＿＿ス",ans:"ウイルス",tip:"病毒",ch:"＿＿＿＿",group:0,accr:0,lhint:0},
