@@ -1660,7 +1660,7 @@ var QAList = new Array(
 {que:"ゆ＿＿り",ans:"ゆっくり",tip:"慢慢地",ch:"＿＿＿＿",group:0,accr:0,lhint:0},
 {que:"合図",ans:"あいず",tip:"暗號",ch:"＿＿＿",group:0,accr:0,lhint:0},//N3 uncategory start
 {que:"相手",ans:"あいて",tip:"對方/對手",ch:"＿＿＿",group:0,accr:0,lhint:0},
-{que:"ア＿＿ア",ans:"アイデア",tip:"主義",ch:"＿＿＿＿",group:0,accr:0,lhint:0},
+{que:"ア＿＿ア",ans:"アイデア",tip:"主意",ch:"＿＿＿＿",group:0,accr:0,lhint:0},
 {que:"ア＿＿ン",ans:"アイロン",tip:"熨斗",ch:"＿＿＿＿",group:0,accr:0,lhint:0},
 {que:"握手",ans:"あくしゅ",tip:"握手",ch:"＿＿＿＿",group:0,accr:0,lhint:0},
 {que:"ア＿＿＿ン",ans:"アクション",tip:"動作",ch:"＿＿＿＿＿",group:0,accr:0,lhint:0},
