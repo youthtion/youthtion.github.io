@@ -1,0 +1,404 @@
+html {
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	min-width: 360px;
+	font-family: sans-serif;
+	line-height: 1.5;
+	height: 100%;
+	display: flex;
+	flex-direction: column; /* 垂直排列 */
+}
+
+@media (orientation: portrait) {
+	body {
+		overflow-x: auto;
+	}
+}
+
+header {
+	min-width: 360px;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgb(255, 255, 255);
+	z-index: 10;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+
+@media (orientation: landscape) and (max-width: 800px) {
+	header {
+		flex-direction: column; /* 主軸改成垂直 */
+		height: 110px;
+	}	
+}
+
+@media (orientation: portrait) {
+	header {
+		flex-direction: column;
+		height: 80px;
+	}
+}
+
+nav {
+	display: flex;
+	gap: 16px;
+}
+
+a {
+	color: inherit; /* 跟父層(li)一樣的顏色 */
+	text-decoration: none; /* 移除底線 */
+	display: inline-block; /* 可點擊範圍比較好控制 */
+	cursor: pointer; /* 滑鼠游標顯示為手指 */
+}
+
+#logo {
+	height: 100%;
+	flex: 0 0 15%; /* 固定 15% 寬度 */
+	display: flex; /* 讓裡面的東西用 flex 排版 */
+	justify-content: center; /* 水平置中 */
+	align-items: center; /* 垂直置中（可選，看需求） */
+}
+
+@media (orientation: landscape) and (max-width: 800px) {
+	#logo {
+		height: 80px;
+		flex: 0 0 80px;
+	}
+}
+
+@media (orientation: portrait) {
+	#logo {
+		flex: 0 0 auto;
+		height: 80px;
+	}
+}
+
+#main-menu {
+	flex: 0 0 62%; /* 只吃剩餘寬度的 62% */
+	margin-left: auto; /* 把 nav 推開，避免黏住 logo */
+	margin-right: auto; /* 讓 nav 在剩餘寬度中置中 */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px; /* 固定高度 */
+    margin-top: auto; /* 在 flex 容器裡推到最下 */
+}
+
+@media (orientation: landscape) and (max-width: 800px) {
+	#main-menu {
+		height: 30px;
+		width: 100%;
+		flex: 0 0 30px; /* 嚴格固定高度 */
+	}
+}
+
+@media (orientation: portrait) {
+	#main-menu {
+		display: none;
+	}
+}
+
+.hamburger {
+	height: 80px;
+	position: fixed;
+	left: 30px;
+	font-size: 26px;
+	background: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	display: none; /* 桌面版隱藏 */
+	z-index: 30; /* 確保在選單上層 */
+	font-weight: bold;
+	color: rgb(40, 40, 40)
+}
+
+@media (orientation: portrait) {
+	.hamburger {
+		display: block;
+	}
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(200, 200, 200, 0.5);
+	opacity: 0;
+	pointer-events: none; /* 預設不能點 */
+	transition: opacity 0.3s ease;
+	z-index: 40;
+}
+
+.overlay.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.side-menu {
+	position: fixed;
+	top: 0;
+	left: -60%; /* 預設藏起來 */
+	width: 60%;
+	height: 100%;
+	background: rgb(250, 250, 250);
+	transition: left 0.3s ease;
+	z-index: 50;
+	display: flex;
+	flex-direction: column;
+	color: rgb(80, 80, 80);
+	opacity: 0.9;
+}
+
+.side-menu.active {
+	left: 0; /* 滑出 */
+}
+
+#side-ul .has-submenu,
+#side-ul .no-submenu {
+	width: 100%;
+	border-bottom: 2px solid rgb(200, 200, 200);
+}
+
+#side-ul .has-submenu .main-btn,
+#side-ul .no-submenu .main-btn {
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none;
+	font-size: 18px;
+	text-align: left; /* 文字靠左 */
+	transition: background 0.3s ease;
+}
+
+#side-ul .has-submenu .main-btn:hover,
+#side-ul .no-submenu .main-btn:hover {
+    background: rgb(200, 200, 200);
+}
+
+#side-ul .has-submenu > a::after {
+	content: " ▽"; /* 預設向下箭頭 */
+	float: right;
+}
+
+#side-ul .has-submenu.open > a::after {
+	content: " ▲"; /* 展開後變成向上箭頭 */
+}
+
+#side-ul .has-submenu.open > a {
+	background: rgb(200, 200, 200);
+}
+
+#side-ul .has-submenu .submenu {
+    background: rgb(200, 200, 200);
+	height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+	display: block;
+}
+
+#side-ul .has-submenu.open .submenu {
+	height: var(--submenu-height)
+}
+
+#side-ul .has-submenu .submenu li {
+	border: 0;
+	margin: 0;
+    padding: 5px 5px 5px 46px; /* 文字內縮 */
+	font-size: 16px;
+	transition: color 0.3s ease;
+}
+
+#side-ul .has-submenu .submenu li:hover {
+    color: rgb(0, 0, 0);
+}
+
+#side-ul .has-submenu .submenu a {
+	padding: 0;
+	position: relative;
+	display: inline-block; /* 讓偽元素依文字寬度 */
+	font-size: 16px;
+	color: inherit;
+}
+
+#side-ul .has-submenu .submenu a::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* 從中間開始 */
+    bottom: 0; /* 貼齊文字底部 */
+    width: 0;
+    height: 2px; /* 底線粗細 */
+    background: rgb(0, 0, 0); /* 底線顏色 */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#side-ul .has-submenu .submenu li:hover a::after {
+    width: 100%;
+    left: 0; /* 展開到整個文字 */
+}
+
+#logo a img {
+    height: 48px;
+    width: auto; /* 保持比例 */
+	filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+header nav li a {
+	font-size: 18px;
+	font-weight: bold;
+	white-space: nowrap;
+	color: rgb(80, 80, 80);
+}
+
+#main-menu #main-ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+#main-menu #main-ul .dropdown {
+    position: relative;
+    flex: 1;
+	z-index: 20;
+}
+
+#main-menu #main-ul .dropdown::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform: translateX(-50%) scaleX(0); /* 從中央展開 */
+	transform-origin: center;
+	transition: transform 0.2s ease, background 0.2s ease;
+	z-index: -1;
+}
+
+#main-menu #main-ul .dropdown:hover::before {
+	background: rgb(220, 220, 220);
+	transform: translateX(-50%) scaleX(1); /* 展開到整個按鈕 */
+}
+
+#main-menu #main-ul .dropdown .main-btn{
+	height: 100%;
+	display: block; /* 讓 a 可填滿父元素 */
+    text-align: center; /* 文字置中 */
+	line-height: 50px;
+}
+
+@media (orientation: landscape) and (max-width: 800px) {
+	#main-menu #main-ul .dropdown .main-btn{
+		line-height: 30px;
+	}
+}
+
+#main-menu #main-ul .dropdown-menu {
+	position: absolute;
+	left: 0;
+	background: rgba(240, 240, 240, 0.8);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	padding: 8px 0;
+	min-width: 180px;
+	z-index: 30;
+	border-radius: 2px;
+	opacity: 0;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	visibility: hidden;
+}
+
+#main-menu #main-ul .dropdown:hover .dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+#main-menu #main-ul .dropdown .dropdown-menu li {
+	border: 0;
+	margin: 0;
+    padding: 6px 20px;
+	font-size: 16px;
+	color: rgb(80, 80, 80);
+	transition: color 0.3s ease;
+	list-style: none;
+}
+
+#main-menu #main-ul .dropdown .dropdown-menu li:hover {
+    color: rgb(0, 0, 0);
+}
+
+#main-menu #main-ul .dropdown .dropdown-menu li a {
+	padding: 0;
+	position: relative;
+	font-size: 16px;
+	color: inherit;
+}
+
+#main-menu #main-ul .dropdown .dropdown-menu li a::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* 從中間開始 */
+    bottom: 0; /* 貼齊文字底部 */
+    width: 0;
+    height: 2px; /* 底線粗細 */
+    background: rgb(0, 0, 0); /* 底線顏色 */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#main-menu #main-ul .dropdown .dropdown-menu li:hover a::after {
+    width: 100%;
+    left: 0; /* 展開到整個文字 */
+}
+
+#content {
+	width: 100%;
+	flex: 1;
+}
+
+.fixed-footer {
+	background-color: rgb(208, 208, 208);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-content {
+	background-color: inherit;
+	width: 100%;
+	aspect-ratio: 800 / 195;
+}
+
+@media (orientation: landscape) and (max-width: 800px) {
+	.footer-content {
+		height: 195px;
+	}
+}
+
+.page-header {
+	width: 100%;
+	aspect-ratio: 800 / 240; /* 先用比例等比縮放 */
+}
+
+@media (orientation: landscape) and (max-width: 800px) {
+	.page-header {
+		height: 240px;
+	}
+}
+
+.page-header img {
+	height: 100%;
+	width: auto;
+	min-width: 100%; /* 保證容器寬度被覆蓋 */
+	object-fit: cover; /* 保持比例，必要時裁切 */
+	display: block;
+}

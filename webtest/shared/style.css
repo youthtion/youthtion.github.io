@@ -1,0 +1,118 @@
+.footer {
+    background: #F0F0F0;
+    padding: 20px 20px 5px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* 800px以上不允許換行 */
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1; /* 每塊等寬 */
+    margin: 10px;
+    min-width: 0; /* 防止因最小寬度卡住 */
+}
+
+.footer-col.contact {
+    flex: 1.8;
+}
+
+.footer-col h3 {
+	font-size: 16px;
+	font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-col ul {
+	font-size: 14px;
+    list-style: none; /* 移除黑點 */
+}
+
+.footer-col ul li{
+	margin: 4px 0;
+}
+
+.footer-col ul li a {
+	position: relative;
+}
+
+.footer-col ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;               /* 從中間開始 */
+    bottom: 0;               /* 貼齊文字底部 */
+    width: 0;
+    height: 2px;             /* 底線粗細 */
+    background: #000000;       /* 底線顏色 */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footer-col ul li a:hover::after {
+    width: 100%;
+    left: 0;                 /* 展開到整個文字 */
+}
+
+.footer-col p {
+	font-size: 14px;
+}
+
+.footer-logo {
+	display: flex;
+    justify-content: center;   /* 水平置中 */
+	align-items: flex-end;     /* 垂直貼底 */
+	height: 100px;             /* 父元素要有高度 */
+}
+
+.footer-logo img {
+    max-width: 160px;
+    height: auto;
+}
+
+/* 小於800px，只留聯絡我們 */
+@media (orientation: landscape) and (max-width: 800px) {
+	.footer {
+		min-width: 360px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between; /* 左中右三欄 */
+    }
+	.footer-logo {
+		order: 0;
+		flex: 0 0 15%;
+		align-items: center;
+    }
+	.footer-columns {
+		order: 1;
+		justify-content: center;
+    }
+	.footer::after {
+		order: 2;
+        content: "";
+        flex: 0 0 15%; /* 跟 logo 一樣寬度 */
+    }
+    .footer-columns .footer-col {
+        display: none;
+    }
+    .footer-columns .footer-col.contact {
+        display: block;
+    }
+}
+
+@media (orientation: portrait) {
+	.footer {
+		display: flex;
+		flex-direction: column;
+    }
+	.footer-logo {
+		height: 50px;
+	}
+	.footer-columns .footer-col {
+        display: none;
+    }
+	.footer-columns .footer-col.contact {
+        display: block;
+    }
+}

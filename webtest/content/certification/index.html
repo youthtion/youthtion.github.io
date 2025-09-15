@@ -1,0 +1,53 @@
+<style>
+#cert-title {
+	text-align: center;
+	font-size: clamp(16px, 4vw, 24px);
+	margin-top: 50px;
+	margin-bottom: 16px;
+}
+#cert-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	margin-bottom: 50px;
+}
+#cert-container .cert-img {
+	flex: 1;
+}
+#cert-container .cert-img a img{
+	width: 100%;
+	height: auto;
+}
+#cert-container div {
+    flex: 3;
+    font-size: clamp(10px, 2.5vw, 15px)
+}
+#cert-container div p {
+	padding-left: 24px;   /* 給縮排空間 */
+	text-indent: -24px;   /* 把第一行往左推回來 */
+}
+
+</style>
+<body>
+<div id="cert-title">認證與榮譽</div>
+<div id="cert-container">
+	<div class="cert-img">
+		<a href="content/certification/SGS.jpg" target="_blank">
+			<img src="content/certification/SGS.jpg" alt="認證證書">
+		</a>
+	</div>
+	<div class="cert-text">
+		The ISO 14001 is a family of standards related to environmental
+		management that exists to help organizations
+		<p>(a) minimize how their operations (processes, etc.) negatively affect the environment (i.e., cause adverse changes to air, water, or land);</p>
+		<p>(b) comply with applicable laws, regulations, and other environmentally oriented requirements</p>
+		<p>(c) continually improve in the above. ISO 14001 is similar to ISO 9001
+			quality management in that both pertain to the process of how a
+			product is produced, rather than to the product itself. As with ISO 9001,
+			certification is performed by third-party organizations rather than
+			being awarded by ISO directly.</p>
+	</div>
+</div>
+</body>

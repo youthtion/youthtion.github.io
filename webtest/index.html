@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>尚鼎技研</title>
+<link rel="stylesheet" href="reset.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header>
+<button class="hamburger" id="hamburger">☰</button>
+<div id="logo">
+	<a href="#" data-page="home"><img src="logo.png" alt="公司LOGO"></a>
+</div>
+<div class="overlay" id="overlay"></div>
+<nav class="side-menu" id="sideMenu">
+	<ul id="side-ul">
+		<li class="no-submenu"><a href="#" data-page="home" class="main-btn">首頁</a></li>
+		<li class="has-submenu" style="--submenu-height:204px;">
+			<a href="#" class="main-btn">關於我們</a>
+			<ul class="submenu">
+				<li>•&nbsp&nbsp<a href="#" data-page="introduction">公司簡介</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="history">發展歷史</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="vision">經營理念與願景</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="team">核心團隊</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="certification">認證與榮譽</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="responsibility">環境與社會責任</a></li>
+			</ul>
+		</li>
+		<li class="has-submenu" style="--submenu-height:34px;">
+			<a href="#" class="main-btn">產品資訊</a>
+			<ul class="submenu">
+				<li>•&nbsp&nbsp<a href="#" data-page="product">產品總覽</a></li>
+			</ul>
+		</li>
+		<li class="has-submenu" style="--submenu-height:170px;">
+			<a href="#" class="main-btn">技術與方案</a>
+			<ul class="submenu">
+				<li>•&nbsp&nbsp<a href="#" data-page="device">產線設備</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="rd">研發能力</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="quality">品質控管與流程</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="detection">檢測能力</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="achievement">成功案例、實績</a></li>
+			</ul>
+		</li>
+		<li class="has-submenu" style="--submenu-height:68px;">
+			<a href="#" class="main-btn">最新消息</a>
+			<ul class="submenu">
+				<li>•&nbsp&nbsp<a href="#" data-page="news">公司新聞</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="paper">技術文章</a></li>
+			</ul>
+		</li>
+		<li class="no-submenu"><a href="#" data-page="contact" class="main-btn">聯絡我們</a></li>
+	</ul>
+</nav>
+<nav id="main-menu">
+	<ul id="main-ul">
+		<li class="dropdown">
+			<a href="#" class="main-btn">關於我們</a>
+			<ul class="dropdown-menu">
+				<li>•&nbsp&nbsp<a href="#" data-page="introduction">公司簡介</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="history">發展歷史</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="vision">經營理念與願景</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="team">核心團隊</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="certification">認證與榮譽</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="responsibility">環境與社會責任</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="main-btn">產品介紹</a>
+			<ul class="dropdown-menu">
+				<li>•&nbsp&nbsp<a href="#" data-page="product">產品總覽</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="main-btn">技術與方案</a>
+			<ul class="dropdown-menu">
+				<li>•&nbsp&nbsp<a href="#" data-page="device">產線設備</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="rd">研發能力</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="quality">品質控管與流程</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="detection">檢測能力</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="achievement">成功案例、實績</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="main-btn">最新消息</a>
+			<ul class="dropdown-menu">
+				<li>•&nbsp&nbsp<a href="#" data-page="news">公司新聞</a></li>
+				<li>•&nbsp&nbsp<a href="#" data-page="paper">技術文章</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a href="#" data-page="contact" class="main-btn">聯絡我們</a>
+		</li>
+	</ul>
+</nav>
+</header>
+<div id="header"></div>
+<main id="content"></main>
+<div id="footer"></div>
+<script src="main.js"></script>
+</body>
+
+</html>
