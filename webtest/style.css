@@ -61,7 +61,6 @@ a {
 
 #logo {
 	height: 100%;
-	flex: 0 0 15%; /* 固定 15% 寬度 */
 	display: flex; /* 讓裡面的東西用 flex 排版 */
 	justify-content: center; /* 水平置中 */
 	align-items: center; /* 垂直置中（可選，看需求） */
@@ -85,11 +84,11 @@ a {
 	flex: 0 0 62%; /* 只吃剩餘寬度的 62% */
 	margin-left: auto; /* 把 nav 推開，避免黏住 logo */
 	margin-right: auto; /* 讓 nav 在剩餘寬度中置中 */
+	margin-top: auto; /* 在 flex 容器裡推到最下 */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 50px; /* 固定高度 */
-    margin-top: auto; /* 在 flex 容器裡推到最下 */
 }
 
 @media (orientation: landscape) and (max-width: 800px) {
@@ -247,9 +246,9 @@ a {
 }
 
 #logo a img {
-    height: 48px;
+    height: 54px;
     width: auto; /* 保持比例 */
-	filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
 }
 
 header nav li a {
@@ -401,4 +400,8 @@ header nav li a {
 	min-width: 100%; /* 保證容器寬度被覆蓋 */
 	object-fit: cover; /* 保持比例，必要時裁切 */
 	display: block;
+}
+
+.content-top-bottom {
+	height: 50px;
 }
