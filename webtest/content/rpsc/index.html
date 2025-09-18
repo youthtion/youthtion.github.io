@@ -1,0 +1,129 @@
+<style>
+#rpsc-img-container {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	margin-bottom: 16px;
+	margin-left: 2vw;
+	margin-right: 2vw;
+}
+#rpsc-img-container img {
+	width: auto;
+	height: 20vw;
+	max-height: 300px;
+}
+@media (max-width: 360px) {
+	#rpsc-img-container img {
+		height: 72px;
+	}
+}
+.rpsc-img-item {
+    flex: 1;
+}
+.rpsc-img-item p {
+	font-size: clamp(14px, 3.5vw, 21px);
+}
+#rpsc-table-container {
+	margin-left: 2vw;
+	margin-right: 2vw;
+}
+#rpsc-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+	font-size: clamp(10px, 2.5vw, 15px)
+}
+#rpsc-table th,
+#rpsc-table td {
+    border: 2px solid #FFFFFF;
+    padding: 10px;
+}
+#rpsc-table th {
+    background-color: #004a9f;
+    color: white;
+	vertical-align: middle;
+}
+#rpsc-table tr:nth-child(even) td {
+    background-color: #F8F8F8;
+}
+#rpsc-table tr:nth-child(odd) td {
+    background-color: #EEEEEE;
+}
+</style>
+<body>
+<div class="content-top-bottom"></div>
+<div id="rpsc-img-container">
+	<div class="rpsc-img-item">
+		<a href="content/rpsc/MKS2L.png" target="_blank">
+			<img src="content/rpsc/MKS2L.png" alt="MKS 2L">
+		</a>
+		<p>MKS 2L</p>
+	</div>
+	<div class="rpsc-img-item">
+		<a href="content/rpsc/MKS6_8_15_22L.png" target="_blank">
+			<img src="content/rpsc/MKS6_8_15_22L.png" alt="MKS 6L/8L/15L">
+		</a>
+		<p>MKS 6L/8L/15L</p>
+	</div>
+	<div class="rpsc-img-item">
+		<a href="content/rpsc/MKS30L.png" target="_blank">
+			<img src="content/rpsc/MKS30L.png" alt="MKS 30L">
+		</a>
+		<p>MKS 30L</p>
+	</div>
+</div>
+<div id="rpsc-table-container">
+	<table id="rpsc-table">
+		<tr>
+			<th>MKS RPS 2L</th>
+			<th>MKS RPS 3L</th>
+			<th>MKS RPS 6L</th>
+			<th>MKS RPS 15L / 22L</th>
+			<th>MKS REVOLUTION<br>PARAGON</th>
+		</tr>
+		<tr>
+			<td>AX7651</td>
+			<td>AX7645</td>
+			<td>AX7658</td>
+			<td>AX7645</td>
+			<td>AX7690</td>
+		</tr>
+		<tr>
+			<td>AX7657</td>
+			<td>AX7670</td>
+			<td>FI80131</td>
+			<td>AX7635</td>
+			<td>AX7695</td>
+		</tr>
+		<tr>
+			<td>AX7658</td>
+			<td>AX7671</td>
+			<td>FI80132</td>
+			<td>AX7665</td>
+			<td>AX7696</td>
+		</tr>
+		<tr>
+			<td>FI20620</td>
+			<td>------</td>
+			<td>FI80133</td>
+			<td>------</td>
+			<td>AX7700</td>
+		</tr>
+		<tr>
+			<td>------</td>
+			<td>------</td>
+			<td>FI80620</td>
+			<td>------</td>
+			<td>AX7710</td>
+		</tr>
+		<tr>
+			<td>------</td>
+			<td>------</td>
+			<td>------</td>
+			<td>------</td>
+			<td>------</td>
+		</tr>
+	</table>
+</div>
+<div class="content-top-bottom"></div>
+</body>
