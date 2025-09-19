@@ -22,11 +22,11 @@
 	height: auto;
 	max-height: 240px;
 }
-#cert-container #cert-text {
+#cert-container .cert-text {
     flex: 4;
     font-size: clamp(10px, 2.5vw, 15px)
 }
-#cert-container #cert-text p {
+#cert-container .cert-text p {
 	padding-left: 24px;   /* 給縮排空間 */
 	text-indent: -24px;   /* 把第一行往左推回來 */
 }
@@ -37,10 +37,10 @@
 <div id="cert-container">
 	<div class="cert-img">
 		<a href="content/certification/SGS.jpg" target="_blank">
-			<img id="cert-img" src="content/certification/SGS.jpg" alt="認證證書">
+			<img src="content/certification/SGS.jpg" alt="認證證書">
 		</a>
 	</div>
-	<div id="cert-text">
+	<div class="cert-text">
 		The ISO 14001 is a family of standards related to environmental
 		management that exists to help organizations
 		<p>(a) minimize how their operations (processes, etc.) negatively affect the environment (i.e., cause adverse changes to air, water, or land);</p>
