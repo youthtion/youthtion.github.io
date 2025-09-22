@@ -20,6 +20,11 @@
 	margin-bottom: 20px;
 	gap: 4vw;
 }
+.device-row-mini{
+	display: flex;
+	justify-content: center;
+	gap: 1vw;
+}
 .device-row-spread {
 	margin: 0 auto;
 	width: 90vw;
@@ -36,6 +41,23 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+}
+.device-col ul {
+	list-style: none;
+	font-size: clamp(10px, 2.5vw, 15px);
+	color: #404040;
+	text-align: center;
+	margin-bottom: 16px;
+}
+.device-col .device-caption {
+	text-align: center;
+	font-size: clamp(10px, 2.5vw, 15px);
+	color: #404040;
+	margin: 1vw 0;
+}
+.device-col a {
+	display: flex;
+	justify-content: center;
 }
 .device-col-up {
 	display: flex;
@@ -81,11 +103,17 @@
 	display: flex;
 	margin: 2vw auto;
 }
+.device-section .landscape-mini {
+	width: auto;
+	height: 12.5vw;
+	max-height: 144px;
+	min-height: 50px;
+}
 .device-section .portrait {
-	width: 20vw;
+	width: 24vw;
 	height: auto;
-	max-width: 300px;
-	min-width: 82px;
+	max-width: 277px;
+	min-width: 96px;
 }
 </style>
 <body>
@@ -151,23 +179,30 @@
 	<div class="device-title">PAR 微污染防治 : class 100 無塵室 & particle counter</div>
 	<div class="device-row">
 		<div class="device-col">
+			<ul>
+				<li>微粒子控制在光電半導體為必要項目</li>
+				<li>若於真空製程中控制不良</li>
+				<li>易造成鍍膜品質Defect</li>
+			</ul>
 			<a href="content/device/5.png" target="_blank">
-				<img src="content/device/5.png" alt="" class="landscape">
+				<img src="content/device/5.png" alt="" class="portrait">
 			</a>
 		</div>
 		<div class="device-col">
 			<a href="content/device/6.png" target="_blank">
-				<img src="content/device/6.png" alt="" class="landscape">
+				<img src="content/device/6.png" alt="" class="landscape-mini">
 			</a>
+			<div class="device-caption">微粒子量測</div>
 			<a href="content/device/7.png" target="_blank">
-				<img src="content/device/7.png" alt="" class="landscape">
+				<img src="content/device/7.png" alt="" class="landscape-mini">
 			</a>
-			<div class="device-row">
+			<div class="device-caption">真空包裝</div>
+			<div class="device-row-mini">
 				<a href="content/device/8.png" target="_blank">
-					<img src="content/device/8.png" alt="" class="landscape">
+					<img src="content/device/8.png" alt="" class="landscape-mini">
 				</a>
 				<a href="content/device/9.png" target="_blank">
-					<img src="content/device/9.png" alt="" class="landscape">
+					<img src="content/device/9.png" alt="" class="landscape-mini">
 				</a>
 			</div>
 		</div>
