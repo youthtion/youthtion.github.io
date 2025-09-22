@@ -3,6 +3,7 @@
 	text-align: center;
 	font-size: clamp(16px, 4vw, 24px);
 	margin-bottom: 16px;
+	color: #404040;
 }
 #cert-container {
     display: flex;
@@ -25,10 +26,15 @@
 #cert-container .cert-text {
     flex: 4;
     font-size: clamp(10px, 2.5vw, 15px)
+	color: #404040;
+}
+#cert-container .cert-text h1{
+	color: #404040;
 }
 #cert-container .cert-text p {
 	padding-left: 24px;   /* 給縮排空間 */
 	text-indent: -24px;   /* 把第一行往左推回來 */
+	color: #404040;
 }
 </style>
 <body>
@@ -41,8 +47,7 @@
 		</a>
 	</div>
 	<div class="cert-text">
-		The ISO 14001 is a family of standards related to environmental
-		management that exists to help organizations
+		<h1>The ISO 14001 is a family of standards related to environmental management that exists to help organizations</h1>
 		<p>(a) minimize how their operations (processes, etc.) negatively affect the environment (i.e., cause adverse changes to air, water, or land);</p>
 		<p>(b) comply with applicable laws, regulations, and other environmentally oriented requirements</p>
 		<p>(c) continually improve in the above. ISO 14001 is similar to ISO 9001
