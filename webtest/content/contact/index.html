@@ -1,2 +1,98 @@
-<h2>聯絡我們</h2>
-<p>內容區</p>
+<style>
+#contact-title {
+	text-align: center;
+	font-size: clamp(16px, 4vw, 24px);
+	margin-bottom: 16px;
+	color: #404040;
+}
+.contact-section {
+	margin-left: 6vw;
+	margin-right: 6vw;
+	color: #404040;
+}
+.contact-row {
+	display: flex;
+	justify-content: center;
+	gap: 1vw;
+}
+.contact-col-map {
+	flex: 5;
+    text-align: center;
+}
+.contact-col-form {
+    flex: 6;
+}
+#contact-form {
+	width: 100%;
+	min-width: 300px;
+}
+#contact-form div {
+	display: flex;
+    align-items: flex-start;
+}
+#contact-form label {
+    width: 18vw;
+	text-align: right;
+	font-size: clamp(10px, 2.5vw, 15px);
+	margin: 0.4vw 0;
+}
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.4vw;
+    margin: 0.4vw 0;
+    border: 1px solid #404040;
+}
+#contact-form textarea {
+    height: 8vw;
+	min-height: 105px;
+	max-height: 140px;
+    resize: vertical;
+}
+#contact-map {
+	width: 60%;
+	height: auto;
+	min-width: 260px;
+}
+#contact-map a img {
+	width: 100%;
+}
+#contact-map p {
+	text-align: left;
+    font-size: clamp(8px, 2vw, 12px);
+}
+#contact-map h1 {
+	text-align: left;
+	font-size: clamp(10px, 2.5vw, 15px);
+}
+</style>
+</head>
+<body>
+<div class="content-top-bottom"></div>
+<div id="contact-title">聯絡我們</div>
+<div class="contact-section">
+    <div class="contact-row">
+		<div class="contact-col-form">
+			<form id="contact-form">
+				<div><label>姓名：</label><input type="text" name="name"></div>
+				<div><label>電話：</label><input type="text" name="phone"></div>
+				<div><label>電子郵件：</label><input type="email" name="email"></div>
+				<div><label>主旨：</label><input type="text" name="subject"></div>
+				<div><label>內容：</label><textarea name="message"></textarea></div>
+			</form>
+		</div>
+		<div class="contact-col-map">
+			<div class="contact-row">
+				<div id="contact-map">
+					<a href="https://www.google.com/maps?q=新竹市香山區牛埔南路216號" target="_blank">
+						<img src="content/contact/map.png" alt="地圖">
+					</a>
+					<p>詳細位置請點選地圖</p>
+					<h1>總公司：新竹市香山區牛埔南路216號</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="content-top-bottom"></div>
+</body>
