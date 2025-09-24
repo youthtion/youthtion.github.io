@@ -1,11 +1,17 @@
+@font-face {
+	font-family: "malgun";
+	src: url("font/malgun-gothic.ttf") format("truetype");
+	font-display: swap;
+}
+
 html {
+	font-family: malgun, sans-serif;;
 	height: 100%;
 }
 
 body {
 	overflow-x: hidden;
 	min-width: 360px;
-	font-family: sans-serif;
 	line-height: 1.5;
 	height: 100%;
 	display: flex;
