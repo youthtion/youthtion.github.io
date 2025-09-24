@@ -1,6 +1,7 @@
 @font-face {
 	font-family: "malgun";
 	src: url("font/malgun-gothic.ttf") format("truetype");
+	unicode-range: U+0020-007F;
 	font-display: swap;
 }
 
