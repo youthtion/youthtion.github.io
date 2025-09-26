@@ -1,5 +1,8 @@
 async function loadPage(page)
 {
+	if(page === ""){
+		return;
+	}
 	try{
 		let header_html = `<div class="page-header"><img src="content/${page}/header.jpg"></div>`;
 		document.getElementById("header").innerHTML = header_html;
@@ -21,6 +24,9 @@ function bindPageLinks() {
 			e.preventDefault();
 			closeMenu();
 			let page = e.currentTarget.getAttribute("data-page");
+			if (!page) {
+				return;
+			}
 			await loadPage(page);
 		});
 	});
