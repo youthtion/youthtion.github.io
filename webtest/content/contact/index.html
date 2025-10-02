@@ -37,7 +37,8 @@
 	margin: 0.4vw 0;
 }
 #contact-form input,
-#contact-form textarea {
+#contact-form textarea,
+#contact-form button {
     width: 100%;
     padding: 0.4vw;
     margin: 0.4vw 0;
@@ -73,12 +74,13 @@
 <div class="contact-section">
     <div class="contact-row">
 		<div class="contact-col-form">
-			<form id="contact-form">
-				<div><label>姓名：</label><input type="text" name="name"></div>
-				<div><label>電話：</label><input type="text" name="phone"></div>
-				<div><label>電子郵件：</label><input type="email" name="email"></div>
-				<div><label>主旨：</label><input type="text" name="subject"></div>
-				<div><label>內容：</label><textarea name="message"></textarea></div>
+			<form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdDeJXFCXBZck3_g1A0Iy3qBik_woqSfXU_xLbgvgAm3iaiTw/formResponse" method="POST" target="hidden_iframe">
+				<div><label>姓名：</label><input type="text" name="entry.1509696832" required></div>
+				<div><label>電話：</label><input type="text" name="entry.896063629" required></div>
+				<div><label>電子郵件：</label><input type="email" name="entry.164353097" required></div>
+				<div><label>主旨：</label><input type="text" name="entry.1181628857" required></div>
+				<div><label>內容：</label><textarea name="entry.291051645" required></textarea></div>
+				<div><label></label><button type="submit">送出</button></div>
 			</form>
 		</div>
 		<div class="contact-col-map">
@@ -95,4 +97,5 @@
 	</div>
 </div>
 <div class="content-top-bottom"></div>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 </body>

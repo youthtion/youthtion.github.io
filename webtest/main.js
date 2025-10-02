@@ -12,10 +12,36 @@ async function loadPage(page)
 		let content_html = await content_res.text();
 		document.getElementById("content").innerHTML = content_html;
 		window.scrollTo({ top: 0, behavior: "smooth" });
+		if (page === "contact") {
+			setupContactForm();
+		}
 	}
 	catch (err){
 		document.getElementById("content").innerHTML = `<p style="color:red">讀取失敗：${err.message}</p>`;
 	}
+}
+
+function setupContactForm() {
+	let form = document.getElementById("contact-form");
+	if (!form) {
+		return;
+	}
+	form.onsubmit = null; 
+	form.addEventListener("submit", function(e) {
+		e.preventDefault();
+		let formData = new FormData(form);
+		fetch(form.action, {
+			method: "POST",
+			body: formData,
+			mode: "no-cors"
+		}).then(() => {
+			form.reset();
+			alert("您的訊息已送出");
+		}).catch(err => {
+			alert("送出時發生錯誤, 請稍後再試");
+			console.error(err);
+		});
+	});
 }
 
 function bindPageLinks() {
