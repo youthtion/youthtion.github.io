@@ -5,8 +5,11 @@ async function loadPage(page)
 	}
 	try{
 		let header_html = `<div class="page-header"><img src="content/${page}/header.jpg"></div>`;
+		if (page === "esg") {
+			header_html = "";
+		}
 		document.getElementById("header").innerHTML = header_html;
-	
+		
 		let content_res = await fetch(`content/${page}/index.html`);
 		if (!content_res.ok) throw new Error("讀取失敗");
 		let content_html = await content_res.text();
@@ -14,6 +17,9 @@ async function loadPage(page)
 		window.scrollTo({ top: 0, behavior: "smooth" });
 		if (page === "contact") {
 			setupContactForm();
+		}
+		if (page === "esg") {
+			setupEsgPage();
 		}
 	}
 	catch (err){
@@ -26,22 +32,60 @@ function setupContactForm() {
 	if (!form) {
 		return;
 	}
-	form.onsubmit = null; 
-	form.addEventListener("submit", function(e) {
-		e.preventDefault();
-		let formData = new FormData(form);
-		fetch(form.action, {
-			method: "POST",
-			body: formData,
-			mode: "no-cors"
-		}).then(() => {
-			form.reset();
-			alert("您的訊息已送出");
-		}).catch(err => {
-			alert("送出時發生錯誤, 請稍後再試");
-			console.error(err);
-		});
-	});
+	form.removeEventListener("submit", form._handleSubmit);
+    form._handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"
+        })
+        .then(() => {
+            form.reset();
+            alert("您的訊息已送出");
+        })
+        .catch(err => {
+            alert("送出時發生錯誤, 請稍後再試");
+            console.error(err);
+        });
+    };
+    form.addEventListener("submit", form._handleSubmit);
+}
+
+function setupEsgPage() {
+	window.removeEventListener('scroll', window._esgScrollHandler);
+	window._esgScrollHandler = () => {
+		const counters = document.querySelectorAll('.esg-counter');
+		const value_cards = document.querySelector('.esg-cards');
+		if (!value_cards){
+			return;
+		}
+		const position = value_cards.getBoundingClientRect().top;
+		const screenPosition = window.innerHeight / 1.3;
+		if (position < screenPosition) {
+			counters.forEach(counter => {
+				if (!counter.dataset.animating) {
+					counter.dataset.animating = 'true';
+					const animate = () => {
+						const target = +counter.dataset.target;
+						const current = +counter.innerText;
+						const increment = target / 50;
+						if (current < target) {
+							counter.innerText = Math.ceil(current + increment);
+							requestAnimationFrame(animate);
+						}
+						else {
+							counter.innerText = target;
+						}
+					};
+					requestAnimationFrame(animate);
+				}
+			});
+			window.removeEventListener('scroll', window._esgScrollHandler);
+		}
+	};
+	window.addEventListener('scroll', window._esgScrollHandler);
 }
 
 function bindPageLinks() {
