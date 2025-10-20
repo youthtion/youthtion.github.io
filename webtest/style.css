@@ -392,18 +392,22 @@ header nav li a {
 
 .page-header {
 	width: 100%;
-	aspect-ratio: 800 / 240; /* 先用比例等比縮放 */
+	/*改橫幅後用橫向優先填滿*/
+	/*aspect-ratio: 800 / 240;*/
 }
 
+/*改橫幅後用橫向優先填滿*/
+/*
 @media (orientation: landscape) and (max-width: 800px) {
 	.page-header {
 		height: 240px;
 	}
 }
+*/
 
 .page-header img {
-	height: 100%;
-	width: auto;
+	height: auto; /*改橫幅後用橫向優先填滿*/
+	width: 100%; /*改橫幅後用橫向優先填滿*/
 	min-width: 100%; /* 保證容器寬度被覆蓋 */
 	object-fit: cover; /* 保持比例，必要時裁切 */
 	display: block;
