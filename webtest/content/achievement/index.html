@@ -1,0 +1,42 @@
+<style>
+.achievement-row-col {
+	display: flex;
+	justify-content: center;
+	gap: 8vw;
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+.achievement-col {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 5vw;
+}
+.achievement-col img {
+	width: 100%;
+	height: auto;
+}
+@media (orientation: portrait) {
+	.achievement-row-col {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+</style>
+<body>
+<div class="content-top-bottom"></div>
+
+<div class="achievement-row-col">
+	<div class="achievement-col">
+		<img src="content/achievement/TSMC_logo.png" alt="TSMC">
+		<img src="content/achievement/UMC_logo.png" alt="UMC">
+		<img src="content/achievement/AUO_logo.png" alt="AUO">
+		<img src="content/achievement/Winbond_logo.png" alt="Winbond">
+	</div>
+	<div class="achievement-col">
+		<img src="content/achievement/map.png" alt="taiwan">
+	</div>
+</div>
+
+<div class="content-top-bottom"></div>
+</body>
