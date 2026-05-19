@@ -1,12 +1,6 @@
-// SWITCH
-var accurateLevel = 80;	// always push when less level(%)
-var expectedFinalStackNum = 300; // expected stack length when all reach accurateLevel
-
 // VARIABLE
 var questNum = 1;
 var questStack = new Array();
-var cookieKeyhead = "ac";
-var versionKeyhead = "verd";
 var spaceText = "＿";
 var correctionMode = false;
 var unshiftRemain = 0;
@@ -15,29 +9,15 @@ function initailStack()
 {
 	questStack = new Array();
 	for(let i = 0; i < QAList.length; i++){
-		if(QAList[i]["accr"] < accurateLevel){
+		if(QAList[i]["acdt"] == 0 || QAList[i]["acdt"] < nowSec()){
 			questStack.push(i);
-		}
-		else{
-			let randn = Math.floor(Math.random()*100);
-			if(randn >= QAList[i]["accr"] && adjStackNumRand()){
-				questStack.push(i);
-			}
-		}
-		QAList[i]["accr"] = QAList[i]["accr"]-1;
-		if(QAList[i]["accr"] < 0){
-			QAList[i]["accr"] = 0;
 		}
 	}
 }
 
-function adjStackNumRand()
+function nowSec()
 {
-	let a = expectedFinalStackNum / QAList.length * 100 / (100 - accurateLevel);
-	let b = Math.random();
-	if(b < a)
-		return true;
-	return false;
+	return Math.floor(Date.now() / 1000);
 }
 
 function randomSort()
@@ -94,7 +74,7 @@ function getQuestion()
 	questNum = questStack.shift();
 	
 	let questText = QAList[questNum]["que"];
-	if(QAList[questNum]["accr"] > accurateLevel){
+	if(QAList[questNum]["accr"] > 0){
 		let newText = "";
 		questText = QAList[questNum]["ans"];
 		if(questText.length == 1){
@@ -125,19 +105,21 @@ function getQuestion()
 function handleKey(e)
 {
 	if(typeof e == "undefined" || (!e))
-		e = window.event;
-		
+		e = window.event;		
 	if(e.keyCode == 13){
 		if (isCorrect()){
 			if(unshiftRemain > 0){
 				if(correctionMode == false && unshiftRemain > 0){
-					QAList[questNum]["accr"] = Math.floor((QAList[questNum]["accr"] + 100) / 2);
-					writeLocalStorage();
+					let new_accr = QAList[questNum]["accr"] + 1;
+					let last_date = QAList[questNum]["acdt"];
+					QAList[questNum]["accr"] = new_accr;
+					QAList[questNum]["acdt"] = nextDate(last_date, new_accr);
 				}
 				else{
 					QAList[questNum]["accr"] = 0;
-					writeLocalStorage();
+					QAList[questNum]["acdt"] = 0;
 				}
+				writeLocalStorage();
 				unshiftRemain = unshiftRemain - 1;
 			}
 			getQuestion();
@@ -153,15 +135,24 @@ function handleKey(e)
 	}
 }
 
+function nextDate(_last, _accr)
+{
+	let res = 86400;
+	for(let i = 1; i <= _accr; i++){
+		if(i == _accr){
+			res += nowSec() - _last;
+		}
+		res *= Math.max(2 - (i * 0.1), 1.2);
+	}
+	return Math.floor(nowSec() + res);
+}
+
 function isCorrect()
 {
 	let input = document.getElementById("inputText").value;
-	if(QAList[questNum]["accr"] > accurateLevel){
-		if (QAList[questNum]["que"] == input){
-			return true;
-		}
+	if (QAList[questNum]["que"] == input){
+		return true;
 	}
-	
 	let ans = QAList[questNum]["ans"];
 	if (kataToHira(ans) == kataToHira(input)){
 		return true;
@@ -197,10 +188,11 @@ function readLocalStorage()
 {
 	let stored = localStorage.getItem("accrData");
 	if(stored){
-		let accrs = JSON.parse(stored);
-		for(let i = 0; i < accrs.length; i++){
+		let datas = JSON.parse(stored);
+		for(let i = 0; i < datas.length; i++){
 			if(QAList[i]){
-				QAList[i]["accr"] = accrs[i];
+				QAList[i]["accr"] = datas[i][0];
+				QAList[i]["acdt"] = datas[i][1];
 			}
 		}
 	}
@@ -208,16 +200,22 @@ function readLocalStorage()
 
 function writeLocalStorage()
 {
-	let accrs = QAList.map(q => q["accr"]);
-	localStorage.setItem("accrData", JSON.stringify(accrs));
+	let datas = QAList.map(q => [
+		q["accr"],
+		q["acdt"]
+	]);
+	localStorage.setItem("acData", JSON.stringify(datas));
 }
 
 function readVersion(lastVer)
 {
 	let isVerChange = false;
-	let accTemp = new Array();
+	let temp = new Array();
 	for(let i = 0; i < QAList.length; i++){
-		accTemp.push(QAList[i]["accr"]);
+		temp.push({
+			accr : QAList[i]["accr"],
+			acdt : QAList[i]["acdt"],
+		});
 	}
 
 	for(let i = 0; i < version_log.length-1; i++){
@@ -225,29 +223,33 @@ function readVersion(lastVer)
 			if(isVerChange == false){
 				isVerChange = true;
 			}
-			let newAcc = new Array();
+			let newTemp = new Array();
 			for(let j = 0; j < QAList.length; j++){
-				newAcc.push(-1);
+				newTemp.push({
+					accr : -1,
+					acdt : 0
+				});
 			}
 			for(let k in version_log[i]["changed"]){
-				newAcc[k] = 0;
+				newTemp[k].accr = 0;
 			}
 			for(let k in version_log[i]["changed"]){
 				let v = version_log[i]["changed"][k];
 				if(v >= 0){
-					newAcc[v] = accTemp[k];
+					newTemp[v] = temp[k];
 				}
 			}
 			for(let j = 0; j < QAList.length; j++){
-				if(newAcc[j] >= 0){
-					accTemp[j] = newAcc[j];
+				if(newTemp[j].accr >= 0){
+					temp[j] = newTemp[j];
 				}
 			}
 		}
 	}
 	
 	for(let i = 0; i < QAList.length; i++){
-		QAList[i]["accr"] = accTemp[i];
+		QAList[i]["accr"] = temp[i].accr;
+		QAList[i]["acdt"] = temp[i].acdt;
 	}
 	
 	if(isVerChange == true){
