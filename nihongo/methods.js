@@ -9,6 +9,9 @@ function initailStack()
 {
 	questStack = new Array();
 	for(let i = 0; i < QAList.length; i++){
+		if(QAList[i]["acdt"] != 0){
+			alert(QAList[i]["acdt"] - nowSec());
+		}
 		if(QAList[i]["acdt"] == 0 || QAList[i]["acdt"] < nowSec()){
 			questStack.push(i);
 		}
@@ -110,14 +113,12 @@ function handleKey(e)
 		if (isCorrect()){
 			if(unshiftRemain > 0){
 				if(correctionMode == false && unshiftRemain > 0){
-					let new_accr = QAList[questNum]["accr"] + 1;
-					let last_date = QAList[questNum]["acdt"];
-					QAList[questNum]["accr"] = new_accr;
-					QAList[questNum]["acdt"] = nextDate(last_date, new_accr);
+					QAList[questNum]["acdt"] = nextDate(QAList[questNum]["acdt"], QAList[questNum]["accr"]);
+					QAList[questNum]["accr"] += 1;
 				}
 				else{
-					QAList[questNum]["accr"] = 0;
 					QAList[questNum]["acdt"] = 0;
+					QAList[questNum]["accr"] = 0;
 				}
 				writeLocalStorage();
 				unshiftRemain = unshiftRemain - 1;
@@ -186,7 +187,7 @@ function readCookie()
 
 function readLocalStorage()
 {
-	let stored = localStorage.getItem("accrData");
+	let stored = localStorage.getItem("acData");
 	if(stored){
 		let datas = JSON.parse(stored);
 		for(let i = 0; i < datas.length; i++){

@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<script src="QAList.js"></script>
+</head>
+<body>
+<div id="rsText" style="position:absolute;width:100%;top:5%;">
+</div>
+<script>
+let stored = localStorage.getItem("acData");
+if(stored){
+	let datas = JSON.parse(stored);
+	for(let i = 0; i < datas.length; i++){
+		if(QAList[i]){
+			QAList[i]["accr"] = datas[i][0];
+			QAList[i]["acdt"] = datas[i][1];
+		}
+	}
+}
+
+var rsText = "";
+for(var i = 0; i < QAList.length-1; i++){
+	let next = QAList[i]["acdt"] - Date.now() / 1000;
+	if(next > 0){
+		rsText += QAList[i]["que"]+" "+(Math.floor(next / 3600))+"HR<br>";
+	}
+}
+document.getElementById("rsText").innerHTML = rsText;
+</script>
+</body>
+</html>
