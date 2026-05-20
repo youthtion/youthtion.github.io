@@ -9,9 +9,6 @@ function initailStack()
 {
 	questStack = new Array();
 	for(let i = 0; i < QAList.length; i++){
-		if(QAList[i]["acdt"] != 0){
-			alert(QAList[i]["acdt"] - nowSec());
-		}
 		if(QAList[i]["acdt"] == 0 || QAList[i]["acdt"] < nowSec()){
 			questStack.push(i);
 		}
