@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Transit Calculator</title>
+</head>
+<body>
+<div id="date1"></div>
+<div id="output1"></div>
+<div id="date2"></div>
+<div id="output2"></div>
+<script type="module">
+import SwissEPH from 'https://cdn.jsdelivr.net/gh/prolaxu/swisseph-wasm@main/src/swisseph.js'
+const swe = new SwissEPH();
+await swe.initSwissEph();
+
+const jd_birth = swe.julday(1992, 2, 13, 8.7167);
+const birth_ven = swe.calc_ut(jd_birth, swe.SE_VENUS, swe.SEFLG_SWIEPH);
+const birth_jup = swe.calc_ut(jd_birth, swe.SE_JUPITER, swe.SEFLG_SWIEPH);
+const houses = swe.houses(jd_birth, 24.8036, 120.9686, 'P');
+
+const now = new Date();
+const hour = now.getUTCHours() + now.getUTCMinutes() / 60 + now.getUTCSeconds() / 3600;
+const jd_now = swe.julday(now.getUTCFullYear(), now.getUTCMonth() + 1, now.getUTCDate(), hour);
+
+Transit(jd_now, 0, 'date1', 'output1')
+Transit(jd_now, 1, 'date2', 'output2')
+
+function Transit(_date, _next, _text1, _text2)
+{
+	let date = new Date(now);
+	date.setUTCDate(date.getUTCDate() + _next);
+	let jd_date = _date + _next;
+	let transit_venus = swe.calc_ut(jd_date, swe.SE_VENUS, swe.SEFLG_SWIEPH);
+	let transit_jupiter = swe.calc_ut(jd_date, swe.SE_JUPITER, swe.SEFLG_SWIEPH);
+	let tj2bv = getNearestAspect(transit_jupiter[0], birth_ven[0]);
+	let tv2bj = getNearestAspect(transit_venus[0], birth_jup[0]);
+
+	document.getElementById(_text1).innerHTML =
+	`${date.getUTCFullYear()}/${String(date.getUTCMonth() + 1).padStart(2, '0')}/${String(date.getUTCDate()).padStart(2, '0')} 
+	${String(date.getUTCHours()).padStart(2, '0')}:${String(date.getUTCMinutes()).padStart(2, '0')}
+	`;
+
+	document.getElementById(_text2).innerHTML =
+	`
+	transit ♃: ${transit_jupiter[0].toFixed(2)}° in house ${getHouse(transit_jupiter[0], houses.cusps)}<br>
+	transit ♀: ${transit_venus[0].toFixed(2)}° in house ${getHouse(transit_venus[0], houses.cusps)}<br>
+	transit ♃ ←→ birth ♀: ${tj2bv.angle.toFixed(2)}° → ${tj2bv.orb.toFixed(2)}° → ${tj2bv.aspect}<br>
+	transit ♀ ←→ birth ♃: ${tv2bj.angle.toFixed(2)}° → ${tv2bj.orb.toFixed(2)}° → ${tv2bj.aspect}<br><br>
+	`;
+}
+
+function getNearestAspect(_lon1, _lon2)
+{
+    let angle = Math.abs(_lon1 - _lon2);
+    if (angle > 180)
+        angle = 360 - angle;
+
+    const aspects = [
+        { name: "conjunction", degree: 0 },
+        { name: "sextile", degree: 60 },
+        { name: "trine", degree: 120 },
+        { name: "opposition", degree: 180 }
+    ];
+
+    let nearest = null;
+    let minOrb = Infinity;
+    for (const aspect of aspects){
+        const orb = Math.abs(angle - aspect.degree);
+        if (orb < minOrb){
+            minOrb = orb;
+            nearest = aspect;
+        }
+    }
+
+    return {
+        angle: angle,
+        aspect: nearest.name,
+        orb: minOrb
+    };
+}
+
+function getHouse(_lon, _cusps)
+{
+    for(let i = 1; i <= 12; i++){
+        const start = _cusps[i];
+        const end = _cusps[i % 12 + 1];
+        if(start < end){
+            if(_lon >= start && _lon < end){
+                return i;
+            }
+        }
+        else{
+            if(_lon >= start || _lon < end){
+                return i;
+            }
+        }
+    }
+    return null;
+}
+</script>
+</body>
+</html>
