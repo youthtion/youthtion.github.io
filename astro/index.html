@@ -2,12 +2,6 @@
 <head>
 <meta charset="utf-8">
 <title>Transit Calculator</title>
-</head>
-<body>
-<div id="date1"></div>
-<div id="output1"></div>
-<div id="date2"></div>
-<div id="output2"></div>
 <script type="module">
 import SwissEPH from 'https://cdn.jsdelivr.net/gh/prolaxu/swisseph-wasm@main/src/swisseph.js'
 const swe = new SwissEPH();
@@ -21,9 +15,10 @@ const houses = swe.houses(jd_birth, 24.8036, 120.9686, 'P');
 const now = new Date();
 const hour = now.getUTCHours() + now.getUTCMinutes() / 60 + now.getUTCSeconds() / 3600;
 const jd_now = swe.julday(now.getUTCFullYear(), now.getUTCMonth() + 1, now.getUTCDate(), hour);
+var next = 1;
 
 Transit(jd_now, 0, 'date1', 'output1')
-Transit(jd_now, 1, 'date2', 'output2')
+Transit(jd_now, next, 'date2', 'output2')
 
 function Transit(_date, _next, _text1, _text2)
 {
@@ -37,16 +32,13 @@ function Transit(_date, _next, _text1, _text2)
 
 	document.getElementById(_text1).innerHTML =
 	`${date.getUTCFullYear()}/${String(date.getUTCMonth() + 1).padStart(2, '0')}/${String(date.getUTCDate()).padStart(2, '0')} 
-	${String(date.getUTCHours()).padStart(2, '0')}:${String(date.getUTCMinutes()).padStart(2, '0')}
-	`;
+	${String(date.getUTCHours()).padStart(2, '0')}:${String(date.getUTCMinutes()).padStart(2, '0')}`;
 
 	document.getElementById(_text2).innerHTML =
-	`
-	transit ♃: ${transit_jupiter[0].toFixed(2)}° in house ${getHouse(transit_jupiter[0], houses.cusps)}<br>
+	`transit ♃: ${transit_jupiter[0].toFixed(2)}° in house ${getHouse(transit_jupiter[0], houses.cusps)}<br>
 	transit ♀: ${transit_venus[0].toFixed(2)}° in house ${getHouse(transit_venus[0], houses.cusps)}<br>
 	transit ♃ ←→ birth ♀: ${tj2bv.angle.toFixed(2)}° → ${tj2bv.orb.toFixed(2)}° → ${tj2bv.aspect}<br>
-	transit ♀ ←→ birth ♃: ${tv2bj.angle.toFixed(2)}° → ${tv2bj.orb.toFixed(2)}° → ${tv2bj.aspect}<br><br>
-	`;
+	transit ♀ ←→ birth ♃: ${tv2bj.angle.toFixed(2)}° → ${tv2bj.orb.toFixed(2)}° → ${tv2bj.aspect}<br>`;
 }
 
 function getNearestAspect(_lon1, _lon2)
@@ -97,6 +89,22 @@ function getHouse(_lon, _cusps)
     }
     return null;
 }
+
+window.ChangeDate = function(_param)
+{
+	next += _param;
+	Transit(jd_now, next, 'date2', 'output2')
+}
 </script>
+</head>
+<body>
+<div id="date1"></div>
+<div id="output1"></div>
+<button type="button" onClick="ChangeDate(-10);"><<</button>
+<button type="button" onClick="ChangeDate(-1);"><</button>
+<button type="button" onClick="ChangeDate(1);">></button>
+<button type="button" onClick="ChangeDate(10);">>></button>
+<div id="date2"></div>
+<div id="output2"></div>
 </body>
 </html>
